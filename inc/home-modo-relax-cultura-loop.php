@@ -1,4 +1,4 @@
-<?php  $the_query = new WP_Query( array( 'category_name' => 'cultura', 'posts_per_page' => 2 ));?>
+<?php  $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'cultura', 'posts_per_page' => 2 ));?>
 
 <?php if ( $the_query->have_posts() ) : ?>			 
     <!-- the loop -->
