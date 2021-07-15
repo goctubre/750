@@ -23,40 +23,11 @@
 
 
 	<!--PRELOAD GOOGLE FONT-->
-	<link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff2" crossorigin>
-	<!-- <link rel="preload" as="font" href="//750.am/wp-content/themes/am750/fonts/inter-v2-latin-regular.woff2" crossorigin> 
-		SEGUIR-->
-
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/fira-sans-v10-latin-600.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/fira-sans-v10-latin-700.woff2" crossorigin>
-
-
-
-
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.eot" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.ttf" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.svg" crossorigin>
-
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.eot" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.ttf" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.svg" crossorigin>
-
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.eot" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff2" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.ttf" crossorigin>
-    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.svg" crossorigin>
-
-	<link rel="preconnect" href="https://fonts.gstatic.com"> <!--chequear si pasar a preload-->
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,600&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
 	<!--PRELOAD GOOGLE FONT-->
-
 
 	<?php wp_head(); ?>
 

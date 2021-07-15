@@ -1,10 +1,10 @@
-<div class="columns mt-6">
+<div class="columns mt-6 visibility">
 	<div class="column is-12">
 		<h2 class="is-size-4 is-celeste has-text-weight-bold">¿Cómo escucharnos?</h2>
 	</div>
 </div>
 	
-<div class="columns mb-6">	
+<div class="columns mb-6 visibility">	
 	<div class="column is-6">
 		<h3 class="is-size-6 mb-2 has-text-weight-bold">Escuchá AM750 en nuestro sitio web</h3>
 		<p>Escuchanos en vivo por nuestro sitio web con el player que se encuentra en el pie del sitio o los recortes anteriores haciendo <a href="https://750.am/" rel="noopener noreferrer">click acá.</a></p>

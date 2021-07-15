@@ -50,7 +50,7 @@ get_header();
 
 
 				<br> <br>
-				<h2 class="is-size-3 mt-6 mt-0-mobile"> Modo relax </h2>
+				<h2 class="is-size-3 mt-6 mt-0-mobile visibility"> Modo relax </h2>
 				<p class="mb-5"> Escuchá todos los episodios y columnas completos de tus programas favoritos </p>
 
 				<!-- CAROUSEL ACTUALIDAD -->
@@ -86,7 +86,7 @@ get_header();
 
 
 
-				<div class="seccion-header mt-6">
+				<div class="seccion-header mt-6 visibility">
 					<div class="seccion-nombre">
 						<h2 class="is-size-3"> Programación Semanal </h2>
 					</div>
@@ -95,30 +95,16 @@ get_header();
 
 
 				<?php 
-				$the_query = array(
-					'post_type' 	 => 'calendarios',
-				    'post_status' 	 => 'publish',
-					'posts_per_page' => 90,
-					'meta_key'		 => 'hora_inicio',
-					'orderby'		 => 'meta_value',
-					'order'			 => 'ASC'
-				);
-				$dias=array(
-					"mon"=>"Lunes",
-					"tue"=>"Martes",
-					"wed"=>"Miércoles",
-					"thu"=>"Jueves",
-					"fri"=>"Viernes",
-					"sat"=>"Sábado",
-					"sun"=>"Domingo"
-				);
-				date_default_timezone_set('America/Argentina/Buenos_Aires');
-				$now_day=strtolower(date("D"));
-				$now_hour=strtolower(date("H:i"));
+					$the_query = array( 'post_type' => 'calendarios', 'post_status' => 'publish', 'posts_per_page' => 90, 'meta_key' => 'hora_inicio',
+						'orderby' => 'meta_value', 'order' => 'ASC' );
+					$dias=array( "mon"=>"Lunes", "tue"=>"Martes", "wed"=>"Miércoles", "thu"=>"Jueves", "fri"=>"Viernes", "sat"=>"Sábado", "sun"=>"Domingo" );
+					date_default_timezone_set('America/Argentina/Buenos_Aires');
+					$now_day=strtolower(date("D"));
+					$now_hour=strtolower(date("H:i"));
 				?>
 
 
-				<div class="tabs rounded programas_tabs">
+				<div class="tabs rounded programas_tabs visibility">
 				  <ul>
 					<?php
 					foreach ($dias as $key => $value) {
@@ -128,7 +114,7 @@ get_header();
 				  </ul>
 				</div>
 
-				<div class="tab-content programas_tabs_content">
+				<div class="tab-content programas_tabs_content visibility">
 					<?php 
 						$loop = new WP_Query( $the_query ); 
 						foreach ($dias as $key => $value) {

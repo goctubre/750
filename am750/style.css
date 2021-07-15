@@ -52,6 +52,7 @@ a:hover {color:inherit!important; opacity: 0.8;}
 
 ol {margin-left: 16px;}
 
+
 .is-bg-violet,.is-bg-violet:visited,.is-bg-violet:focus {background: #3D3F52; color:#FFF; border: none}
 .is-bg-violet:hover  span{ color: #FFF;}
 .is-bg-celeste {background: #009FD4; color:#FFF;}
@@ -62,6 +63,7 @@ ol {margin-left: 16px;}
 
 .is-invert {filter: brightness(100);}
 .noclick {cursor: unset;}
+.visibility {content-visibility: auto;}
 
 .button.is-bg-violet:hover {color: #FFF !important; border: none; opacity: 0.9;}
 
@@ -434,7 +436,9 @@ filter: grayscale(100%) brightness(194%);
 @media screen and (max-width:1023px) {}
 
 
-
+/* Homepage
+--------------------------------------------- */
+#actualidad, #opinion, #accesos-rapidos, #cultura, #descubri, #entrevistas, #audicuentos, #deportes, #lavenganzasera, #ayudanos {content-visibility: auto;}
 
 /* Posts
 --------------------------------------------- */
@@ -475,7 +479,7 @@ article ul {list-style: unset!important; margin-bottom: 1.6rem}
 .nota-contenido h5 {font-size: 1.25rem !important;}
 .nota-contenido h6 {font-size: 1rem !important;}
 
-
+.nota-contenido a {color: #019bcf; text-decoration: underline;}
 
 .nota-contenido blockquote {font-size: 1.2em; position:relative;border: 1px solid #009FD4;
   border-radius: 4px;color: #009FD4;margin: 20px 0; font-family: 'Fira Sans', sans-serif; 
@@ -644,11 +648,11 @@ background-position: center center; background-size: 10px; background-image: url
 .ml-32 {margin-left:32%;}
 
 /*BREAKING NEWS - URGENTE-AHORA*/
-.breaking { text-align: center; color: #FFF; position: sticky; top: 55px;z-index: 99999; margin-top: -.68rem;}
+.breaking { text-align: center; color: #FFF; position: sticky; top: 55px;z-index: 9999; margin-top: -.68rem;}
 .urgente { background: #CD1010; font-weight: 700 !important;}
 .urgente::before { content: "Urgente:"; margin-left: -68px; }
-.ahora {background: #DADADA; color:#3D3F52;  font-weight: 600 !important;}
-.ahora::before {  content: "• Ahora: "; color: #CD1010; margin-left: -90px;}
+.ahora {background: #DADADA; color:#3D3F52;  font-weight: 600 !important; font-size: 14px}
+.ahora::before {  content: "• Ahora: "; color: #CD1010;/* margin-left: -90px;*/}
 .ahora::after {background: url("img/ahora.svg") no-repeat top right; height: 20px; width: 20px; background-size: contain; 
 position: relative; content: ""; display: inline-block; top: 3px; left: 2px;}
 
@@ -733,14 +737,6 @@ border-radius: 10px; padding: 30px 6px;}
 .edit-link {background: #009FD4; padding: 10px 20px; display: inline-block; margin-top: 20px; color: #FFF;}
 
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
 /* Accessibility
 --------------------------------------------- */
 
@@ -757,99 +753,6 @@ border-radius: 10px; padding: 30px 6px;}
 
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus { outline: 0;}
-
-
-
-
-
-
-
-
-/*GOOGLE FONTS
-https://google-webfonts-helper.herokuapp.com/fonts/inter?subsets=latin
-https://web.dev/optimize-webfont-loading/
-*/
-
-
-/* inter-regular - latin */
-@font-face {
-  font-family: 'Inter'; 
-  font-style: normal;
-  font-weight: 400;
-  font-display: optional; /* or block, swap, fallback, optional */
-  src: url('fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/inter-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
-}
-
-/* inter-500 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: optional;
-  src: url('fonts/inter-v2-latin-500.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/inter-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/inter-v2-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('fonts/inter-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/inter-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/inter-v2-latin-500.svg#Inter') format('svg'); /* Legacy iOS */}
-
-/* inter-700 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: url('fonts/inter-v2-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/inter-v2-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/inter-v2-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('fonts/inter-v2-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/inter-v2-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/inter-v2-latin-700.svg#Inter') format('svg'); /* Legacy iOS */}
-
-
-/* fira-sans-600 - latin */
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: optional;
-  src: url('fonts/fira-sans-v10-latin-600.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/fira-sans-v10-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/fira-sans-v10-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('fonts/fira-sans-v10-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/fira-sans-v10-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/fira-sans-v10-latin-600.svg#FiraSans') format('svg'); /* Legacy iOS */}
-
-/* fira-sans-700 - latin */
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: url('fonts/fira-sans-v10-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/fira-sans-v10-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/fira-sans-v10-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('fonts/fira-sans-v10-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/fira-sans-v10-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/fira-sans-v10-latin-700.svg#FiraSans') format('svg'); /* Legacy iOS */}
-
-
-
-
-
-
-
-
 
 
 /*--------------------------------------------------------------

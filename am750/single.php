@@ -43,7 +43,7 @@ get_header();
 
 
 						<!--TE PUEDE INTERESAR--->
-						<h2 class="is-size-4 mb-5"> Te puede interesar </h2>
+						<h2 class="is-size-4 mb-5 visibility"> Te puede interesar </h2>
 
 						<?php
 							global $post;
@@ -53,7 +53,7 @@ get_header();
 							$myposts = get_posts( $args );
 
 							foreach( $myposts as $post ) : setup_postdata($post); ?>
-								<article class="mb-3 columns mas-notas" data-url="<?php the_permalink();?>" data-title=" <?php the_title(); ?>">
+								<article class="mb-3 columns mas-notas visibility" data-url="<?php the_permalink();?>" data-title=" <?php the_title(); ?>">
 									<div class="column is-5">
 										<a href="<?php the_permalink();?>" aria-hidden="true" tabindex="-1">
 											<figure class="image is-3by2">
