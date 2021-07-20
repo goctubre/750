@@ -18,7 +18,7 @@
 			<?php if ( $the_query->have_posts() ) : ?>			 
 			    <!-- the loop -->
 			    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			    	<article id="lanotaprincipal" class="mb-4">
+			    	<article id="lanotaprincipal" class="mb-4 ml-5">
 
 			    		<div class="etiquetas">
 							<button class="button is-750 etiquet has-text-weight-bold noclick">
@@ -50,7 +50,7 @@
 			    <?php wp_reset_postdata(); ?>
 			 
 			<?php else : ?>
-			    <p><?php _e( 'Upsss.' ); ?></p>
+			    <p><?php //_e( 'Upsss.' ); ?></p>
 			<?php endif; ?>
 			<!--// ÚLTIMA NOTICIA CATÁSTROFE-->
 

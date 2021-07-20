@@ -16,7 +16,7 @@ if(isset($_GET["sec"])){
 }
 ?>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/covid-data/style.css?v=5">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/covid-data/style.css?v=7">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!--     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/covid-data/js/functions.js"></script> -->

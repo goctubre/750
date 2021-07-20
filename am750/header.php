@@ -33,8 +33,10 @@
 
 
 	<!--ADZONE-->
-	<script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
-
+	<!-- <script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script> -->
+	<link rel="preload" href="https://s-adzone.com/c/14_750amsupertag.js" as="script">
+	<script type="text/javascript" src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
+	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -86,7 +88,7 @@
 		    <div class="navbar-brand">
 		      <a class="site-branding navbar-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 		    	  <img loading="lazy" src="<?php echo http2();?>/img/750am-logo.svg" width="125" height="28" alt="AM 750 - Una señal" />
-		      </a> <!-- .site-branding -->
+	     	 </a> <!-- .site-branding -->
 		    </div>
 
 		    <div class="navbar-end">

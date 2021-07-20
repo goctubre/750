@@ -16,7 +16,9 @@ if(isset($_GET["sec"])){
 	$section = "datos";
 }
 ?>
-
+<div class="info">
+<p class="py-3">En este Especial vas a encontrar datos sobre la campaña de vacunación, fichas de cada una de las vacunas contra el COVID 19 que se aplican en Argentina y una guía con preguntas y respuestas. </p>
+</div>
 <div class="covid-menu tabs is-centered">
   <ul>
   	<li class="<?php if($section=='vacunas'){echo 'is-active';}?> menu-items">

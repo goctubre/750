@@ -16,6 +16,7 @@
 
 	<div class="info mt-6 has-text-centered cards">
 		<h2 class="has-text-centered">¿Qué vacunas se aplican en Argentina?</h2>
+		<p class="pb-6">Todo lo que tenés que saber sobre AstraZeneca, Sputnik V, Sinopharm y Covishield.</p>
 	</div>
 
 <div class="info ">
@@ -36,7 +37,7 @@
 			      </div>
 			    </div>
 			    <div class="content">
-			    	<div><b>País:</b> Reino Unido<br /></div>
+			    	<div><b>País:</b> Inglaterra<br /></div>
 			    	<div class="bg"><b>Aplicación:</b> Dos dosis<br /></div>
 			    	<div><b>Desarrollador:</b> AstraZeneca-Oxford - Reino Unido<br /></div>
 			    	<div class="bg"><b>Autorizado edad: </b> Mayores de 18<br /></div>
@@ -65,7 +66,7 @@
 			    <div class="content">
 			    	<div><b>País:</b> Rusia<br /></div>
 			    	
-			    	<div class="bg"><b>Apliación:</b> Dos dosis<br /></div>
+			    	<div class="bg"><b>Aplicación:</b> Dos dosis<br /></div>
 			    	
 			    	<div><b>Desarrollador:</b> Centro Nacional Gamaleya de Epidemiología y Microbiología - Rusia<br /></div>
 			    	
@@ -100,7 +101,7 @@
 			    <div class="content">
 			    	<div><b>País:</b> China<br /></div>
 			    	
-			    	<div class="bg"><b>Apliación:</b> Dos dosis<br /></div>
+			    	<div class="bg"><b>Aplicación:</b> Dos dosis<br /></div>
 			    	
 			    	<div><b>Desarrollador:</b> Beijing Institute of Biological Products - República Popular China<br /></div>
 			    	
@@ -131,7 +132,7 @@
 			    <div class="content">
 			    	<div><b>País:</b> India<br /></div>
 			    	
-			    	<div class="bg"><b>Apliación:</b> Dos dosis<br /></div>
+			    	<div class="bg"><b>Aplicación:</b> Dos dosis<br /></div>
 			    	
 			    	<div><b>Desarrollador:</b> Serum Institute - India<br /></div>
 			    	
@@ -147,11 +148,44 @@
 
 
 	</div>
+
+	<div class="columns ">
+		<div class="column is-half" style="margin:0 auto">
+			<div class="card">
+			  <div class="card-content">
+			    <div class="media">
+			      <div class="media-left">
+			        <figure class="image ">
+			          <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-ico_usa.jpg" alt="" width="94" height="74" style="max-width: 94px;">
+			        </figure>
+			      </div>
+			      <div class="media-content">
+			        <p class="title">Moderna</p>
+			        <p class="subtitle ">mRNA-1273</p>
+			      </div>
+			    </div>
+			    <div class="content">
+			    	<div><b>País:</b> Estados Unidos<br /></div>
+			    	
+			    	<div class="bg"><b>Aplicación:</b> Dos dosis<br /></div>
+			    	
+			    	<div><b>Desarrollador:</b> Moderna & NIH, Camridge, Massachusetts, EE. UU.<br /></div>
+			    	
+			    	<div class="bg"><b>Autorizado edad: </b> Mayores de 18<br /></div>
+			    	
+			    	<span>*Efectividad<br />94,1% </span><br /><br />
+			    	<a href="hhttps://www.modernatx.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_4.png"></a>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
 		<span style="    color: #016446;
     font-weight: bold;
     line-height: 18px;
     display: block;
-    margin-top: 10px;">*Efectividad para mortalidad por COVID-19, según vacuna y dosis</span>
+    margin-top: 10px;">*Efectividad para mortalidad por COVID-19.</span>
 
 </div>
 

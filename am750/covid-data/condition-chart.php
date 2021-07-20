@@ -60,6 +60,15 @@ $array = json_decode($response)[0];
   .google-visualization-table-td{
     padding-left: 5%;
   }
+  .darkmode .google-visualization-table-tr-even,.darkmode .google-visualization-table-tr-odd{
+        background-color: #131313;
+  }
+  .darkmode .google-visualization-table-table td{
+    border-width: 1px 1px 1px 1px;
+  }
+  .darkmode .google-visualization-table-table th{
+        border-width: 0 0px 0px 0;
+  }
 </style>
 <script type="text/javascript">
       google.charts.load('current', {'packages':['table']});
@@ -87,14 +96,16 @@ $array = json_decode($response)[0];
           width: '100%', 
           height: '100%',
           title: 'Aplicaciones por condición',
-          sortColumn:0
+          sortColumn:0,
+      backgroundColor: { fill:'transparent' }
+
         });
       }
     </script>
 <div class="info">
    <h2 class="pt-6   mb-4-mobile  has-text-centered">Aplicaciones por condición</h2>   
    <p class="has-text-centered">
-    El plan de vacunación se organizó en etapas: por edad, factores de riesgo, y priorizando personal estratégico. El siguiente gráfico muestra la cantidad de dosis aplicadas según el grupo o condición de las personas.
+    El Plan de Vacunación se organizó por etapas, priorizando la inmunización de personas mayores, personas con condiciones de riesgo y personal estratégico (personal de salud, de las fuerzas de seguridad y personal docente). En el siguiente gráfico se da cuenta del total de dosis aplicadas por cada segmento.
    </p>  
 </div>
   <div id="condition-chart_div" class="mt-6" style="max-width: 1024px;width: 100%;height: 100%;margin: 0 auto;"></div>

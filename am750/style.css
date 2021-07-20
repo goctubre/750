@@ -656,11 +656,16 @@ background-position: center center; background-size: 10px; background-image: url
 .ahora::after {background: url("img/ahora.svg") no-repeat top right; height: 20px; width: 20px; background-size: contain; 
 position: relative; content: ""; display: inline-block; top: 3px; left: 2px;}
 
+/*CATASTROFE*/
+#catastrofe #lanotaprincipal {text-align: center;}
+#catastrofe #lanotaprincipal img {object-position: top;}
+
+
 .catastrofe { margin-bottom: 2rem;}
-.catastrofe .etiquet {order:0; text-align: left;}
-.catastrofe #informativo750,.catastrofe #destacados,
-.catastrofe #especiales, .catastrofe #serviciostop {display: none}
-.catastrofe #lanotaprincipal {text-align: center;}
+.catastrofe #informativo750,.catastrofe #destacados, .catastrofe #bannertop,
+.catastrofe #especiales, .catastrofe #serviciostop, .catastrofe #nota-principal {display: none;}
+
+
 
 @media screen and (max-width:1023px){
   .breaking {margin-left: -0.65rem; margin-right: -0.65rem; padding: 2rem 1.4rem 1.5rem !important; text-align: left; 

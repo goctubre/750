@@ -69,6 +69,7 @@ $array = json_decode($response)[0]->datapoints;
       colors: ['#009FD4'],
       legend: { position: 'top',alignment: 'center' },
       vAxis: {title: 'Aplicaciones'},
+      backgroundColor: { fill:'transparent' }
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -87,7 +88,7 @@ $array = json_decode($response)[0]->datapoints;
 <div class="info">
     <h2 class="pt-6 mb-4-mobile has-text-centered ">Cómo evoluciona la aplicación de vacunas día por día</h2>     
     <p class=" has-text-centered">
-      El objetivo de la campaña de vacunación es inmunizar a <a href="https://www.argentina.gob.ar/sites/default/files/coronavirus-vacuna-plan-estrategico-vacunacion-covid-19-diciembre-2020.pdf" target="_blank">24 millones</a> de personas, es decir, el 52 % de la población. En este gráfico se puede ver cómo avanza la vacunación día a día.
+      El objetivo del plan de vacunación nacional es inmunizar al 52% de la población, es decir a <a href="https://www.argentina.gob.ar/sites/default/files/coronavirus-vacuna-plan-estrategico-vacunacion-covid-19-diciembre-2020.pdf" target="_blank">24 millones</a> de personas. El siguiente gráfico permite seguir su avance día por día.
     </p>
 </div>
     <div id="chart_div" class="mt-6" style="width: 100%; height: 300px;"></div>

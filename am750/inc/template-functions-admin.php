@@ -73,11 +73,13 @@ add_settings_field( 'breaking_news_field', 'Ahora / Urgente', 'portada_input','p
 add_settings_field('breaking_news_url', 'URL', 'portada_url','portada-page', 'portada_page_setting_section');
 add_settings_field('breaking_mode', 'Seleccionar tipo', 'portada_radio', 'portada-page', 'portada_page_setting_section');
 add_settings_field('catastrofe', 'Portada catástrofe?', 'portada_catastrofe', 'portada-page', 'portada_page_setting_section');
+add_settings_field('orden_portada', 'Orden de la portada', 'portada_orden_portada', 'portada-page', 'portada_page_setting_section');
 
 register_setting( 'portada-page', 'breaking_news_field' );
 register_setting( 'portada-page', 'breaking_news_url' );
 register_setting( 'portada-page', 'breaking_mode' );
 register_setting( 'portada-page', 'catastrofe' );
+register_setting( 'portada-page', 'orden_portada' );
 }
 
 function my_setting_section_callback_function() { echo '<p>Desde acá se puede modificar la portada</p>'; }
@@ -104,6 +106,13 @@ function portada_catastrofe() { ?>
     <input type="radio" name="catastrofe" value="off" <?php checked(off, get_option('catastrofe'), true); ?>>  ✘ <br>
     <input type="radio" name="catastrofe" value="una" <?php checked(una, get_option('catastrofe'), true); ?>> Una nota <br>
     <input type="radio" name="catastrofe" value="cuatro" <?php checked(cuatro, get_option('catastrofe'), true); ?>> Cuatro notas <br>
+    <label style="margin-top: 14px; float: left;"> Llama a las siguientes cuatro notas con categoría #catástrofe</label>
+    <?php
+}
+
+function portada_orden_portada() { ?>
+    <input type="radio" name="orden_portada" value="actualidad" <?php checked(actualidad, get_option('orden_portada'), true); ?>> Modo Actualidad - Modo Relax <br>
+    <input type="radio" name="orden_portada" value="relax" <?php checked(relax, get_option('orden_portada'), true); ?>> Modo Relax - Modo Actualidad <br>
     <?php
 }
 

@@ -24,7 +24,7 @@ get_header();
 	?>
 <!--//CATASTROFE-->
 
-<div id="bloque01" class="container <?php $catastrofe =  get_option('catastrofe'); if( $catastrofe == 'catastrofe' ) { echo "catastrofe";} ?>">
+<div id="bloque01" class="container  <?php $catastrofe =  get_option('catastrofe'); if( $catastrofe == 'una' || $catastrofe == 'cuatro' ) { echo "catastrofe";} ?>">
 
 	<div class="columns">
 		

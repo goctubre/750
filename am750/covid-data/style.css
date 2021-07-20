@@ -101,7 +101,9 @@
       margin-bottom: 5px;
   }
   .progress{border-radius: 0px;border: 1px solid #C5D3DD;position: relative;}
-
+  #covid table td:not([align]),   #covid table th:not([align]){
+        line-height: 25px;
+  }
 /*  progress::-moz-progress-bar { background: #009FD4 !important; }
   progress::-webkit-progress-bar { background: #009FD4 !important; }*/
   progress::-webkit-progress-value { background: #009FD4 !important; }
@@ -260,6 +262,35 @@
   height: 1030px;
 }
 #covid a{color: #3273dc;}
+.darkmode #covid h2,.darkmode #covid h4{color: rgba(255, 255, 255, 0.87)}
+.darkmode #covid table{
+  background: none;
+  color:  rgba(255, 255, 255, 0.87);
+}
+.darkmode #covid #chart_div {
+  /*filter: invert(1);*/
+}
+.darkmode #covid iframe {
+  filter: invert(1);
+}
+.darkmode #covid .card{
+  background: #131313;
+    box-shadow: none;
+    border: 1px solid #f3f8fb2e;
+}
+.darkmode #covid .card-content .content .bg {
+    background: #f3f8fb05;
+}
+.darkmode #covid .card .title,.darkmode #covid .card .subtitle,.darkmode #covid .card-content{
+  color:  rgba(255, 255, 255, 0.87);
+
+}
+.darkmode #covid .content img{
+  filter: invert(1);
+}
+.darkmode .formulario .bg_gris {
+    background: #f1f1f105;
+}
 @media screen and (max-width:769px){ 
   #covid .map1{
     height: 50rem;

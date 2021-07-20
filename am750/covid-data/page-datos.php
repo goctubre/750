@@ -35,7 +35,7 @@ $poblacion=45808747;
 <div class="container">
 		<div class="info py-6">
 					<p class="is-celeste has-text-centered"><b>
-					La campaña de vacunación contra el COVID-19 se inició el 29 de diciembre de 2020. Destinado al personal de salud, el primer lote de vacunas que entró al país tenía 300 mil dosis de Sputnik V. Desde Ezeiza, fueron distribuidas simultáneamente a 32 puntos del país.</b>
+					La campaña de vacunación contra el Covid-19 en la Argentina comenzó el 29 de diciembre del 2020. El primer lote de vacunas arribó el 24 de diciembre, con 300 mil dosis de la vacuna Sputnik V destinadas al personal de salud. Se distribuyeron a 32 puntos del país.</b>
 					</p>
 				</div>
 
@@ -238,7 +238,7 @@ if($response){
 						  	</tr>
 						</tbody>
 					</table>
-					<span>*Porcentaje calculado sobre 45.808.747 de personas, la proyección de población del INDEC para el 2021.</span>
+					<span>*Porcentaje calculado sobre la proyección de población del INDEC para el 2021.</span>
 
 				</div>
 			</div>
@@ -246,6 +246,9 @@ if($response){
 	
 
 			
+		</div>
+		<div class=" p-5 m-5 pt-0-mobile mt-0-mobile  mr-0-mobile ml-0-mobile">
+			<?php include get_theme_file_path( '/covid-data/geo-chart3.php' );?>
 		</div>
 		<div class=" p-5 m-5 pt-0-mobile mt-0-mobile  mr-0-mobile ml-0-mobile">
 			<?php include get_theme_file_path( '/covid-data/timeline-chart.php' );?>

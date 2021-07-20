@@ -2,7 +2,7 @@
 <div class="info">
     <h2 class="pt-6 mb-4-mobile has-text-centered ">¿Cuáles son las provincias que ya están vacunando a tu grupo etario?</h2>     
     <p class="has-text-centered">
-      Con la llegada continua de dosis, se aceleró la vacunación en todo el país. Se incorporaron rápidamente más franjas etarias y se ampliaron las convocatorias para vacunación libre de grupos priorizados.  
+      La llegada continua y fluida de vacunas permitió acelerar el avance de la vacunación en todo el país. Se fueron sumando nuevas franjas etarias e incluso se pusieron en marcha  convocatorias de vacunación libre para algunos grupos priorizados, como las personas gestantes. Hacé clic en tu provincia para saber a qué grupo etario están vacunando. 
     </p>
 </div>
 
