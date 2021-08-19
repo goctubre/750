@@ -70,9 +70,13 @@ $array = json_decode($response)[0];
         border-width: 0 0px 0px 0;
   }
 </style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js?callback=start1" async></script>
 <script type="text/javascript">
+  function start1(){
       google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);
+  }
+      
 
       function drawTable() {
         var data = new google.visualization.DataTable();

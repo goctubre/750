@@ -1,3 +1,4 @@
+#covid table{width: 100%!important;}
 .docis_pais{
     background:#009FD4;
     color:#fff;
@@ -104,6 +105,26 @@
   #covid table td:not([align]),   #covid table th:not([align]){
         line-height: 25px;
   }
+#covid .prog{
+    border-radius: 0px;
+    border: 1px solid #C5D3DD;
+    position: relative;
+}
+#covid .prog .bar{
+  position: absolute;
+  left: 0px;
+    height: 100%;
+  background: #009FD4 !important;
+}
+#covid .prog .porcent{
+    z-index: 1;
+    position: relative;
+    background: #ffffff8a;
+    border-radius: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /*  progress::-moz-progress-bar { background: #009FD4 !important; }
   progress::-webkit-progress-bar { background: #009FD4 !important; }*/
   progress::-webkit-progress-value { background: #009FD4 !important; }
@@ -152,7 +173,7 @@
         min-height: 90px;
 }
 .covid-menu ul li.is-active{
-  background: #F8F8F8;
+  background: #d4cece;
 }
 .covid-menu li.is-active a,.covid-menu li a:hover,.covid-menu li:hover a{
   border-bottom-color: #dadada78;
@@ -348,10 +369,32 @@
     .covid-menu ul li{
       float: left;
       display: block;
-      width: 95%;
+      width: 30%;
+      position: relative;
+      /* display: table; */
+      text-align: center;
     }
     .covid-menu ul li a{
       min-width: 95%;
+      padding: 0px;
+      min-height: 150px;
+    }
+    .covid-menu ul li a img{
+      margin: 0 auto;
+      float: left;
+      width: 100%;
+      position: absolute;
+          margin-top: -50px;
+    }
+    .covid-menu ul li a span{
+      width: 100%;
+      text-align: center;
+      display: block;
+      float: left;
+      clear: left;
+      position: relative;
+          margin-top: 100px;
+    margin-bottom: 20px;
     }
     .covid-menu.mapa ul li{
       float: left;

@@ -11,6 +11,9 @@
 	<img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-header-mobile.png" width="" height="" alt="" style="margin-bottom: -8px;margin-top: 20px;width: 100%;" class="is-hidden-tablet"/>
 </div>
 
+			<?php include get_theme_file_path( '/covid-data/head.php' );?>
+
+
 <div class="container">
 	<div class="columns preguntas has-text-centered pt-0-mobile mt-0-mobile p-5  pr-0-mobile pl-0-mobile cards">
 		<div class="column info has-text-centered " >

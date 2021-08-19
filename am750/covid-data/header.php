@@ -15,31 +15,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v04.css">
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">  -->
-	<link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css" /> 
-	<?php /*<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-swiper.css">*/?>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> 
+	<link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css" />
 
-
-	<meta name="theme-color" content="#ffffff">
 	<link rel="manifest" href="/manifest.json">
 
 
 	<!--PRELOAD GOOGLE FONT-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+	<link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff2" crossorigin>
+	<!-- <link rel="preload" as="font" href="//750.am/wp-content/themes/am750/fonts/inter-v2-latin-regular.woff2" crossorigin> 
+		SEGUIR-->
+
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/fira-sans-v10-latin-600.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/fira-sans-v10-latin-700.woff2" crossorigin>
+
+
+
+
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.eot" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.woff" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-regular.svg" crossorigin>
+
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.eot" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.woff" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.ttf" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-500.svg" crossorigin>
+
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.eot" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.woff" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.ttf" crossorigin>
+    <link rel="preload" as="font" href="<?php echo http2();?>/fonts/inter-v2-latin-700.svg" crossorigin>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com"> <!--chequear si pasar a preload-->
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,600&display=swap" rel="stylesheet"> 
 	<!--PRELOAD GOOGLE FONT-->
+
 
 	<?php wp_head(); ?>
 
 
 	<!--ADZONE-->
-	<!-- <script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script> -->
-	<link rel="preload" href="https://s-adzone.com/c/14_750amsupertag.js" as="script">
-	<script type="text/javascript" src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
-	
+	<script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
+
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -91,7 +114,7 @@
 		    <div class="navbar-brand">
 		      <a class="site-branding navbar-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 		    	  <img loading="lazy" src="<?php echo http2();?>/img/750am-logo.svg" width="125" height="28" alt="AM 750 - Una señal" />
-	     	 </a> <!-- .site-branding -->
+		      </a> <!-- .site-branding -->
 		    </div>
 
 		    <div class="navbar-end">

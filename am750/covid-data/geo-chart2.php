@@ -8,14 +8,31 @@
 
 
 
-<div class="info ">
-  <div class="columns ">
+
+<div class="covid-menu mapa tabs is-centered mt-6">
+  <ul>
+    <li class="menu-items is-active">
+    <a href="#argentina2" class="has-text-centered" onclick="jQuery('.map_tabs2').addClass('is-hidden');jQuery(jQuery(this).attr('href')).removeClass('is-hidden');jQuery('.menu-items').removeClass('is-active');jQuery(this).parent().addClass('is-active');return false">
+      Argentina
+      </a>
+    </li>
+    <li class="menu-items" >
+      <a href="#caba2" class="has-text-centered" onclick="jQuery('.map_tabs2').addClass('is-hidden');jQuery(jQuery(this).attr('href')).removeClass('is-hidden');jQuery('.menu-items').removeClass('is-active');jQuery(this).parent().addClass('is-active');return false">
+        Solo CABA
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="info">
+  <div class="columns map_tabs2" id="argentina2">
       <div class="column  has-text-centered-mobile pt-0-mobile mt-0-mobile">
-
-<iframe src='https://flo.uri.sh/visualisation/6126472/embed' class="flourish-embed flourish-map  px-6 mx-6 ml-0-mobile mr-0-mobile pl-0-mobile pr-0-mobile map1" title='Interactive or visual content'  frameborder='0' scrolling='no'  sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-
-
-        <!-- <div class="flourish-embed flourish-map  px-6 mx-6 ml-0-mobile mr-0-mobile pl-0-mobile pr-0-mobile" data-src="visualisation/6126472"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
+       <iframe src='https://flo.uri.sh/visualisation/6126472/embed' class="flourish-embed flourish-map  px-6 mx-6 ml-0-mobile mr-0-mobile pl-0-mobile pr-0-mobile map1" title='Interactive or visual content'  frameborder='0' scrolling='no'  sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+      </div>
+  </div>
+  <div class="columns map_tabs2 is-hidden" id="caba2">
+      <div class="column  has-text-centered-mobile pt-0-mobile mt-0-mobile">
+        <iframe src='https://flo.uri.sh/visualisation/6867097/embed' title='Interactive or visual content' class='flourish-embed flourish-map  px-6 mx-6 ml-0-mobile mr-0-mobile pl-0-mobile pr-0-mobile map1' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
   </div>
 </div>

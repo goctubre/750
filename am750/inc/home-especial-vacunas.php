@@ -76,9 +76,6 @@
     width: 900px;
   }
 }
-asda
-
-
 
 </style>
 
@@ -93,7 +90,7 @@ asda
     <div class="column mw-320">
         <div class="borde">
             <a href="<?php echo get_site_url(); ?>/vacunas-en-argentina/?sec=vacunas" class="" >
-                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_3.png" width="80" height="" alt="" style="" class=""/>
+                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_3.png" width="80" height="80"/>
                 <span>Tipos de <br/>vacunas</span>
             </a>
         </div>
@@ -101,7 +98,7 @@ asda
     <div class="column  mw-320">
         <div class="borde">
             <a href="<?php echo get_site_url(); ?>/vacunas-en-argentina/?sec=datos" class="">
-                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_1.png" width="80" height="" alt="" style="" class=""/>
+                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_1.png" width="80" height="80"/>
                 <span style="padding-top: 20px;">Datos</span>
             </a>
         </div>
@@ -109,7 +106,7 @@ asda
     <div class="column  mw-320">
         <div>
             <a href="<?php echo get_site_url(); ?>/vacunas-en-argentina/?sec=preguntas" class="" >
-                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_2.png" width="80" height="" alt="" style="" class=""/>
+                <img src="<?php echo get_template_directory_uri(); ?>/covid-data/img/covid-btn_2.png" width="80" height="80"/>
                 <span>Preguntas<br/>Frecuentes</span>
             </a>
         </div>

@@ -29,7 +29,7 @@
 	<!--//MÁS VISTAS-->
 
 	<div class="banner sticky">
-    	<div class="ad-slot" id="notas_sidebar" data-adtype="box"> </div>
+    	<div class="ad-slot" id="notas_sidebar" data-adtype="bigbox"> </div>
 	</div>
 
 	<?php //dynamic_sidebar( 'sidebar-1' ); ?>

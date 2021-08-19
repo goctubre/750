@@ -29,10 +29,28 @@
 
 
 		<!--DESTACADOS-->
-		<div class="column is-3" id="destacados"  data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php">
-			
+		<!-- <div class="column is-3" id="destacados"  data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
+		<div class="column is-3" id="destacados">	
+
+			<!--ESPECIAL - DESTACADO -->
+		    <button class="button is-750 etiquet has-text-weight-bold mb-2 noclick"> Democracia 2021 </button>
+
+			<a href="https://750.am/2021/08/12/elecciones-2021-donde-voto-en-las-paso/">
+				<h2 class="is-size-5 has-text-weight-semibold mb-3 is-fira">Elecciones 2021: dónde voto en las PASO</h2>
+			</a>
+
+			<figure class="image is-16by9 mb-5 nopuntito" style="border:none"> 
+		        <picture>
+		            <img loading="lazy" style="padding:0" class="is-bordeado" srcset="https://i2.wp.com/750.am/wp-content/uploads/2021/08/Voto.jpg?fit=1000%2C541&ssl=1" alt="Elecciones 2021: dónde voto en las PASO">
+		        </picture> 
+			 </figure>
+			<!--//ESPECIAL-->
+
+
     		<!--//DESTACADOS-->
+    		<div data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php">
 				<?php include get_theme_file_path( '/inc/home-modo-noticias-destacados-loop.php' );?>
+			</div> 
     		<!--//DESTACADOS-->
     		
 		</div>
@@ -104,10 +122,6 @@
 	</div> <!--//columns-->
 </section> <!--//section-->
 <!--//ACTUALIDAD-->
-
-
-
-
 
 
 

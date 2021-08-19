@@ -42,9 +42,13 @@ $array = json_decode($response)[0]->datapoints;
 
 ?>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js?callback=start2" async></script>
 <script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
+  function start2(){
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+  }
+  
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([

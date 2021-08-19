@@ -103,23 +103,23 @@ get_header();
 
 		<script>
 			// TE PUEDE INTERESAR
-			const masnotas = [...document.querySelectorAll('.mas-notas')];
-			const options = { threshold: 1};
-			const observer = new IntersectionObserver(function (entries) {
-			  entries.forEach(entry => {
-			    if (entry.isIntersecting) {
-			      entry.target.classList.add('active');
-			      var linksUrl = entry.target.getAttribute('data-url');
-			      var titlesUrl = entry.target.getAttribute('data-title');
-			      history.pushState(null, null, linksUrl);
-			      document.title = titlesUrl;
-				  sendPageView();
-			    } else {
-			      entry.target.classList.remove('active');
-			    }
-			  });
-			}, options);
-			masnotas.forEach(masnotas => { observer.observe(masnotas);});
+			// const masnotas = [...document.querySelectorAll('.mas-notas')];
+			// const options = { threshold: 1};
+			// const observer = new IntersectionObserver(function (entries) {
+			//   entries.forEach(entry => {
+			//     if (entry.isIntersecting) {
+			//       entry.target.classList.add('active');
+			//       var linksUrl = entry.target.getAttribute('data-url');
+			//       var titlesUrl = entry.target.getAttribute('data-title');
+			//       history.pushState(null, null, linksUrl);
+			//       document.title = titlesUrl;
+			// 	  sendPageView();
+			//     } else {
+			//       entry.target.classList.remove('active');
+			//     }
+			//   });
+			// }, options);
+			// masnotas.forEach(masnotas => { observer.observe(masnotas);});
 		</script>
 
 

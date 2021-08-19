@@ -16,6 +16,8 @@
 	  <div class="container">
 	  	<div class="columns mt-5 has-text-centered">
 	  		<div class="column">
+	  			<img style="display: none" loading="lazy" width="0" height="0" src="<?php echo get_template_directory_uri(); ?>/img/750am-logo-blanco.svg" alt="750 AM" />
+	  			<!--hack raro, cambia la url de la primera image -->
 	  			<img loading="lazy" width="120" height="27" src="<?php echo get_template_directory_uri(); ?>/img/750am-logo-blanco.svg" alt="750 AM" />
 	  		</div>
 	  		<div class="column">

@@ -32,12 +32,11 @@ $poblacion=45808747;
 		
 
 </div>
+
+			<?php include get_theme_file_path( '/covid-data/head.php' );?>
+
 <div class="container">
-		<div class="info py-6">
-					<p class="is-celeste has-text-centered"><b>
-					La campaña de vacunación contra el Covid-19 en la Argentina comenzó el 29 de diciembre del 2020. El primer lote de vacunas arribó el 24 de diciembre, con 300 mil dosis de la vacuna Sputnik V destinadas al personal de salud. Se distribuyeron a 32 puntos del país.</b>
-					</p>
-				</div>
+
 
 
 			<?php 
@@ -222,6 +221,9 @@ if($response){
 
 
 				<h2 class="pt-6 mb-4-mobile has-text-centered">Personas vacunadas en Argentina</h2>
+				<div class="info">
+					<p class="py-3">En Argentina la campaña de vacunación contra el COVID-19 se inició el 29 de diciembre del año 2020. El primer lote de vacunas que entró al país tenía 300 mil dosis de Sputnik V, destinadas al personal de salud. Desde Ezeiza fueron distribuidas simultáneamente a 32 puntos del país.</p>
+				</div>
 
 				<div class="my-6 px-6 px-0-mobile ">
 					<table class="table is-fullwidth has-text-centered ">
@@ -229,12 +231,26 @@ if($response){
 						    <tr>
 								<td style="width:33%">*Primera dosis</td>
 								<td style="width:33%;border-left: 1px solid #F0F0F0;border-right: 1px solid #F0F0F0;"><?php echo '<span>'.number_format($primeraDocis_numero, 0, '.', '.').'</span>'?></td>
-								<td style="width:33%"><progress class="progress mt-1 is-medium  " min="0" max="100" value="<?php echo round((($primeraDocis_numero/$poblacion)*100),1)?>" ><?php echo round((($primeraDocis_numero/$poblacion)*100),1)?>%</progress></td>
+								<td style="width:33%">
+
+
+									<div class="prog">
+										<span class="bar" style="width: <?php echo round((($primeraDocis_numero/$poblacion)*100),1)?>%;"></span>
+										<span class="porcent"><?php echo round((($primeraDocis_numero/$poblacion)*100),1)?>%</span>
+									</div>
+
+		
+								</td>
 						  	</tr>
 						  	<tr>
 								<td>*Segunda dosis</td>
 								<td style="width:33%;border-left: 1px solid #F0F0F0;border-right: 1px solid #F0F0F0;"><?php echo '<span>'.number_format($segundaDocis_numero, 0, '.', '.').'</span>'?></td>
-								<td><progress class="progress mt-1 is-medium " min="0" max="100" value="<?php echo round((($segundaDocis_numero/$poblacion)*100),1)?>" ><?php echo round((($segundaDocis_numero/$poblacion)*100),1)?>%</progress></td>
+								<td>
+									<div class="prog">
+										<span class="bar" style="width: <?php echo round((($segundaDocis_numero/$poblacion)*100),1)?>%;"></span>
+										<span class="porcent"><?php echo round((($segundaDocis_numero/$poblacion)*100),1)?>%</span>
+									</div>
+								</td>
 						  	</tr>
 						</tbody>
 					</table>
