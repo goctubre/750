@@ -65,17 +65,24 @@ get_header();
 
 									<div class="column is-6">
 										<a href="<?php the_permalink();?>">
-											<?php
+
+											<!--PASO 20211-->
+											<?php  if ( in_category('democracia-2021') ) { ?>
+												<a href="https://750.am/category/democracia-2021/" alt="Ver noticias en Democracia 2021">
+													<img class='mr-5 mb-1' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='90' height='40'>
+												</a>
+											<? } else {
 												$categories = get_the_category();
 												$output = '';
 												if ( ! empty( $categories ) ) {
 												    foreach( $categories as $category ) {
-												        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'Ver todos las notas en %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light etiquet mb-2">' . esc_html( $category->name ) . '</button> </a>';
+												        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light etiquet mb-2">' . esc_html( $category->name ) . '</button> </a>';
 												    }
 												    echo trim( $output );
 												}
-											?>
+											}?>
 
+											
 								    		<h3 class="is-size-5 has-text-weight-semibold is-fira mt-2 mb-2"> <a href="<?php the_permalink();?>">  <?php the_title(); ?> </a> </h3>
 								    		<p class="lh-140"> <?php echo wp_trim_words( get_the_content(), 20, '...' );?> </p>
 								    		<a href="<?php the_permalink();?>" aria-hidden="true" tabindex="-1"> <button class="button mt-4">Leer más</button> </a>
@@ -102,10 +109,10 @@ get_header();
 
 
 		<script>
-			// TE PUEDE INTERESAR
-			// const masnotas = [...document.querySelectorAll('.mas-notas')];
-			// const options = { threshold: 1};
-			// const observer = new IntersectionObserver(function (entries) {
+			// TE PUEDE INTERESAR - SINGLE.PHP == OK
+			// masnotas = [...document.querySelectorAll('.mas-notas')];
+			// options = { threshold: 1};
+			// observer = new IntersectionObserver(function (entries) {
 			//   entries.forEach(entry => {
 			//     if (entry.isIntersecting) {
 			//       entry.target.classList.add('active');
@@ -113,13 +120,23 @@ get_header();
 			//       var titlesUrl = entry.target.getAttribute('data-title');
 			//       history.pushState(null, null, linksUrl);
 			//       document.title = titlesUrl;
-			// 	  sendPageView();
+			//     sendPageView();
 			//     } else {
 			//       entry.target.classList.remove('active');
 			//     }
 			//   });
 			// }, options);
 			// masnotas.forEach(masnotas => { observer.observe(masnotas);});
+			// FIN TE PUEDE INTERESAR
+
+			let botones = document.getElementsByClassName('button');
+				for (let i = 0; i < botones.length; i++) {
+					let elDiv = botones[i];
+					let value = elDiv.innerHTML.trim();
+					if (value == 'Destacado-primero' || value == 'footer') {
+					elDiv.style.display = 'none';
+				}
+			}
 		</script>
 
 

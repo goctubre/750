@@ -82,7 +82,7 @@ register_setting( 'portada-page', 'catastrofe' );
 register_setting( 'portada-page', 'orden_portada' );
 }
 
-function my_setting_section_callback_function() { echo '<p>Desde acá se puede modificar la portada</p>'; }
+function my_setting_section_callback_function() { echo '<p>Alertas: usar comillas inglesas “ ” </p>'; }
 
 function portada_input() { ?>
     <label for="my-input"> <?php //_e( 'Ahora / Urgente' ); ?> </label>

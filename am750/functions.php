@@ -143,9 +143,8 @@ function am750_scripts() {
 	//wp_enqueue_style( 'am750-style', get_stylesheet_uri(), array(), _S_VERSION );
 	//wp_style_add_data( 'am750-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'am750-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'am750-scripts', get_template_directory_uri() . '/js/750-v03.js', array(), _S_VERSION, true );
-	//wp_enqueue_script( 'am750-floatsidebar', get_template_directory_uri() . '/js/float-sidebar.min.js', array(), _S_VERSION, true );
+	//wp_enqueue_script( 'am750-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime(get_template_directory() . '/js/navigation.js'), false); //
+	//wp_enqueue_script( 'am750-scripts', get_template_directory_uri() . '/js/750-v04.js', array(), filemtime(get_template_directory() . '/js/750-v04.js'), true); // AJAXIFY 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -181,3 +180,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
+
+// function defer_parsing_of_js( $url ) {
+//     if ( is_user_logged_in() ) return $url; //don't break WP Admin
+//     if ( FALSE === strpos( $url, '.js' ) ) return $url;
+//     if ( strpos( $url, 'jquery.js' ) ) return $url;
+//     return str_replace( ' src', ' defer src', $url );
+// }
+// add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );

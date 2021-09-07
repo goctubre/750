@@ -75,7 +75,11 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body id="body"> <!--ajaxify-->
+
+	<div id="donde">  <!--ajaxify-->
+		<div id="insidedonde" <?php body_class(); ?>>  <!--ajaxify-->
+
 
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD85CXQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -118,12 +122,34 @@
 		    </div>
 
 		    <div class="navbar-end">
+					<!-- SEARCH -->
+					<div id="search" class="is-hidden-touch">
+						<div class="nav-search-button">
+							<img id="search-btn" loading="lazy" src="<?php echo http2();?>/img/i-lupa.svg" width="22px" height="22px" alt="buscar" />
 
-				<!-- SEARCH -->
-				<form role="search" method="get" id="search" class="search-form is-hidden-touch" action="<?php echo home_url( '/' ); ?>" aria-label="Buscar">
-					<input type="search" class="input" id="search-input" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-					<button type="reset" class="search" id="search-btn"></button>
-				</form>
+							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" aria-label="Buscar">
+
+								<div class="field is-grouped">
+								  <p class="control is-expanded">
+								    <input type="search" class="input" id="search-input" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+									<!-- <button type="reset" class="search" id="search-btn"></button> -->
+								  </p>
+								  <p class="control">
+								    <a class="button is-small search-close">
+										<svg aria-labelledby="nav-search-button-close-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" width="22px">
+											<title id="nav-search-button-close-icon">Cerrar</title>
+											<polygon points="0.44 1.22 9.78 10.56 10.56 9.78 1.22 0.44 0.44 1.22"></polygon>
+											<polygon points="1.22 10.56 10.56 1.22 9.78 0.44 0.44 9.78 1.22 10.56"></polygon>
+										</svg>
+								    </a>
+								  </p>
+							</div>
+
+							</form>
+						</div>
+
+					</div>
+					<!--//SEARCH-->
 
 				<!--DARKMODE-->
 				<a class="navbar-item switch is-hidden-touch rayita" aria-label="Cambiar a modo oscuro">

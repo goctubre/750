@@ -26,7 +26,9 @@ get_header();
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-								<figure class="image is-16by9 mb-3"> <?php am750_post_thumbnail(); ?> </figure>
+								<figure class="image is-16by9 mb-3"> 
+									<?php am750_post_thumbnail(); ?>
+								</figure>
 								<?php the_title( '<h1 class="is-size-2 is-size-4-mobile mt-4 mb-4 is-fira has-text-centered">', '</h1>' );?>
 								<!-- <div class="ad-slot" id="mobile_nota_btf" data-adtype="box_mobile"> </div -->
 
@@ -166,7 +168,7 @@ get_header();
 				    <?php wp_reset_postdata(); ?>
 				 
 				<?php else : ?>
-				    <p><?php _e( 'Upsss.' ); ?></p>
+				    <p><?php _e( 'Próximamente.' ); ?></p>
 				<?php endif; ?>
 				<? endwhile; // End of the loop. ?>
 				<!--//VOLVER A ESCUCHAR-->

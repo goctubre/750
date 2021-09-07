@@ -32,20 +32,32 @@
 		<!-- <div class="column is-3" id="destacados"  data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
 		<div class="column is-3" id="destacados">	
 
-			<!--ESPECIAL - DESTACADO -->
-		    <button class="button is-750 etiquet has-text-weight-bold mb-2 noclick"> Democracia 2021 </button>
+			<!--PREDESTACADO -->
+			<div id="predestacado" class="mb-5">
+				<?php 
+					$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'destacado-primero', 'posts_per_page' => 1 ));
+				    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-			<a href="https://750.am/2021/08/12/elecciones-2021-donde-voto-en-las-paso/">
-				<h2 class="is-size-5 has-text-weight-semibold mb-3 is-fira">Elecciones 2021: dónde voto en las PASO</h2>
-			</a>
+		    		<!--democracia 2021-->
+					<?php  if ( in_category('democracia-2021') ) { ?>
+						<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='64' height='27'>
+					<? } else {?>
+						<button class="button is-750 etiquet has-text-weight-bold mb-2 noclick">
+							<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
+						</button>
+					<?}?>
+					<!--//democracia 2021-->
 
-			<figure class="image is-16by9 mb-5 nopuntito" style="border:none"> 
-		        <picture>
-		            <img loading="lazy" style="padding:0" class="is-bordeado" srcset="https://i2.wp.com/750.am/wp-content/uploads/2021/08/Voto.jpg?fit=1000%2C541&ssl=1" alt="Elecciones 2021: dónde voto en las PASO">
-		        </picture> 
-			 </figure>
-			<!--//ESPECIAL-->
+					<a href="<?php the_permalink(); ?>">
+						<h2 class="is-size-5 has-text-weight-semibold mb-3 is-fira"><?php the_title(); ?></h2>
+					</a>
 
+				    <?php echo picture_image('medium', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado');?>
+
+
+				<?php endwhile; ?>
+			</div>	
+			<!--//PREDESTACADO-->
 
     		<!--//DESTACADOS-->
     		<div data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php">
@@ -100,6 +112,12 @@
 						<?php echo picture_image('medium', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado');?>
 					<?php endif; ?>
 
+					<!--democracia 2021-->
+					<?php  if ( in_category('democracia-2021') ) { ?>
+					<img class='mt-4 pl-3' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='86' height='36'>
+					<? } ?>
+					<!--//democracia 2021-->
+
 		    		<p class="p-3 mt-4"> <?php echo categorias_programas();?> </p>
 		    		<a href="<?php the_permalink(); ?>">
 		        		<h2 class="is-size-5 mt-3 is-fira pr-3 pl-3 pr-3 pb-4"> <?php the_title(); ?></h2>
@@ -108,6 +126,13 @@
 
 				<div class="column is-offset-m1">
 				     <?php else : ?>
+
+				     	<!--democracia 2021-->
+				        <?php  if ( in_category('democracia-2021') ) { ?>
+						  <img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='64' height='27'>
+					    <? } ?>
+					    <!--//democracia 2021-->
+
 				     	<?php echo categorias_programas();?>
 			    		<a href="<?php the_permalink(); ?>">
 			        		<h3 class="is-size-5 has-text-weight-semibold is-fira mt-4 mb-4">
@@ -122,7 +147,6 @@
 	</div> <!--//columns-->
 </section> <!--//section-->
 <!--//ACTUALIDAD-->
-
 
 
 

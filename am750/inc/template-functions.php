@@ -304,14 +304,14 @@ include(get_template_directory() . '/inc/programacion-type.php');
 
 
 //Modifico el jquery version para que ande el zajax - Santi
-function modify_jquery_version() {
-    if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery',get_template_directory_uri() . '/js/jquery.min.js', false, '1.12.4');
-        wp_enqueue_script('jquery');
-    }
-}
-add_action('wp_enqueue_scripts', 'modify_jquery_version');
+// function modify_jquery_version() {
+//     if (!is_admin()) {
+//         wp_deregister_script('jquery');
+//         wp_register_script('jquery',get_template_directory_uri() . '/js/jquery.min.js', false, '1.12.4');
+//         wp_enqueue_script('jquery');
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'modify_jquery_version');
 //Modifico el jquery version para que ande el zajax
 
 

@@ -15,6 +15,15 @@
 get_header();
 ?>
 
+<!--TOP POSITION - paso2021-->
+<div class="container">
+
+	<!-- NOTAS DESCATADAS TOP - paso2021 -- sin portada-->
+		<?php include get_theme_file_path( '/-paso-2021/home-notas-top.php' ); ?>
+	<!-- // NOTAS DESCATADAS TOP -->
+</div>
+
+
 <!-- CATASTROFE -->
 	<?php 
 		$catastrofe =  get_option('catastrofe'); 
@@ -36,11 +45,11 @@ get_header();
 			</section>
 			<!--//BANNERS-->
 
-			<!--ESPECIASLES -->
+			<!--ESPECIALES -->
 			<section id="especiales" class="my-4">
-				<?php include get_theme_file_path( '/inc/home-especial-vacunas.php' );?>
+				<?php //include get_theme_file_path( '/inc/home-especial-vacunas.php' );?>
 			</section>
-			<!--//ESPECIASLES-->
+			<!--//ESPECIALES-->
 
 			<!--SERVICIOS -->
 			<!-- <section id="serviciostop" class="is-bg-grisclarito mt-5 mb-5">
@@ -207,7 +216,24 @@ get_header();
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then(function (registration) { console.log("success load"); }).catch(function (err) { console.log(err); });
    }
+
+  // QUIERO SABER MÁS == OK
+  var quierosaber = document.getElementById("quierosaber");
+
+  document.getElementById("sabermas").addEventListener('click', function () {
+    quierosaber.classList.toggle('sabermas');
+    var x = document.querySelector("#sabermas");
+    if (x.innerHTML === "Cerrar") {
+      x.innerHTML = "<img src='https://750.am/wp-content/themes/am750/img/i-prev.svg\' width=\'11px\' height=\'7px\'> Quiero saber más";
+      x.classList.remove("cerrate");
+    } else {
+      x.innerHTML = "Cerrar";
+      x.classList.add("cerrate");
+    }
+  });
+  
 </script>
+
 
 <?php
 //get_sidebar();

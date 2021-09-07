@@ -105,8 +105,8 @@
 
 						<?php endwhile; ?>
 					  </div>
-					  <div class="swiper-button-prev programacion-bt-prev"></div>
-					  <div class="swiper-button-next programacion-bt-next"></div>
+					  <div class="swiper-button-prev programacion-bt-prev"></div> <!--parche-->
+					  <div class="swiper-button-next programacion-bt-next"></div> <!--parche-->
 					</div> 
 				<!--// carrousel-->
 

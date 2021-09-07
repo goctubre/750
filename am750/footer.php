@@ -36,8 +36,11 @@
 	  		<div class="column">
 
 				<!-- Begin Mailchimp Signup Form -->
-				<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+				<!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"> -->
 				<style type="text/css">
+
+				#mc_embed_signup form{text-align:center;padding:10px 0 10px 0}.mc-field-group{display:inline-block}#mc_embed_signup input.email{font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;font-size:15px;border:1px solid #abb0b2;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#343434;background-color:#fff;box-sizing:border-box;height:32px;padding:0 .4em;display:inline-block;margin:0;width:350px;vertical-align:top}#mc_embed_signup label{display:block;font-size:16px;padding-bottom:10px;font-weight:700}#mc_embed_signup .clear{display:inline-block}#mc_embed_signup .button{font-size:13px;border:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;letter-spacing:.03em;color:#fff;background-color:#aaa;box-sizing:border-box;height:32px;line-height:32px;padding:0 18px;display:inline-block;margin:0;transition:all .23s ease-in-out 0s}#mc_embed_signup .button:hover{background-color:#777;cursor:pointer}#mc_embed_signup div#mce-responses{float:left;top:-1.4em;padding:0 .5em 0 .5em;overflow:hidden;width:90%;margin:0 5%;clear:both}#mc_embed_signup div.response{margin:1em 0;padding:1em .5em .5em 0;font-weight:700;float:left;top:-1.5em;z-index:1;width:80%}#mc_embed_signup #mce-error-response{display:none}#mc_embed_signup #mce-success-response{color:#529214;display:none}#mc_embed_signup label.error{display:block;float:none;width:auto;margin-left:1.05em;text-align:left;padding:.5em 0}@media (max-width:768px){#mc_embed_signup input.email{width:100%;margin-bottom:5px}#mc_embed_signup .clear{display:block;width:100%}#mc_embed_signup .button{width:100%;margin:0}}
+
 					@media screen and (max-width:768px){ #mc_embed_signup { width: 80%; margin-left: 10%;} #mc_embed_signup input.email {margin-bottom:10px;} }
 
 					@media screen and (min-width:769px){ 
@@ -56,7 +59,6 @@
 
 				<form action="https://750.us16.list-manage.com/subscribe/post?u=533d2b93d7b2998584d7dff67&amp;id=eef050d62a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				    <div id="mc_embed_signup_scroll">
-					
 					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
 				    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 				    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_533d2b93d7b2998584d7dff67_7336ef8e66" tabindex="-1" value=""></div>
@@ -64,7 +66,7 @@
 				</form>
 				</div>
 
-				<!--End mc_embed_signup--> 		
+				<!--End mc_embed_signup--> 	
 			</div>
 	  	</div>
 	  	<!--//NEWSLETTER-->
@@ -84,7 +86,7 @@
 				Ciudad de Buenos Aires <br> <br>
 
 
-				<b> <a href="https://750.am/sitemap.html"> Mapa del sitio </a> </b> <br>
+				<b> <a href="https://750.am/sitemap.html" target="_blank" class="no-ajaxy"> Mapa del sitio </a> </b> <br>
 
 				<ul id="redesbottom" class="redes">
 					<i class="fab fa-facebook-f"></i></a>
@@ -149,27 +151,38 @@
 	  </div>
 	</footer><!-- #footer -->
 		
-</div><!-- #page -->
+	</div><!-- #page -->
 
 
-	<!-- Back to top button -->
-	<a id="gototop" class="is-bg-celeste">
-		<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/chevron-up.svg" width="" height="" alt="Ir hacia arriba" />
-	</a>
+		<!-- Back to top button -->
+		<a id="gototop" class="is-bg-celeste">
+			<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/chevron-up.svg" width="" height="" alt="Ir hacia arriba" />
+		</a>
+
+
+		</div><!--INSIDE DONDE ajaxify-->
+	</div> <!--DONDE ajaxify-->
 
 
 	<!--Player-->
-	<div class="custom_player_space"> 
-		<div data-msp data-type='live' data-id='601bf3e463786007e6d3b9b0' data-player='603416a7b108a9485c0be15f'>
-			<script type='text/javascript' src='https://player.cdn.mdstrm.com/lightning_player/api.js' defer></script>
-		</div>
-	</div>
-	<!--player-->
+	<?php include get_theme_file_path( '/inc/inc-mediaplayer.php' );?>
+	<!--// Player-->->
 
 
-<?php wp_footer(); ?>
 
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" defer></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js" defer></script>
+    
+
+    <script src="<?php echo get_template_directory_uri(); ?>/js/750-ajaxify.js?=v<?php echo rand()?>>" defer></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/750-general.js?=v<?php echo rand()?>>" data-class="always" defer></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/750-home.js?=v<?php echo rand()?>>" data-class="always" defer></script>
+
+	<?php wp_footer(); ?>
 
 	<!--COMSCORE-->
 	<script type="text/javascript">

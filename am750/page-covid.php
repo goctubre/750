@@ -6,7 +6,9 @@
  * @package am750
  */
 // refe https://coronavirus.msal.gov.ar/vacunas/d/8wdHBOsMk/seguimiento-vacunacion-covid/d/8wdHBOsMk/seguimiento-vacunacion-covid?orgId=1&refresh=15m%3F%3F%3F%3F%3F%3Flogin
-include get_theme_file_path( '/covid-data/header.php' );
+
+get_header();
+//include get_theme_file_path( '/covid-data/header.php' );
 
 
 if(isset($_GET["sec"])){
@@ -15,8 +17,6 @@ if(isset($_GET["sec"])){
 	$section = "datos";
 }
 ?>
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/covid-data/style.css?v=<?php echo rand()?>">
 
     <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" async></script> -->
 
@@ -58,6 +58,10 @@ if(isset($_GET["sec"])){
 
 
 	</section>
+
+<!--     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" id="vacunas" data-class="vacunas">
+ -->	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/covid-data/style.css?v=<?php echo rand()?>" id="vacunas" data-class="vacunas">
+
 
 <?php
 get_footer();

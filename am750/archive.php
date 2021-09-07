@@ -21,10 +21,14 @@ get_header();
 						<?php if ( have_posts() ) : ?>
 
 							<header class="page-header">
-								<?php
+
+								<!--PASO 2021-->
+								<?php  if ( in_category('democracia-2021') ) { ?>
+									<img class='mr-5 mb-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='140' height='59'>
+								<? } else {
 									the_archive_title( '<h1 class="is-size-4 mb-5 mt-4">', '</h1>' );
 									the_archive_description( '<div class="archive-description">', '</div>' );
-								?>
+									}?>
 							</header><!-- .page-header -->
 
 							<?php

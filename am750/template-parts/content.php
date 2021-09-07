@@ -11,17 +11,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-newPost="true" data-title="<?php echo get_the_title()?>" data-url="<?php echo str_replace(home_url(), '', get_permalink())?>">
 	<header class="entry-header mb-5">
+
+
+
+		<!--PASO 20211-->
+		<?php  if ( in_category('democracia-2021') ) { ?>
+			<img class='mr-5 mb-1' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='140' height='59'>
+		<? } else {
+				$categories = get_the_category();
+				$output = '';
+				if ( ! empty( $categories ) ) {
+				    foreach( $categories as $category ) {
+				        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light etiquet mb-2">' . esc_html( $category->name ) . '</button> </a>';
+				    }
+				    echo trim( $output );
+				}
+			}?>
+
+
 		<?php
 		//if ( is_singular() ) :
 
-			$categories = get_the_category();
-			$output = '';
-			if ( ! empty( $categories ) ) {
-			    foreach( $categories as $category ) {
-			        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light etiquet mb-2">' . esc_html( $category->name ) . '</button> </a>';
-			    }
-			    echo trim( $output );
-			}
 
 			the_title( '<h1 class="is-size-1 is-size-3-mobile mt-4 mb-4 is-fira">', '</h1>' ); //IS-SIZE-2
 			

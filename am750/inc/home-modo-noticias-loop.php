@@ -15,9 +15,17 @@
     	<article id="lanotaprincipal">
 
     		<div class="etiquetas">
-				<button class="button is-750 etiquet has-text-weight-bold noclick">
-					<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
-				</button>
+
+    			<!--democracia 2021-->
+				<?php  if ( in_category('democracia-2021') ) { ?>
+					<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='86' height='36'>
+				<? } else {?>
+					<button class="button is-750 etiquet has-text-weight-bold noclick">
+						<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
+					</button>
+				<? } ?>
+				<!--//democracia 2021-->
+
 
 				<?php echo categorias_programas();?>
 			</div>
@@ -85,9 +93,13 @@
 					<div class="column"> 
 						<div class="is-hidden-desktop"> <?php echo categorias_programas();?> </div>
 
-			    		<p class="is-size-6 mt-2 is-hidden-desktop">
-			    			<?php //echo cantidad_tiempo_entrada();?>	    		
-		    			</p>
+						<!--democracia 2021-->
+						<?php  if ( in_category('democracia-2021') ) { ?>
+							<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='64' height='27'>
+						<? } ?>
+						<!--//democracia 2021-->
+
+			    		<p class="is-size-6 mt-2 is-hidden-desktop"> <?php //echo cantidad_tiempo_entrada();?> </p>
 
 			    		<a href="<?php the_permalink(); ?>">
 			        		<h2 class="is-size-5 has-text-weight-semibold is-fira">
@@ -103,6 +115,12 @@
 	     <?php else : ?>
 	    	<article class="mb-6">
 
+	    		<!--democracia 2021-->
+				<?php  if ( in_category('democracia-2021') ) { ?>
+					<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='64' height='27'>
+				<? } ?>
+				<!--//democracia 2021-->
+				
 				<?php echo categorias_programas();?>
 
 	    		<p class="is-size-6 mt-2">
