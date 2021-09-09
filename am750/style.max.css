@@ -132,9 +132,10 @@ h2 {/*background: lightgreen*/}
 
 /* Banners 
 --------------------------------------------- */
-.ad-slot { z-index: 0; position: relative; background: #eee}
+.ad-slot { z-index: 0; position: relative; background: #eee; margin: 0 auto;}
 #banner01 img {width: 300px !important}
 #bannermiddle, #bannertop {/*overflow-x: hidden;*/ overflow: hidden; height:90px;}
+#bannertop .ad-slot { margin: 0 auto;}
 
 #Home_MediumRectangle_Content, 
 #Home_MediumRectangle_Content_2,
@@ -644,8 +645,8 @@ background-position: center center; background-size: 10px; background-image: url
 
 
 @media screen and (max-width:1023px){
-  .breaking {margin-left: -0.65rem; margin-right: -0.65rem; padding: 2rem 1.4rem 1.5rem !important; text-align: left; 
-    line-height: 140%; z-index: 1; margin-top: none; top:unset;}
+  .breaking {margin-left: -0.65rem; margin-right: -0.65rem; padding: 1rem 1.4rem 0.8rem !important; text-align: left; 
+    line-height: 140%; z-index: 1; margin-top: none; top:unset; height: unset;}
   .ahora::before, .urgente::before {margin-left: 0;}
   .catastrofe #lanotaprincipal h2,
   .catastrofe #lanotaprincipal p  {text-align: left;}
@@ -812,7 +813,7 @@ border-radius: 10px; padding: 30px 6px;}
   #bt-wa {padding-left: 0!important; padding-right: 0; margin-right: 10px}
   #bt-wa img { width: 33px; max-height: unset; margin-top:5px; }
 
-  #bannertop { margin-right: -0.7rem;  margin-left: -0.7rem; /*overflow: hidden; */height: 56px}
+  #bannertop { margin-right: -0.7rem;  margin-left: -0.7rem; /*overflow: hidden; */height: 50px; margin-top: 8px;}
   #serviciostop {font-size: 12px; padding: 5px 10px !important;letter-spacing: -0.4px; line-height: 22px; 
     margin-top: 0!important; margin-bottom: .25rem !important; margin-left: -.75rem; margin-right: -.75rem; 
     border-radius: 0 !important;}
@@ -847,8 +848,8 @@ border-radius: 10px; padding: 30px 6px;}
   #nota-principal article:last-child { margin-bottom: 0 !important;}
 
   #opinion .column.is-offset-1 article:nth-last-of-type(-n+1) { display: none;}
-  .opinion.firstmobile {margin-top: -46px; margin-left: .75rem;}
-
+  .firstmobile {margin-top: -46px; }
+  .firstmobile .opinion {/*margin-top: -46px; */margin-left: .75rem;}
 
   #lanotasegunda { display: flex; flex-direction: column; }
   .o-1 {order: 1;}

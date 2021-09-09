@@ -19,9 +19,9 @@
 
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css"></noscript>
-
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">  -->
 	
+
 	<!--PASO 2021-->
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/-paso-2021/elecciones-paso.css?v=<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!--//PASO 2021-->
@@ -40,7 +40,7 @@
 
 
 	<!--PRELOAD GOOGLE FONT-->
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> -->
@@ -67,7 +67,6 @@
 
 	<!--ADZONE-->
 	<!-- <script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script> -->
-	
 	<link rel="preload" href="https://s-adzone.com/c/14_750amsupertag.js" as="script">
 	<script type="text/javascript" src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
 	 
@@ -78,9 +77,6 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TD85CXQ');</script>
 	<!-- End Google Tag Manager -->
-
-
-
 </head>
 
 <!-- <body id="body" <?php //body_class(); ?>> OFIGINAL--> <!--ajaxify-->
@@ -161,8 +157,6 @@
 					</div>
 					<!--//SEARCH-->
 
-
-
 					<!--DARKMODE-->
 					<div class="navbar-item switch is-hidden-touch rayita" aria-label="Cambiar a modo oscuro">
 						<img loading="lazy" src="<?php echo http2();?>/img/i-contrast.svg" width="22px" height="" />
@@ -231,8 +225,13 @@
 
 		</header><!-- #masthead -->
 
-		<!--BREAKING NEWS  -->
+		<!--BANNERS ELECCIONES 2021 -->
+		<section id="bannertop" class="is-bg-grisclarito is-hidden-desktop" style="margin-top:8px">
+			<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
+		</section>
+		<!--//BANNERS-->
 
+		<!--BREAKING NEWS  -->
 		<?php
 			if ( is_front_page()) {
 

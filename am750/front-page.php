@@ -1,5 +1,5 @@
 <?php
-/**
+/* Template Name: HOME
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
@@ -17,31 +17,54 @@ get_header();
 
 <!--TOP POSITION - paso2021-->
 <div class="container">
-
-	<!-- NOTAS DESCATADAS TOP - paso2021 -- sin portada-->
-		<?php include get_theme_file_path( '/-paso-2021/home-notas-top.php' ); ?>
-	<!-- // NOTAS DESCATADAS TOP -->
-</div>
-
-
-<!-- CATASTROFE -->
 	<?php 
+		$elecciones_up =  get_option('elecciones_up');
+		$notas_up =  get_option('elecciones_up'); 
 		$catastrofe =  get_option('catastrofe'); 
-		if( $catastrofe == 'una' || $catastrofe == 'cuatro' ) { 
-			include get_theme_file_path( '/inc/home-modo-catastrofe-loop.php' );
-		}
 	?>
-<!--//CATASTROFE-->
+	<!-- WIDGET ELECCIONES - paso2021-->
+		<?php 
+			if( $elecciones_up == 'widget') { include get_theme_file_path( '/-paso-2021/home-especial-elecciones.php' ); }
+		?>
+	<!-- // WIDGET ELECCIONES -->
+
+	<!-- WIDGET ELECCIONES - paso2021-->
+		<?php 
+			if( $elecciones_up == 'widgetp12') { include get_theme_file_path( '/-paso-2021/home-especial-elecciones-p12.php' );} ?>
+	<!-- // WIDGET ELECCIONES -->
+
+	<!-- NOTAS DESCATADAS TOP - paso2021-->
+		<?php 
+			if( $elecciones_up == 'servicio') { include get_theme_file_path( '/-paso-2021/home-notas-top.php' );} ?>
+	<!-- // NOTAS DESCATADAS TOP -->
+
+	<!-- CATASTROFE -->
+	<?php 
+		if( $catastrofe == 'una' || $catastrofe == 'cuatro' || $catastrofe == 'mapa'  ) { 
+			include get_theme_file_path( '/inc/home-modo-catastrofe-loop.php' ); } ?>
+	<!--//CATASTROFE-->
+
+	<!-- DESTACADO SUPERIOR - paso2021-->
+		<?php if( $catastrofe == 'destacadosuperior' ||$catastrofe == 'destacadosuperiormasnotas' ) { 
+			include get_theme_file_path( '/inc/home-nota-top-destacada.php' ); }?>
+	<!-- // NOTAZA  -->
+
+	</div>
+<!--//TOP POSITION-->
+
+
+
+
 
 <div id="bloque01" class="container  <?php $catastrofe =  get_option('catastrofe'); if( $catastrofe == 'una' || $catastrofe == 'cuatro' ) { echo "catastrofe";} ?>">
 
 	<div class="columns">
 		
 		<div class="column is-9">
-			<!--BANNERS -->
+			<!--BANNERS - UBICACION ORIGINAL-->
 			<section id="bannertop" class="is-bg-grisclarito">
 				<div class="ad-slot" id="home_billboard_atf" data-adtype="billboard"></div>
-				<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
+				<!--<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> 300x50-320x50-360x56-->
 			</section>
 			<!--//BANNERS-->
 
