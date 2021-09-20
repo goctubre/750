@@ -133,7 +133,7 @@ get_header();
 				for (let i = 0; i < botones.length; i++) {
 					let elDiv = botones[i];
 					let value = elDiv.innerHTML.trim();
-					if (value == 'Destacado-primero' || value == 'footer') {
+					if (value == 'Destacado-primero' || value == 'footer' || value == 'catastrofe-uno') {
 					elDiv.style.display = 'none';
 				}
 			}

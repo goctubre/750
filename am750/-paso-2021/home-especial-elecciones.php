@@ -3,9 +3,13 @@
 
 <script type="text/javascript">
 window.addEventListener('message', function(e) {
-    if(e.data.height){
-        // console.log("e.data.height",e.data.height);
-        document.querySelector('#GOlistas_paso').style.height = e.data.height+'px';
+    if(e.origin!="https://www.pagina12.com.ar"){
+        console.log("750 wiget heihgt",e.data.height);
+
+        if(e.data.height){
+            // console.log("e.data.height",e.data.height);
+            document.querySelector('#GOlistas_paso').style.height = e.data.height+'px';
+        }
     }
 });
 </script>

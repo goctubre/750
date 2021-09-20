@@ -86,3 +86,6 @@
 
 
 <hr class="dashed">
+
+
+<script type="text/javascript" src="https://player.cdn.mdstrm.com/lightning_player/api.js" data-class="always"></script>

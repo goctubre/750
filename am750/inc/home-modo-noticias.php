@@ -8,14 +8,15 @@
 			<!--BANNER MOBILE-->
 			<div class="ad-slot mb-6" id="mobile_home_atf" data-adtype="box_mobile"> </div>
 			<!-- //BANNER MOBILE-->
-			<div data-autorefresh="/inc/s-informativo-750.php" class="sticky">
+			<!-- <div data-autorefresh="/inc/s-informativo-750.php" class="sticky"> -->
+			<div class="sticky">
 				<?php include get_theme_file_path( '/inc/s-informativo-750.php' );?>
 			</div>
 		</div>
 		<!--//INFORMATIVO COLUMN3-->
 
-		<div class="column" id="nota-principal" data-scroll data-scroll-speed="1" data-autorefresh="/inc/home-modo-noticias-loop.php">
-
+		<!-- <div class="column" id="nota-principal" data-scroll data-scroll-speed="1" data-autorefresh="/inc/home-modo-noticias-loop.php"> -->
+		<div class="column" id="nota-principal">
     		<!--//ULTIMAS NOTICIAS -  CATASTROFE -->
     			<?php 
     				$catastrofe =  get_option('catastrofe'); 
@@ -24,14 +25,12 @@
     				}
     			?>
     		<!--//ULTIMAS NOTICIAS-->
-
 		</div>
 
 
 		<!--DESTACADOS-->
 		<!-- <div class="column is-3" id="destacados"  data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
 		<div class="column is-3" id="destacados">	
-
 			<!--PREDESTACADO -->
 			<div id="predestacado" class="mb-5">
 				<?php 
@@ -60,7 +59,8 @@
 			<!--//PREDESTACADO-->
 
     		<!--//DESTACADOS-->
-    		<div data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php">
+    		<!-- <div data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
+    		<div>	
 				<?php include get_theme_file_path( '/inc/home-modo-noticias-destacados-loop.php' );?>
 			</div> 
     		<!--//DESTACADOS-->
@@ -78,36 +78,16 @@
 <section id="mapasection" class="mb-6-mobile">
 	<?php
 		$catastrofe_mapa =  get_option('catastrofe_mapa');  
-		if( $catastrofe_mapa == 'on' && $catastrofe == 'destacadosuperior' || $catastrofe == 'off' &&  $catastrofe_mapa == 'on' ||  $catastrofe_mapa == 'on' && $catastrofe == 'destacadosuperiormasnotas') { 
-			$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'mapa-portada', 'orderby' => 'menu_order',  'order' => 'ASC', 'posts_per_page' => 1 ) );
-			
-			if ( $the_query->have_posts() ) : ?>
-			 					 
-			 	<hr class="dashed">
-				 
-			    <!-- the loop -->
-			    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<a href="<?php the_permalink(); ?>"> <h3 class="is-size-2 is-size-3-mobile mt-3 mb-4 is-fira lh-110 has-text-centered  has-text-left-mobile has-text-weight-bold"> <?php the_title(); ?> </h3> </a>
-					<p class="mb-5 has-text-centered has-text-left-mobile"> <?php echo get_post_meta( get_the_ID(),  'bajada', true ); ?> </p>	
-			    <?php endwhile; ?>
-			    <!-- end of the loop -->
-
-			    <?php wp_reset_postdata(); ?>
-
-			<?php else : ?> <p><?php //_e( 'Upsss.' ); ?></p> <?php endif; ?>
-
-			<!--IFRAME MAPA -->		
-			<iframe id="iframemapa" src="<?php echo get_option( 'mapa_url');?>" style="border:0px #ffffff none;" name="mario" scrolling="no" marginheight="0px" marginwidth="0px" allowfullscreen="" width="100%" height="950px" frameborder="0"></iframe>
-			<!--//IFRAME MAPA-->
-
-		<?php
-		}
+		if( $catastrofe_mapa == 'on' &&  $catastrofe !== 'mapa') { ?>
+		<!-- <div data-autorefresh="-paso-2021/mapa-elecciones.php"> -->
+		<div>
+			<?php include get_theme_file_path( '-paso-2021/mapa-elecciones.php' );?>
+		</div>	
+		<?}
 	?>
 
 </section>
 <!--//MAPA - PASO 2021-->
-
-
 
 
 <!-- MÁS DE ACTUALIDAD-->

@@ -1,3 +1,7 @@
+<style>
+#nota-top a:hover { opacity: 0.9 !important;}
+</style>
+
 <!--BANNERS -->
 <section id="bannertop" class="is-bg-grisclarito is-hidden-mobile">
 	<div class="ad-slot" id="home_billboard_atf" data-adtype="billboard"></div>
@@ -7,7 +11,7 @@
 
 <div id="nota-top">
 
-	<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'catastrofe', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 1 ) );	?>
+	<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'catastrofe-uno', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 1 ) );	?>
 
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -18,7 +22,7 @@
 				
 				<?php if( $catastrofe == 'destacadosuperior' ||  $catastrofe == 'destacadosuperiormasnotas' ) { 
 				if ( has_post_thumbnail() ) :
-					echo picture_image('large', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9 is-inline-block', 'is-bordeado');
+					echo picture_image('full', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9 is-inline-block', 'is-bordeado');
 				 	endif;
 					};
 				?>
@@ -29,7 +33,9 @@
 
 	<!--CATÁSTROFE HOME NORMAL - ULTIMAS +3-->
 	<?php
-		if( $catastrofe == 'destacadosuperiormasnotas' ) {  $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'catastrofe', 'orderby' => 'menu_order',  'order' => 'ASC', 'posts_per_page' => 3, 'offset' => 1 ) );
+		if( $catastrofe == 'destacadosuperiormasnotas' ) {  $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'catastrofe', 'orderby' => 'menu_order',  'order' => 'ASC', 'posts_per_page' => 3//, 'offset' => 1 
+		) );
+			//'offset' => 1 
 	?>
 
 		<div class="columns mt-1">
@@ -40,7 +46,7 @@
 					<article class="mb-4 column">
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php echo picture_image('medium', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado');?>
+							<?php echo picture_image('large', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado');?>
 						<?php endif; ?>
 
 						<div class="my-3"> <?php echo categorias_programas();?> </div>

@@ -2,6 +2,10 @@ h1 {margin-top: 30px !important; font-size:33px!important}
 .dipButton_off, .selected {filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))!important;}
 .provincias { position: relative;  top: -50px; }
 
+/*MAPA INSIDE NOTAS*/
+#iframemapa {height:950px}
+@media (max-width: 780px) { #iframemapa {height:640px !important} }
+
 
 /* MAPA DENTRO DE SECTION */
 #mapasection #iframemapa .contenedor {transform: unset;}

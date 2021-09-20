@@ -226,9 +226,14 @@
 		</header><!-- #masthead -->
 
 		<!--BANNERS ELECCIONES 2021 -->
-		<section id="bannertop" class="is-bg-grisclarito is-hidden-desktop" style="margin-top:8px">
-			<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
-		</section>
+		<?php
+			if ( is_front_page()) { ?>
+				<section id="bannertop" class="is-bg-grisclarito is-hidden-desktop" style="margin-top:8px">
+					<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
+				</section>
+			<?php }
+		?>
+
 		<!--//BANNERS-->
 
 		<!--BREAKING NEWS  -->
