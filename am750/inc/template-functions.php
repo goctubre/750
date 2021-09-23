@@ -175,17 +175,18 @@ function bajada_save_meta( $post_id, $post ) {
 
 /* CATEGORÍAS PROGRAMA */
 function categorias_programas() {
-    $programas = get_the_category( $post->ID );
+   //$programas = get_the_category( $post->ID );
+    $programas = get_the_category( get_the_ID() );
 
-        $output = '';
-        if ( ! empty( $programas ) ) {
-            foreach( $programas as $programa ) {
-                if ($programa->parent != 0) {
-                    $output .= '<a href="' . esc_url( get_category_link( $programa->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'Ver todas las noticias en %s', 'textdomain' ), $programa->name ) ) . '"> <button class="button is-light etiquet">' . esc_html( $programa->name ) . '</button> </a>';
-                }
-
+    $output = '';
+    if ( ! empty( $programas ) ) {
+        foreach( $programas as $programa ) {
+            if ($programa->parent != 0) {
+                $output .= '<a href="' . esc_url( get_category_link( $programa->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'Ver todas las noticias en %s', 'textdomain' ), $programa->name ) ) . '"> <button class="button is-light etiquet">' . esc_html( $programa->name ) . '</button> </a>';
             }
-            echo trim( $output );
+
+        }
+        echo trim( $output );
     }
 }
 
@@ -323,9 +324,7 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
 // Remove dashicons in frontend for unauthenticated users
 add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
 function bs_dequeue_dashicons() {
-    if ( ! is_user_logged_in() ) {
-        wp_deregister_style( 'dashicons' );
-    }
+    if ( ! is_user_logged_in() ) { wp_deregister_style( 'dashicons' ); }
 }
 
 //Remove Gutenberg Block Library CSS from loading on the frontend
@@ -340,10 +339,40 @@ function bs_dequeue_dashicons() {
 // wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
 // }
 
-function webapptiv_remove_block_library_css()
-{
-wp_dequeue_style( 'wp-block-library' ); }
+function webapptiv_remove_block_library_css() {wp_dequeue_style( 'wp-block-library' ); }
 add_action( 'wp_enqueue_scripts', 'webapptiv_remove_block_library_css' );
+
+
+//SACAR COSAS - WEB VITALS 2
+function deregister_media_elements(){
+    if (is_front_page() || is_home()) {
+        wp_deregister_script('wp-mediaelement');
+        wp_deregister_style('wp-mediaelement');
+    }
+}
+add_action('wp_enqueue_scripts','deregister_media_elements');
+
+function deregister_cosas(){
+    if (is_front_page() || is_home()) {
+        wp_deregister_script('allow-webp-image');
+        wp_deregister_style('allow-webp-image');
+   }
+}
+add_action('wp_enqueue_scripts','deregister_cosas');
+
+function dequeue_unused_css() { //CHEQUEAR
+     if (is_front_page() || is_home()) {
+        wp_dequeue_style('components');
+        wp_deregister_style('components');
+        wp_dequeue_style('block-editor');
+        wp_deregister_style('block-editor');
+     }
+  }
+add_action('wp_enqueue_scripts', 'dequeue_unused_css', 330);
+
+
+
+
 
 /* PICTURE THUMBAIL */
 // Thumbnail    (150 x 150 hard cropped)
@@ -401,36 +430,6 @@ function pagination_bar() {
 }
 
 
-//AMP - SANTI
-function get_custom_cat_template($single_template) {
-   global $post;
-   if ( in_category( 'amp' )) {
-remove_for_amp();
-      $single_template = dirname( __FILE__ ) . '/../amp/single-amp.php';
-   }
-   return $single_template;
-} 
-add_filter( "single_template", "get_custom_cat_template" ) ;
-
-
-function get_custom_category_template($category_template) {
-   global $post;
-   if ( in_category( 'amp' )) {
-remove_for_amp();
-      $single_template = dirname( __FILE__ ) . '/../amp/category-amp.php';
-   }
-   return $single_template;
-} 
-add_filter( "category_template", "get_custom_category_template" ) ;
-
-remove_action('wp_head', 'wlwmanifest_link');
-
-remove_for_amp();
-function remove_for_amp(){
-    remove_action('wp_head', 'wlwmanifest_link');
-    show_admin_bar(false);
-    
-}
 
 // CATEGORIA BODY CLASS - FULLWIDTH - paso2021
 add_filter('body_class','add_category_to_single');

@@ -166,6 +166,10 @@ require get_template_directory() . '/inc/template-functions.php';
 /*** Functions Admin which enhance the theme by hooking into WordPress. */
 require get_template_directory() . '/inc/template-functions-admin.php';
 
+/*** Functions AMP */
+require get_template_directory() . '/inc/template-functions-amp.php';
+
+
 /*** Customizer additions. */
 require get_template_directory() . '/inc/customizer.php';
 
