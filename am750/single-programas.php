@@ -26,23 +26,14 @@ get_header();
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-								<figure class="image is-16by9 mb-3"> 
-									<?php am750_post_thumbnail(); ?>
-								</figure>
+								<?php echo picture_image('full', 'medium', 'medium', 'medium', 'is-16by9', 'is-bordeado', 'eager', 'high');?>
+								
 								<?php the_title( '<h1 class="is-size-2 is-size-4-mobile mt-4 mb-4 is-fira has-text-centered">', '</h1>' );?>
 								<!-- <div class="ad-slot" id="mobile_nota_btf" data-adtype="box_mobile"> </div -->
 
 								<div class="entry-content has-text-centered"> <?php the_content(); ?> </div>
 									<?php 
-									$dias_spa=array(
-										"mon"=>"lunes",
-										"tue"=>"martes",
-										"wed"=>"miercoles",
-										"thu"=>"jueves",
-										"fri"=>"viernes",
-										"sat"=>"sabado",
-										"sun"=>"domingo",
-									);
+									$dias_spa=array( "mon"=>"lunes", "tue"=>"martes", "wed"=>"miercoles", "thu"=>"jueves", "fri"=>"viernes", "sat"=>"sabado", "sun"=>"domingo",);
 										$post_id = get_the_ID();
 									    $calendario = get_posts(array(
 											'numberposts'	=> -1,
@@ -61,15 +52,12 @@ get_header();
 										if(count(array_intersect($lun_a_vier, $programa_dias)) == count($lun_a_vier)){
 										    $dias="de lunes a viernes";
 										}else{
-										    	$dias=array();
-											foreach ($programa_dias as $key => $value) {
-										    	$dias[]=$dias_spa[$value];
-											}
+											$dias=array();
+											foreach ($programa_dias as $key => $value) { $dias[]=$dias_spa[$value]; }
 											$dias=implode($dias,", ");
 										}
 									?>
-								<div style="" class="has-text-centered">Escuchalo <?php echo $dias;?> de <?php echo $horario_inicio;?> a <?php echo $horario_fin;?>hs 
-								</div>
+								<div class="has-text-centered">Escuchalo <?php echo $dias;?> de <?php echo $horario_inicio;?> a <?php echo $horario_fin;?>hs </div>
 
 
 								<?php $programa_id=get_the_ID();
@@ -153,9 +141,7 @@ get_header();
 
 									<?php
 										the_title( '<h3 class="is-fira is-size-5"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-									if ( 'post' === get_post_type() ) :
-										?>
-
+											if ( 'post' === get_post_type() ) : ?>
 									<?php endif; ?>
 								</div>
 

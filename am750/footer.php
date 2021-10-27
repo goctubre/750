@@ -166,9 +166,7 @@
 
 	<!--Player-->
 	<?php include get_theme_file_path( '/inc/inc-mediaplayer.php' );?>
-	<!--// Player-->->
-
-
+	<!--// Player-->
 
 
 	<!-- <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script"> -->

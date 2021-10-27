@@ -167,7 +167,7 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-functions-admin.php';
 
 /*** Functions AMP */
-require get_template_directory() . '/inc/template-functions-amp.php';
+//require get_template_directory() . '/inc/template-functions-amp.php';
 
 
 /*** Customizer additions. */

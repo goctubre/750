@@ -57,8 +57,8 @@
 
 
 	<hr class="dashed">
-	
-	<?php echo picture_image('full', 'medium', 'medium', 'medium', 'is-16by9', 'is-bordeado');?>
+	<?php echo picture_image('full', 'medium', 'medium', 'medium', 'is-16by9', 'is-bordeado', 'eager', 'high');?>
+
 	<!-- figure class="image is-16by9 mb-3">  <?php //am750_post_thumbnail(); ?> </figure> -->
 
 	<p class="is-size-6 mb-6"> <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?> </p>
@@ -84,8 +84,6 @@
 </section>
 <!--//BANNER-->
 
-
 <hr class="dashed">
-
 
 <script type="text/javascript" src="https://player.cdn.mdstrm.com/lightning_player/api.js" data-class="always"></script>

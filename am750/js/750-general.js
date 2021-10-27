@@ -79,32 +79,6 @@ document.querySelector("html").classList.remove("overhidden");
 //FIN REDES
 
 
-//PLAYING / PAUSE MEDIAPLAYER == jquery
-function check_if_playing(elem=false){
-    if(jQuery(".np__btn_controls_play").children().hasClass("fa-pause")){
-      jQuery(".play_btn").addClass("reproduciendo");
-      jQuery(".np__btn_controls_play").addClass("reproduciendo");
-      console.log("reproduciendo");
-     // window.reproduciendo=true;
-      if(elem!=false){ dataLayer.push({'event': 'play'}); }
-    } else {
-      jQuery(".play_btn").removeClass("reproduciendo");
-      jQuery(".np__btn_controls_play").removeClass("reproduciendo");
-      console.log("pausa");
-      //window.reproduciendo=false;
-      if(elem!=false){ dataLayer.push({'event': 'stop'}); }
-    }
-     console.log(window.reproduciendo);
-}
-
-var playPauseStreaming = function(elem) { jQuery(".np__btn_controls_play").click(); setTimeout(function(){ check_if_playing(elem); }, 700);};
-
-jQuery("body").on("click touch", ".np__btn_controls_play", function() { setTimeout(function(){ check_if_playing("player"); }, 700); });  
-jQuery("body").on("click touch", ".play_btn", function() { playPauseStreaming(jQuery(this)) });  
-
-check_if_playing();
-
-
 //PLAYING / PAUSE MEDIAPLAYER JS --> terminar cuándo se pueda controlar vía api
 // btplayerdown = document.querySelector('.np__btn_controls_play');
 // btplayerup = document.querySelector('.play_btn');
@@ -186,37 +160,46 @@ check_if_playing();
 
 
 
-    //ANALYTICS
-    function check_if_playing(elem=false){
-        if(jQuery(".np__btn_controls_play").children().hasClass("fa-pause")){
-          jQuery(".play_btn").addClass("reproduciendo");
-          jQuery(".np__btn_controls_play").addClass("reproduciendo");    
-          window.reproduciendo=true;
-          if(elem!=false){ dataLayer.push({'event': 'play'}); }
-        }else{
-          jQuery(".play_btn").removeClass("reproduciendo");
-          jQuery(".np__btn_controls_play").removeClass("reproduciendo");    
-          window.reproduciendo=false;
-          if(elem!=false){ dataLayer.push({'event': 'stop'}); }
-        }
-        // console.log(window.reproduciendo);
-    }
+  //ANALYTICS
+  function sendPageView(){
+    dataLayer.push({ 'event': 'pageview','pagePath': window.location.pathname,'pageTitle': document.title });
+    self.COMSCORE && COMSCORE.beacon({c1:"2",c2:"24322362"});
+    jQuery.ajax({
+      url : "https://750.am/wp-content/themes/am750/COMSCORE.txt?rand="+Math.random(4),
+            type: 'get',
+            success: function(response) { console.log(response); }
+        });
+  }
 
-    function sendPageView(){
-      dataLayer.push({ 'event': 'pageview','pagePath': window.location.pathname,'pageTitle': document.title });
-      self.COMSCORE && COMSCORE.beacon({c1:"2",c2:"24322362"});
-      jQuery.ajax({
-        url : "https://750.am/wp-content/themes/am750/COMSCORE.txt?rand="+Math.random(4),
-              type: 'get',
-              success: function(response) { console.log(response); }
-          });
-    }
-
-    sendPageView();
-
-    //ANALYTICS
+  sendPageView();
+  //ANALYTICS
 
 
+
+  //PLAYING / PAUSE MEDIAPLAYER == jquery
+  function check_if_playing(elem=false){
+      if(jQuery(".np__btn_controls_play").children().hasClass("fa-pause")){
+        jQuery(".play_btn").addClass("reproduciendo");
+        jQuery(".np__btn_controls_play").addClass("reproduciendo");
+        console.log("reproduciendo");
+        window.reproduciendo=true;
+        if(elem!=false){ dataLayer.push({'event': 'play'}); }
+      } else {
+        jQuery(".play_btn").removeClass("reproduciendo");
+        jQuery(".np__btn_controls_play").removeClass("reproduciendo");
+        console.log("pausa");
+        window.reproduciendo=false;
+        if(elem!=false){ dataLayer.push({'event': 'stop'}); }
+      }
+      console.log(window.reproduciendo);
+  }
+
+  var playPauseStreaming = function(elem) { jQuery(".np__btn_controls_play").click();};
+
+  jQuery("body").on("click touch", ".np__btn_controls_play", function() { setTimeout(function(){ check_if_playing("player"); }, 700); });  
+  jQuery("body").on("click touch", ".play_btn", function() { playPauseStreaming(jQuery(this)) });  
+
+  check_if_playing();
 
 
   //PROGRAMAS TAB - PAGE PROGRAMAS

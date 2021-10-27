@@ -343,32 +343,32 @@ function webapptiv_remove_block_library_css() {wp_dequeue_style( 'wp-block-libra
 add_action( 'wp_enqueue_scripts', 'webapptiv_remove_block_library_css' );
 
 
-//SACAR COSAS - WEB VITALS 2
-function deregister_media_elements(){
-    if (is_front_page() || is_home()) {
-        wp_deregister_script('wp-mediaelement');
-        wp_deregister_style('wp-mediaelement');
-    }
-}
-add_action('wp_enqueue_scripts','deregister_media_elements');
+//SACAR COSAS - WEB VITALS 2 - 23/09/2021
+// function deregister_media_elements(){
+//     if (is_front_page() || is_home()) {
+//         wp_deregister_script('wp-mediaelement');
+//         wp_deregister_style('wp-mediaelement');
+//     }
+// }
+// add_action('wp_enqueue_scripts','deregister_media_elements');
 
-function deregister_cosas(){
-    if (is_front_page() || is_home()) {
-        wp_deregister_script('allow-webp-image');
-        wp_deregister_style('allow-webp-image');
-   }
-}
-add_action('wp_enqueue_scripts','deregister_cosas');
+// function deregister_cosas(){
+//     if (is_front_page() || is_home()) {
+//         wp_deregister_script('allow-webp-image');
+//         wp_deregister_style('allow-webp-image');
+//    }
+// }
+// add_action('wp_enqueue_scripts','deregister_cosas');
 
-function dequeue_unused_css() { //CHEQUEAR
-     if (is_front_page() || is_home()) {
-        wp_dequeue_style('components');
-        wp_deregister_style('components');
-        wp_dequeue_style('block-editor');
-        wp_deregister_style('block-editor');
-     }
-  }
-add_action('wp_enqueue_scripts', 'dequeue_unused_css', 330);
+// function dequeue_unused_css() { //CHEQUEAR
+//      if (is_front_page() || is_home()) {
+//         wp_dequeue_style('components');
+//         wp_deregister_style('components');
+//         wp_dequeue_style('block-editor');
+//         wp_deregister_style('block-editor');
+//      }
+//   }
+// add_action('wp_enqueue_scripts', 'dequeue_unused_css', 330);
 
 
 
@@ -386,22 +386,22 @@ add_action('wp_enqueue_scripts', 'dequeue_unused_css', 330);
 //21.874em = 349.984px
 
 
-function picture_image($screenbig, $screenmedium, $screensmall, $screenmini, $relation, $imgradius) {
+function picture_image($screenbig, $screenmedium, $screensmall, $screenmini, $relation, $imgradius, $loading = "lazy",  $importance = "auto") {
     $full = get_the_post_thumbnail_url('', 'full');
     $large = get_the_post_thumbnail_url('', 'large');
     $mediumlarge = get_the_post_thumbnail_url('', 'medium_large');
     $medium = get_the_post_thumbnail_url('', 'medium');
     $small = get_the_post_thumbnail_url('', 'thumbnail');
-    $titulo =  esc_html (get_the_title());
+    //$titulo =  esc_html (get_the_title());
 
     $html=' 
     <figure class="image '.$relation.'"> 
         <picture>
-            <source media="(min-width: 75.000em)" srcset="'.$$screenbig.'" alt="'.$titulo.'">
-            <source media="(min-width: 48.000em)" srcset="'.$$screenmedium.'" alt="'.$titulo.'">
-            <source media="(min-width: 21.875em)" srcset="'.$$screensmall.'" alt="'.$titulo.'">
-            <source media="(max-width: 21.874em)" srcset="'.$$screenmini.'" alt="'.$titulo.'">
-            <img loading="lazy" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt="'.$titulo.'">
+            <source media="(min-width: 75.000em)" srcset="'.$$screenbig.'" alt=" ">
+            <source media="(min-width: 48.000em)" srcset="'.$$screenmedium.'" alt=" ">
+            <source media="(min-width: 21.875em)" srcset="'.$$screensmall.'" alt=" ">
+            <source media="(max-width: 21.874em)" srcset="'.$$screenmini.'" alt=" ">
+            <img importance="'.$importance.'" loading="'.$loading.'" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt=" ">
         </picture> 
     </figure>';
     return $html;
@@ -444,3 +444,7 @@ add_filter('body_class','add_category_to_single');
     // return the $classes array
     return $classes;
   }
+
+
+/*** Functions AMP */
+//require get_template_directory() . '/inc/template-functions-amp.php';

@@ -11,7 +11,7 @@ Description: Description
 Version: 4.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
-Date: 05-05-2021;
+Date: 26-10-2021;
 License: GNU General Public License v2 or later
 License URI: 
 Text Domain: am750LICENSE
@@ -92,7 +92,9 @@ color: #fff;text-shadow: 1px 0 1px #888;background-color: #3D3F52;-webkit-border
 .show { opacity: 0.6; top: calc(50% + 6em); display: block!important}
 
 .is-bordeado {border-radius: 3px;}
-figure.image { overflow: hidden;}
+figure.image {overflow: hidden}
+figure.image.is-16by9 {background: #F1F1F1F1; text-align: center; border-radius: 4px;}
+figure.image.is-16by9:before { content: " "; position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); background: url("img/750am-logo.svg") no-repeat; width: 100px; height: 24px; background-size: contain; filter: grayscale(1) opacity(0.6) brightness(20) invert(1);  margin: 0 auto;}
 .image img { object-fit: cover;}
 .image img.is-bordeado {border-radius: 3px;}
 

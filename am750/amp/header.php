@@ -25,6 +25,7 @@
 	<!-- <link rel="preload" href="//cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">  -->
 	<!-- <link rel="preload" href="//unpkg.com/swiper/swiper-bundle.min.css" /> -->
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 	<style amp-custom>
 		<?php include get_theme_file_path( '/amp/bulma.min.css' );;?>
@@ -57,46 +58,33 @@
 	})(window,document,'script','dataLayer','GTM-TD85CXQ');</script> -->
 	<!-- End Google Tag Manager -->
 
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
+<!-- Google Tag Manager -->
 
 
 </head>
 
 <body <?php body_class(); ?>>
-
-<amp-analytics type="gtag" data-credentials="include">
+	<amp-analytics type="googleanalytics" >
 <script type="application/json">
-
 {
-  "vars" : {
-    "apid": "998877",
+  "vars": {
+    "account": "UA-16668138-1",
     "apv": "1.0",
-    "apn": "AMP",
-
-   	"gtag_id": "UA-16668138-1",
-    "config" : {
-      "UA-16668138-1": { }
-    }
+    "apn": "750 AMP"
   },
   "triggers": {
-    "trackPageview": {
+    "default pageview": {
       "on": "visible",
-      "request": "pageview",
-      "vars": {
-        "clientId": "AMP"
-      },
-      "extraUrlParams": {
-				"cd1":"AMP"
-			} 
+      "request": "pageview"
     }
   }
 }
-
 </script>
 </amp-analytics>
+
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD85CXQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD85CXQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 	<!-- End Google Tag Manager (noscript) -->
 
 
@@ -133,8 +121,8 @@
 
 		    <div class="navbar-end">
 
-<a href="<?php echo get_site_url(); ?>" id="playnav" class=" button is-bg-violet" style="margin-top:5px;border-radius: 30px;">
-						<span>Escuchá AM750 en vivo</span>
+<a href="<?php echo get_site_url(); ?>" id="playnav" class=" button is-bg-violet" style="margin-top:5px;border-radius: 30px;    margin-right: 15px;">
+						<span>AM 750 en vivo</span>
 					</a>
 
 		    </div>

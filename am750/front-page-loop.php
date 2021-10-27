@@ -1,5 +1,5 @@
 <!--TOP POSITION - paso2021-->
-<div class="container portadatop mb-6">
+<div class="container portadatop"> <!-- mb-6-->
 
 	<?php $elecciones_up =  get_option('elecciones_up'); $notas_up =  get_option('elecciones_up'); $catastrofe =  get_option('catastrofe');?>
 	<!-- WIDGET ELECCIONES - paso2021-->

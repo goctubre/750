@@ -59,7 +59,7 @@ picture .image img { position: relative; object-fit: cover; width: 100%; height:
 
 input.no-bg { background: none; color:#FFF; }
 hr.dashed {margin:20px 0; border-top:0px ; border-bottom: 1px solid transparent; 
-  border-image: url("img/linea.png") 1 round; background: none}
+  border-image: url("https://750.am/wp-content/themes/am750/img/linea.png") 1 round; background: none}
 
 .button.is-light { background-color: #F2F2F2;}
 
@@ -182,9 +182,9 @@ z-index: 99999999; left: 0; left: -1000px; transition: 0.6s;transition-timing-fu
 padding-left: 50px;} /*270*/
 #menuprincipal.is-active {left: 0;transition: 0.3s;transition-timing-function: ease-out; }
 #menuprincipal .menu-item a, #menu-mob li { color: #3D3F52; padding: 28px 40px 28px 0; display: flex; font-weight: 700;
-border-bottom: 1px solid transparent ;border-image: url("img/linea.png") 1 round; border-top:0; }
+border-bottom: 1px solid transparent ;border-image: url("https://750.am/wp-content/themes/am750/img/linea.png") 1 round; border-top:0; }
 
-#menuprincipal .menu-item a:after {position: absolute; content: " "; right: 30px; background: url("img/arrow.svg") no-repeat top right; background-size: auto;height: 14px;
+#menuprincipal .menu-item a:after {position: absolute; content: " "; right: 30px; background: url("https://750.am/wp-content/themes/am750/img/arrow.svg") no-repeat top right; background-size: auto;height: 14px;
 width: 8px; background-size: contain; margin-top: 6px;}
 
 
@@ -386,9 +386,9 @@ filter: grayscale(100%) brightness(194%);
 
 
 /*Escuchar*/
-.play_btn .icon { background: url("img/nav-play.svg"); background-repeat: repeat;background-repeat: no-repeat;height: 20px;width: 20px;
+.play_btn .icon { background: url("https://750.am/wp-content/themes/am750/img/nav-play.svg"); background-repeat: repeat;background-repeat: no-repeat;height: 20px;width: 20px;
  filter: brightness(100);}
-.play_btn.reproduciendo .icon  {background:url("img/nav-pause.svg");}
+.play_btn.reproduciendo .icon  {background:url("https://750.am/wp-content/themes/am750/img/nav-pause.svg");}
 
 
 
@@ -548,7 +548,7 @@ font-weight: bold;border-radius: 5px;}
 .swiper-button-prev::after, .swiper-container-rtl .swiper-button-next::after,
 .swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {
 content: " "; position: relative; height: 100%; width: 100%; background-repeat: no-repeat; 
-background-position: center center; background-size: 10px; background-image: url("img/i-prev.svg");}
+background-position: center center; background-size: 10px; background-image: url("https://750.am/wp-content/themes/am750/img/i-prev.svg");}
 
 .swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {transform: rotate(180deg);}
 
@@ -621,7 +621,7 @@ background-position: center center; background-size: 10px; background-image: url
 .urgente::before { content: "Urgente:"; margin-left: -68px; }
 .ahora {background: #DADADA; color:#3D3F52;  font-weight: 600 ;}
 .ahora::before {  content: "• Ahora: "; color: #CD1010; margin-left: -90px;}
-.ahora::after {background: url("img/ahora.svg") no-repeat top right; height: 20px; width: 20px; background-size: contain; 
+.ahora::after {background: url("https://750.am/wp-content/themes/am750/img/ahora.svg") no-repeat top right; height: 20px; width: 20px; background-size: contain; 
 position: relative; content: ""; display: inline-block; top: 3px; left: 2px;}
 
 .catastrofe { margin-bottom: 2rem;}
@@ -649,7 +649,7 @@ position: relative; content: ""; display: inline-block; top: 3px; left: 2px;}
 .home .seccion-header {margin-bottom: 1.5rem}
 .seccion-nombre { padding-right: 14px;}
 
-.vermas {background-image: url("img/linea.png");background-position: center; 
+.vermas {background-image: url("https://750.am/wp-content/themes/am750/img/linea.png");background-position: center; 
 background-repeat: repeat-x;flex-grow: 1;min-height: 1px;}
 .vermas .is-celeste {cursor: pointer;background: #FFF; padding-left: 10px;}
 
@@ -805,8 +805,8 @@ border-radius: 10px; padding: 30px 6px;}
   #menu-mob li { position: relative;}
   #menu-mob li a { margin-left: 32px;}
   #menu-mob li::before { position: absolute; width: 22px; height: 22px; content: " "; top: 28px; background-repeat: no-repeat ;}
-  #menu-mob li:first-child:before {background:url("img/i-contrast.svg"); top:31px; background-size: 18px;}
-  #menu-mob li:nth-child(2):before {background:url("img/i-lupa.svg"); top:33px; background-size: 18px;}
+  #menu-mob li:first-child:before {background:url("https://750.am/wp-content/themes/am750/img/i-contrast.svg"); top:31px; background-size: 18px;}
+  #menu-mob li:nth-child(2):before {background:url("https://750.am/wp-content/themes/am750/img/i-lupa.svg"); top:33px; background-size: 18px;}
 
   .navbar-menu {padding: .2rem 0;}
   .navbar-burger.burger {margin-right: 0; margin-left: 10px}
@@ -826,7 +826,7 @@ border-radius: 10px; padding: 30px 6px;}
   .bwhatapp .icon { margin: 0 ;}
 
   .navbar-brand{ -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto}
-  .site-branding.navbar-item { margin: 0 auto;}
+  .site-branding.navbar-item {}
 
 
   /* HOME */

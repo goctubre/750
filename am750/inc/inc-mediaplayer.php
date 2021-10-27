@@ -9,10 +9,10 @@
   <div id="player-div"></div>
 
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     function playerLoaded (player) { console.log('*** player loaded', player) }
   </script>
- -->
+
 
 
  

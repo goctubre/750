@@ -40,11 +40,6 @@
 
 
 	<!--PRELOAD GOOGLE FONT-->
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> -->
-
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<!-- optionally increase loading priority -->
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;700&display=swap">
@@ -60,6 +55,7 @@
 	</noscript>	
 	<!--PRELOAD GOOGLE FONT-->
 
+
 	<?php wp_head(); ?>
 
 	<!-- AJAXIFY-->
@@ -67,8 +63,8 @@
 
 	<!--ADZONE-->
 	<!-- <script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script> -->
-	<link rel="preload" href="https://s-adzone.com/c/14_750amsupertag.js" as="script">
-	<script type="text/javascript" src="https://s-adzone.com/c/14_750amsupertag.js" defer></script>
+	<link rel="preload" href="https://s-adzone.com/c/14_750amsupertag.js" as="script" importance="low">
+	<script type="text/javascript" src="https://s-adzone.com/c/14_750amsupertag.js" defer importance="low"></script>
 	 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -77,11 +73,21 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TD85CXQ');</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- CLARIFY -->
+	<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "42cn5npxd1");
+	</script>
+	<!-- //CLARIFY -->
+	
 </head>
 
 <!-- <body id="body" <?php //body_class(); ?>> OFIGINAL--> <!--ajaxify-->
 <body id="body"> <!--ajaxify-->
-
 	<div id="donde">  <!--ajaxify-->
 		<div id="insidedonde" <?php body_class(); ?>>  <!--ajaxify-->
 
@@ -122,7 +128,7 @@
 
 			    <div class="navbar-brand">
 			      <a class="site-branding navbar-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			    	  <img loading="lazy" src="<?php echo http2();?>/img/750am-logo.svg" width="125" height="28" alt="AM 750 - Una señal" />
+			    	  <img loading="eager" src="<?php echo http2();?>/img/750am-logo.svg" width="125" height="28" alt="AM 750 - Una señal" />
 		     	 </a> <!-- .site-branding -->
 			    </div>
 
@@ -131,7 +137,7 @@
 					<!-- SEARCH -->
 					<div id="search" class="is-hidden-touch">
 						<div class="nav-search-button">
-							<img id="search-btn" loading="lazy" src="<?php echo http2();?>/img/i-lupa.svg" width="22px" height="22px" alt="buscar" />
+							<img id="search-btn" loading="eager" src="<?php echo http2();?>/img/i-lupa.svg" width="22px" height="22px" alt="buscar" />
 
 							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" aria-label="Buscar">
 
@@ -159,13 +165,13 @@
 
 					<!--DARKMODE-->
 					<div class="navbar-item switch is-hidden-touch rayita" aria-label="Cambiar a modo oscuro">
-						<img loading="lazy" src="<?php echo http2();?>/img/i-contrast.svg" width="22px" height="" />
+						<img loading="eager" src="<?php echo http2();?>/img/i-contrast.svg" width="22px" height="22px" />
 					</div>
 					<!--//DARKMODE-->
 
 					<!--WHATSAPP-->
 					<a class="navbar-item rayita" id="bt-wa" href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank" aria-label="Enviá un mensaje a la radio" rel="noopener noreferrer">
-						<img loading="lazy" src="<?php echo http2();?>/img/i-wa-verde.svg" width="24px" height="24px" alt="AM 750 - Mensajes" class="wz"/>
+						<img loading="eager" src="<?php echo http2();?>/img/i-wa-verde.svg" width="24px" height="24px" alt="AM 750 - Mensajes" class="wz"/>
 					</a>
 					<!--//WHATSAPP-->
 

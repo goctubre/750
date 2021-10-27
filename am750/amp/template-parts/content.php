@@ -57,7 +57,7 @@
 
 	$html=' 
         <figure class="image '.$relation.'" > 
-                <amp-img layout="responsive" width="100" height="100" class="" alt="'.$titulo.'" srcset="'.$full.'">
+                <amp-img layout="responsive" width="100" height="100" class="" alt="'.$titulo.'" srcset="'.$medium.'">
             </picture> 
         </figure>';
 
