@@ -165,27 +165,22 @@
 
 
 	<!--Player-->
-	<?php //include get_theme_file_path( '/player/mediaplayer.php' );?>
-	<?php include get_theme_file_path( '/player/mediaplayer-asyn.php' );?>
+	<?php include get_theme_file_path( '/inc/inc-mediaplayer.php' );?>
 	<!--// Player-->
+
 
 	<!-- <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script"> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" defer></script>
 
-	<?php wp_footer(); ?>
 
+    <script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js" defer></script>
+    
 
-
-	<script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js" defer></script>
-
-	<script type="module">
-		let ajaxify = new Ajaxify({elements: "#insidedonde", selector: "a:not(.no-ajaxy)", inline: false });
-	</script>
-
-	<!--<script src="<?php echo get_template_directory_uri(); ?>/js/750-ajaxify.js?=v<?php echo rand()?>>" defer></script> -->    
+    <script src="<?php echo get_template_directory_uri(); ?>/js/750-ajaxify.js?=v<?php echo rand()?>>" defer></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/750-general.js?=v<?php echo rand()?>>" data-class="always" defer></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/750-home.js?=v<?php echo rand()?>>" data-class="always" defer></script>
 
+	<?php wp_footer(); ?>
 
 	<!--COMSCORE-->
 	<script type="text/javascript">

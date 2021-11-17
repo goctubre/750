@@ -67,20 +67,19 @@ add_settings_section('portada_page_setting_section', __( 'Catástrofe - Switch M
 add_settings_field('catastrofe', 'Portadas catástrofe - Elecciones-', 'portada_catastrofe', 'portada-page', 'portada_page_setting_section');
 add_settings_field('catastrofemapa_', 'Mapa', 'portada_catastrofe_mapa', 'portada-page', 'portada_page_setting_section');
 add_settings_field('elecciones_up', 'Destacado Superior', 'portada_elecciones_up', 'portada-page', 'portada_page_setting_section');
-
+add_settings_field('widget_bancas', 'Widget Bancas', 'portada_bancas', 'portada-page', 'portada_page_setting_section'); //CÓMO QUEDÓ
 add_settings_field('candidates_url', 'URL Resultados por Candidates', 'portada_candidates_url', 'portada-page', 'portada_page_setting_section');
 add_settings_field('candidates_p12_url', 'URL Resultados por Candidates P12', 'portada_candidates_p12_url', 'portada-page', 'portada_page_setting_section');
 add_settings_field('mapa_url', 'URL Mapa', 'portada_mapa_url', 'portada-page', 'portada_page_setting_section');
-
 add_settings_field('orden_portada', 'Orden de la portada', 'portada_orden_portada', 'portada-page', 'portada_page_setting_section');
 
-
 register_setting( 'portada-page', 'catastrofe' );
-register_setting( 'portada-page', 'catastrofe_mapa' ); //add
-register_setting( 'portada-page', 'elecciones_up' ); //add
-register_setting( 'portada-page', 'candidates_url' ); //add
-register_setting( 'portada-page', 'candidates_p12_url' ); //add
-register_setting( 'portada-page', 'mapa_url' ); //add
+register_setting( 'portada-page', 'catastrofe_mapa' );
+register_setting( 'portada-page', 'elecciones_up' );
+register_setting( 'portada-page', 'widget_bancas' ); //CÓMO QUEDÓ
+register_setting( 'portada-page', 'candidates_url' );
+register_setting( 'portada-page', 'candidates_p12_url' );
+register_setting( 'portada-page', 'mapa_url' );
 register_setting( 'portada-page', 'orden_portada' );
 
 }
@@ -113,6 +112,14 @@ function portada_elecciones_up() { ?>
 
     <?php
 }
+
+// COMO QUEDO
+function portada_bancas() { ?>
+    <input type="radio" name="widget_bancas" value="bancasoff" <?php checked(bancasoff, get_option('widget_bancas'), true); ?>> Apagado <br>
+    <input type="radio" name="widget_bancas" value="bancason" <?php checked(bancason, get_option('widget_bancas'), true); ?>> Prendido <br>
+    <?php
+}
+
 
 function portada_candidates_url() { ?>
     <input style="width:400px" type="text" id="candidates_url" name="candidates_url" value="<?php echo get_option('candidates_url'); ?>">

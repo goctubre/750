@@ -392,16 +392,16 @@ function picture_image($screenbig, $screenmedium, $screensmall, $screenmini, $re
     $mediumlarge = get_the_post_thumbnail_url('', 'medium_large');
     $medium = get_the_post_thumbnail_url('', 'medium');
     $small = get_the_post_thumbnail_url('', 'thumbnail');
-    //$titulo =  esc_html (get_the_title());
+    $titulo =  esc_html (get_the_title());
 
     $html=' 
     <figure class="image '.$relation.'"> 
         <picture>
-            <source media="(min-width: 75.000em)" srcset="'.$$screenbig.'" alt=" ">
-            <source media="(min-width: 48.000em)" srcset="'.$$screenmedium.'" alt=" ">
-            <source media="(min-width: 21.875em)" srcset="'.$$screensmall.'" alt=" ">
-            <source media="(max-width: 21.874em)" srcset="'.$$screenmini.'" alt=" ">
-            <img importance="'.$importance.'" loading="'.$loading.'" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt=" ">
+            <source media="(min-width: 75.000em)" srcset="'.$$screenbig.'">
+            <source media="(min-width: 48.000em)" srcset="'.$$screenmedium.'">
+            <source media="(min-width: 21.875em)" srcset="'.$$screensmall.'">
+            <source media="(max-width: 21.874em)" srcset="'.$$screenmini.'">
+            <img importance="'.$importance.'" loading="'.$loading.'" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt="'.$titulo.'">
         </picture> 
     </figure>';
     return $html;

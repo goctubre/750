@@ -10,28 +10,28 @@
 			</div>
 
 	    	<div class="column fl">
-	    		<a href="https://750.am/2021/10/13/elecciones-2021-puedo-votar-si-no-vote-en-las-paso/">
+	    		<a href="https://750.am/2021/11/03/de-cuanto-es-la-multa-por-no-votar-en-las-elecciones-2021/">
 	    			<div class="columns">
 	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/nota-paso-01.png" width="147" height="84">
+							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-01.jpg" width="147" height="84">
 						</div>	
 
 						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold"> ¿Puedo votar si no voté en las PASO?</h3> 
+							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿De cuánto es la multa por no votar?</h3> 
 						</div>
 					</div>
 	    		</a>
 	    	</div>
 
 	    	<div class="column fl">
-	    		<a href="https://750.am/2021/10/15/donde-voto-ya-esta-el-padron-definitivo-para-el-14-de-noviembre/">
+	    		<a href="https://750.am/2021/11/03/elecciones-2021-que-pasa-si-no-voto/">
 	    			<div class="columns">
 	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/nota-paso-02.png" width="147" height="84">
+							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-02.jpg" width="147" height="84">
 						</div>	
 
 						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">Dónde voto: consultá el padrón</h3> 
+							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿Qué pasa <br> si no voto?</h3> 
 						</div>
 					</div>
 	    		</a>
@@ -39,14 +39,14 @@
 
 
 	    	<div class="column fl">
-	    		<a href="https://750.am/2021/10/15/elecciones-2021-una-por-una-todas-las-listas-de-candidatos-que-compiten-en-las-legislativas/">
+	    		<a href="https://750.am/2021/11/12/especial-interactivo-que-esta-en-juego-en-las-elecciones-legislativas/">
 	    			<div class="columns">
 	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/nota-paso-03.png" width="147" height="84">
+							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-03.jpg" width="147" height="84">
 						</div>	
 
 						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">Conocé todas <br>las listas</h3> 
+							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿Qué está <br> en juego en estas elecciones?</h3> 
 						</div>
 					</div>
 	    		</a>

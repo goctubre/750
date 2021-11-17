@@ -694,10 +694,11 @@ position: absolute; border-radius: 10px; left: -4px;top: 0px;}
 border-radius: 100px; left: -17px; top: 9px; z-index: 1}
 #destacados article.rayita { margin: 0 !important;padding-bottom: 40px !important;}
 
-
 #destacados .rayita:last-child { border: none;}
 #destacados .rayita:last-child h3:before {left: -16px;}
 
+#destacados figure.image.is-16by9:before{display: none;}
+#destacados figure.image.is-16by9{background: none; border-radius: unset;}
 
 #sabermas img {transform: rotate(-90deg); margin-right: 10px;} /*mobile*/
 #sabermas.cerrate::before { height: 17px; width: 12px; float: left;

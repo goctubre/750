@@ -90,6 +90,16 @@
 <!--//MAPA - PASO 2021-->
 
 
+<!--comoqueda CONGRESO NACIONAL - ELECCIONES 2021-->
+<?php
+	$widget_bancas =  get_option('widget_bancas');  
+	if( $widget_bancas == 'bancason') { ?>
+		 <iframe src="https://especiales.gonoticias.com/2021/elecciones/generales/resultados/widget_bancas/index.html" id="GObancas" scrolling="No" height="300" width="100%" style="border: none; margin-bottom: 30px;"> </iframe>
+	<?}; ?>
+
+ <!--//comoqueda-->
+
+
 <!-- MÁS DE ACTUALIDAD-->
 <section id="actualidad" class="is-seccion">
 
@@ -214,7 +224,7 @@
 								<a href="<?php echo get_author_posts_url( $post->post_author ); ?>">	
 						    		<figure class="image is-64x64">
 						    			<?php 
-										$autorimg = get_avatar( get_the_author_meta( 'ID' ), '600', $default, $alt, array( 'class' => array( 'is-rounded' ) ) );
+										$autorimg = get_avatar( get_the_author_meta( 'ID' ), '600', 'retro', '', array( 'class' => array( 'is-rounded' ) ) );
 						    			echo $autorimg;
 						    			?>
 									</figure>
@@ -261,7 +271,7 @@
 			    			<a href="<?php echo get_author_posts_url($post->post_author);?>">	
 					    		<figure class="image is-64x64">
 					    			<?php 
-									$autorimg = get_avatar( get_the_author_meta( 'ID' ), '600', $default, $alt, array( 'class' => array( 'is-rounded' ) ) );
+									$autorimg = get_avatar( get_the_author_meta( 'ID' ), '600', 'retro', '', array( 'class' => array( 'is-rounded' ) ) );
 					    			echo $autorimg;
 					    			?>
 								</figure>
