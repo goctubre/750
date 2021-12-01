@@ -26,21 +26,17 @@ get_header();
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-								<?php echo picture_image('full', 'medium', 'medium', 'medium', 'is-16by9', 'is-bordeado', 'eager', 'high');?>
+								<?php the_title( '<h1 class="is-size-2 is-size-4-mobile mt-4 mb-2 is-fira has-text-centered">', '</h1>' );?>
+
 								
-								<?php the_title( '<h1 class="is-size-2 is-size-4-mobile mt-4 mb-4 is-fira has-text-centered">', '</h1>' );?>
 								<!-- <div class="ad-slot" id="mobile_nota_btf" data-adtype="box_mobile"> </div -->
 
 								<div class="entry-content has-text-centered"> <?php the_content(); ?> </div>
 									<?php 
-									$dias_spa=array( "mon"=>"lunes", "tue"=>"martes", "wed"=>"miercoles", "thu"=>"jueves", "fri"=>"viernes", "sat"=>"sabado", "sun"=>"domingo",);
+									$dias_spa=array( "mon"=>"lunes", "tue"=>"martes", "wed"=>"miércoles", "thu"=>"jueves", "fri"=>"viernes", "sat"=>"sábado", "sun"=>"domingo",);
 										$post_id = get_the_ID();
-									    $calendario = get_posts(array(
-											'numberposts'	=> -1,
-											'post_type'		=> 'calendarios',
-											'meta_key'		=> 'programa',
-											'meta_value'	=> $post_id,
-									    	'post_status' => 'publish',
+									    $calendario = get_posts(array( 
+									    	'numberposts' => -1, 'post_type' => 'calendarios', 'meta_key' => 'programa', 'meta_value' => $post_id, 'post_status' => 'publish',
 										));
 										$post_id = $calendario[0]->ID;
 
@@ -51,40 +47,41 @@ get_header();
 										$lun_a_vier = array("mon","tue","wed","thu","fri");
 										if(count(array_intersect($lun_a_vier, $programa_dias)) == count($lun_a_vier)){
 										    $dias="de lunes a viernes";
-										}else{
+										} else {
 											$dias=array();
 											foreach ($programa_dias as $key => $value) { $dias[]=$dias_spa[$value]; }
 											$dias=implode($dias,", ");
 										}
 									?>
-								<div class="has-text-centered">Escuchalo <?php echo $dias;?> de <?php echo $horario_inicio;?> a <?php echo $horario_fin;?>hs </div>
 
+								<div class="has-text-centered mb-4"> <b>Escuchalo  <?php echo $dias;?> de <?php echo $horario_inicio;?> a <?php echo $horario_fin;?> hs </b>  </div>
 
-								<?php $programa_id=get_the_ID();
-								$autores = get_field( "autores", $programa_id );
-								// $debug = var_export($autores, true);
-									$template='<div class="columns mt-5">';
-									foreach ($autores as $key => $value) {
-										$user_info = get_userdata($value);
-									 	$display_name = $user_info->display_name;
-									 	$autorimg = get_avatar( $value , '200', $default, $alt, array( 'class' => array( 'is-rounded' ) ) );
-									 	//$avatar = get_avatar($value);
-										$template.='<div class="column is-3 has-text-centered ">
-											<a href="'.esc_url( get_author_posts_url( $value ) ).'">
-												<figure class="image is-square-small" >'.$autorimg.'</figure>
-												<h5 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold"> '.$display_name.' </h5> 
-											</a>
-										</div>';
-									}
-									$template.='</div>';
-									echo $template;
+								<?php echo picture_image('full', 'medium', 'medium', 'medium', 'is-16by9', 'is-bordeado', 'eager', 'high');?>
 
+								<?php 
+								// $programa_id=get_the_ID();
+								// $autores = get_field( "autores", $programa_id );
+								// // $debug = var_export($autores, true);
+								// 	$template='<div class="columns mt-5">';
+								// 	foreach ($autores as $key => $value) {
+								// 		$user_info = get_userdata($value);
+								// 	 	$display_name = $user_info->display_name;
+								// 	 	$autorimg = get_avatar( $value , '200', $default, $alt, array( 'class' => array( 'is-rounded' ) ) );
+								// 	 	//$avatar = get_avatar($value);
+								// 		$template.='<div class="column is-3 has-text-centered ">
+								// 			<a href="'.esc_url( get_author_posts_url( $value ) ).'">
+								// 				<figure class="image is-square-small" >'.$autorimg.'</figure>
+								// 				<h5 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold"> '.$display_name.' </h5> 
+								// 			</a>
+								// 		</div>';
+								// 	}
+								// 	$template.='</div>';
+								// 	echo $template;
 								?>
 
-
-					    			<!--is-128x128 <figure class="image is-square-small ">
-					    				<?php //the_post_thumbnail('medium', array('class' => 'is-rounded')); ?>
-					    			</figure> -->
+				    			<!--is-128x128 <figure class="image is-square-small ">
+				    				<?php //the_post_thumbnail('medium', array('class' => 'is-rounded')); ?>
+				    			</figure> -->
 
 
 								<footer class="entry-footer">
@@ -92,7 +89,6 @@ get_header();
 								</footer><!-- .entry-footer -->
 
 							</article><!-- #post-<?php the_ID(); ?> -->
-
 
 
 				<?php 

@@ -1,5 +1,5 @@
 	<div id="alaire" class="mt-4 mb-4" >
-		<h2 class="mb-3 pt-3 pb-3 is-bg-violet is-size-4 is-fira">Al aire ahora</h2>
+		<h2 class="pt-3 pb-3 is-bg-violet is-size-4 is-fira">Al aire ahora</h2>
 
 		<?php
 			$date_now = date('H:i:s'); 
@@ -11,21 +11,9 @@
 				'post_type'	=> 'calendarios',
 				'meta_query'	=> array(
 				 	'relation'	=> 'AND',
-				 	array(	
-				 		'key'	 	=> 'dias_de_la_semana',
-				 		'value'	  	=> $diadehoy,
-				 		'compare' 	=> 'LIKE',
-				 	),
-				 	array(	
-				 		'key'	 	=> 'hora_fin',
-				 		'value'	  	=> $date_now,
-				 		'compare' 	=> '>',
-				 	),
-				 	array(	
-		                'key'     => 'hora_inicio',
-		                'value'   => $date_now,
-		                'compare' => '<=',
-				 	),
+				 	array( 'key' => 'dias_de_la_semana', 'value' => $diadehoy, 'compare' => 'LIKE', ),
+				 	array( 'key' => 'hora_fin', 'value' => $date_now, 'compare' 	=> '>', ),
+				 	array( 'key' => 'hora_inicio', 'value' => $date_now, 'compare' => '<=', ),
 				 )
 			));
 		?>
@@ -40,23 +28,24 @@
 
 				<div class="p-3"> 
 					<a href="<?php the_permalink($programa_id); ?>">
-					<figure class="image is-16by9"> 
-						<?php echo get_the_post_thumbnail( $programa_id, 'medium', array( 'class' => 'is-bordeado')); ?></a> 
-					</figure>
+
+						<figure class="image is-16by9"> 
+							<?php //echo get_the_post_thumbnail( $programa_id, 'thumbnail', array( 'class' => 'is-bordeado')); ?>
+							<?php echo get_the_post_thumbnail( $programa_id,  array(300, 169), array( 'class' => 'is-bordeado')); ?>
+						</figure>
+					</a>
 				</div>
 				
 				<p class="is-celeste mb-3"><?php echo $horario_inicio;?> a <?php echo $horario_fin;?> hs </p>
 				
 				<h3 class="is-size-4 is-fira pr-2 pl-2"> 
-					<a href="<?php the_permalink(); ?>">  
-						<?php echo get_the_title($programa_id)?> 
-					</a> 
+					<a href="<?php the_permalink($programa_id);?>"> <?php echo get_the_title($programa_id)?> </a> 
 				</h3>
 
-					<button class="button is-750 mb-2 play_btn mt-3"> 
-						<span class="mr-1">Escuchar</span>
-						<span class="icon"> </span>
-					</button>
+				<button class="button is-750 mb-2 play_btn mt-3"> 
+					<span class="mr-1">Escuchar</span>
+					<span class="icon"> </span>
+				</button>
 			<?php endwhile; ?>
 		<?php endif; ?>
 

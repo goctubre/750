@@ -103,8 +103,13 @@
 		@keyframes lds-ellipsis2 { 0% { transform: translate(0, 0); } 100% { transform: translate(24px, 0);}}
 	</style>
 
-  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css" as="style" onload="this.onload=null;this.rel='stylesheet'" importance="low">
-  <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css"></noscript>
+
+
+<!--   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css" as="style" onload="this.onload=null;this.rel='stylesheet'" importance="low">
+  <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css"></noscript> -->
+
+  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-filtrado.css" as="style" onload="this.onload=null;this.rel='stylesheet'" importance="low">
+  <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-filtrado.css"></noscript>
   <!--//defer-non-critical-css // AJAXIFY-->
   
   <div id="playerLoaded"> </div>

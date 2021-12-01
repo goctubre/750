@@ -12,21 +12,9 @@
 		'post_type'	=> 'calendarios',
 		'meta_query'	=> array(
 		 	'relation'	=> 'AND',
-		 	array(	
-		 		'key'	 	=> 'dias_de_la_semana',
-		 		'value'	  	=> $diadehoy,
-		 		'compare' 	=> 'LIKE',
-		 	),
-		 	array(	
-		 		'key'	 	=> 'hora_fin',
-		 		'value'	  	=> $date_now,
-		 		'compare' 	=> '>',
-		 	),
-		 	array(	
-                'key'     => 'hora_inicio',
-                'value'   => $date_now,
-                'compare' => '<=',
-		 	),
+		 	array( 'key' => 'dias_de_la_semana', 'value' => $diadehoy, 'compare' => 'LIKE',),
+		 	array( 'key' => 'hora_fin', 'value' => $date_now, 'compare' 	=> '>', ),
+		 	array( 'key'     => 'hora_inicio', 'value'   => $date_now, 'compare' => '<=', ),
 		 )
 	));
 
@@ -49,19 +37,20 @@
 		$horario_inicio = get_field( "hora_inicio", $post_id );
 		$horario_fin = get_field( "hora_fin", $post_id );?>
 
-		<div class="columns" id="en-vivo-bloque">
+		<div class="columns is-revert-mobile" id="en-vivo-bloque">
 
-			<div class="column is-7 pb-0-mobile"> <a href="<?php the_permalink($programa_id); ?>"> <?php echo get_the_post_thumbnail( $programa_id, 'large', array( 'class' => 'is-bordeado' ) ); ?> </a> </div>
+			<div class="column is-6 pb-0-mobile">
+				<a href="<?php the_permalink($programa_id); ?>"> <?php echo get_the_post_thumbnail( $programa_id, 'medium', array( 'class' => 'is-bordeado' ) ); ?> </a> 
+			</div>
 
 			<div class="column has-text-centered-mobile">
-
-				<button class="button is-danger is-small has-text-weight-bold mr-4">Vivo</button>
+				<div class="is-small has-text-weight-bold mr-4">Vivo</div>
 				<div class="mb-5"> <?php echo $horario_inicio;?> a <?php echo $horario_fin;?> hs </div>
 
-				<h2 class="is-size-4 mb-5 mb-1-mobile"> <?php echo get_the_title($programa_id)?> </h2>
+				<h2 class="is-size-4 mb-5 mb-4-mobile"> <?php echo get_the_title($programa_id)?> </h2>
 				<!-- p class="mb-4"> <?php //echo the_content($programa_id); ?> </p> -->
 
-				<div class="field is-grouped has-text-centered-mobile no-flex-desktop is-justify-content-center-mobile">
+				<div class="field is-grouped has-text-centered-mobile is-justify-content-center-mobile is-inline">
 					<button class="button is-750 mb-2 play_btn" style="margin-left: -3px;"> 
 						<span class="mr-1">Escuchar en vivo</span>
 						<span class="icon">
@@ -70,7 +59,7 @@
 					</button>
 				</div>
 
-				<div class="control">
+				<div class="control is-inline">
 					<a href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank">
 					<button class="button">
 							<span class="mr-1">Mensaje</span>
