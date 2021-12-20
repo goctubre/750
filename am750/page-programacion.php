@@ -24,7 +24,7 @@ get_header();
 				<h2 class="is-size-3 mt-6 mt-4-mobile">Actualidad</h2>
 				<p class="mt-1 mb-5"> Escuchá todos los episodios y columnas completos de tus programas favoritos </p>
 				<!-- CAROUSEL ACTUALIDAD -->
-					<div class="swiper-container swiper-programacion">
+					<div class="swiper swiper-programacion">
 					  <div class="swiper-wrapper">
 						<!-- loop programas -->
 						<?php $the_query = new WP_Query( array( 'post_type' => 'programas', 'modo' => 'actualidad', 'posts_per_page' => 8)); ?>
@@ -54,7 +54,7 @@ get_header();
 				<p class="mb-5"> Escuchá todos los episodios y columnas completos de tus programas favoritos </p>
 
 				<!-- CAROUSEL ACTUALIDAD -->
-					<div class="swiper-container swiper-programacion">
+					<div class="swiper swiper-programacion">
 					  <div class="swiper-wrapper">
 						<!-- loop programas -->
 						<?php 

@@ -96,7 +96,7 @@ figure.image {overflow: hidden}
 figure.image.is-16by9 {background: #F1F1F1F1; text-align: center; border-radius: 4px;}
 figure.image.is-16by9:before { content: " "; position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); background: url("img/750am-logo.svg") no-repeat; width: 100px; height: 24px; background-size: contain; filter: grayscale(1) opacity(0.6) brightness(20) invert(1);  margin: 0 auto;}
 .image img { object-fit: cover;}
-.image img.is-bordeado {border-radius: 3px;}
+.image img.is-bordeado {border-radius: 3px;font-size: 0}
 
 picture .image img { position: relative; object-fit: cover; width: 100%; height: 100%;}
 
@@ -551,7 +551,7 @@ font-weight: bold;border-radius: 5px;}
 
 /* Carousel
 --------------------------------------------- */
-.swiper-container {line-height: 140%; }
+.swiper {line-height: 140%; }
 .swiperbox { position: relative; padding: 0 1.5rem; margin-left: -1.5rem;}
 .swiper-button-next, .swiper-button-prev {background:#FFF; box-shadow: 0px 1px 4px rgba(0,0,0,0.15);top:50%;
   border-radius:50%;color:#3D3F52; padding:0!important; height: 40px;width: 40px;font-weight: bold}
@@ -569,7 +569,7 @@ background-position: center center; background-size: 10px; background-image: url
 
 @media screen and (max-width:1023px){
 .swiperbox {  position: relative; padding: 0 0 0 1.5rem;}
-.swiper-container {padding-bottom: 40px;margin-right: -.75rem;}
+.swiper {padding-bottom: 40px;margin-right: -.75rem;}
 .swiper-container-mob {margin-bottom: 30px}
 .swiper-container-mob .swiper-button-next, .swiper-container-mob .swiper-button-prev,
 .swiperbox-seccion .swiper-button-next, .swiperbox-seccion .swiper-button-prev {

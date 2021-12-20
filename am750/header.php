@@ -29,8 +29,8 @@
 	<!--swiper-->
 		<!-- <link rel="preload" as="style" href="//unpkg.com/swiper/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css" /> -->
-		<link rel="preload" as="style" href="https://unpkg.com/swiper@6.8.0/swiper-bundle.min.css"/>
-		<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.0/swiper-bundle.min.css"/> 
+		<link rel="preload" as="style" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> 
 	<!--//swiper-->
 
 	<?php /*<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-swiper.css">*/?>

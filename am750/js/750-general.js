@@ -1,4 +1,4 @@
-console.log("x___n - hi!");
+console.log("(╹◡╹) un grito de corazón!");
 
 
 /**************************
@@ -19,19 +19,13 @@ elmenu.classList.remove('is-active');
 burger.classList.remove('is-active');
 
 openmenu.addEventListener('click', function () {
-  manto.classList.toggle('show');
-  manto.classList.toggle('hide');
-  elmenu.classList.toggle('is-active');
-  burger.classList.toggle('is-active');
-  html.classList.toggle('overhidden');
+  manto.classList.toggle('show'); manto.classList.toggle('hide'); elmenu.classList.toggle('is-active');
+  burger.classList.toggle('is-active'); html.classList.toggle('overhidden');
 });
 
 manto.addEventListener('click', event => {
-  manto.classList.toggle('show');
-  manto.classList.toggle('hide');
-  elmenu.classList.remove('is-active');
-  burger.classList.remove('is-active');
-  html.classList.remove('overhidden');
+  manto.classList.toggle('show'); manto.classList.toggle('hide'); elmenu.classList.remove('is-active');
+  burger.classList.remove('is-active'); html.classList.remove('overhidden');
 });
 
 document.querySelector("html").classList.remove("overhidden");
@@ -79,52 +73,18 @@ document.querySelector("html").classList.remove("overhidden");
 //FIN REDES
 
 
-//PLAYING / PAUSE MEDIAPLAYER JS --> terminar cuándo se pueda controlar vía api
-// btplayerdown = document.querySelector('.np__btn_controls_play');
-// btplayerup = document.querySelector('.play_btn');
-
-// btplayerdown.addEventListener('click',check_if_playing ); // PASAR CON API MEDIA
-// btplayerup.addEventListener('click',check_if_playing ); // PASAR CON API MEDI
-
-// function check_if_playing(){
-//   if (btplayerdown.querySelectorAll(".fa-play").length > 0) {
-//     console.log("playin");
-//     btplayerdown.classList.add('reproduciendo');
-//     btplayerup.classList.add('reproduciendo');
-//     //window.reproduciendo=true;
-//     dataLayer.push({'event': 'play'});
-//   } else {
-//      console.log("pausado")
-//     btplayerdown.classList.remove('reproduciendo');
-//     btplayerup.classList.remove('reproduciendo');
-//     //window.reproduciendo=false;
-//     dataLayer.push({'event': 'stop'});
-//   }
-// }
-
-
-    // DARKMODE == OK
+// DARKMODE == OK
     var darkMode = localStorage.getItem("darkMode");
     var darkSwitch = document.querySelectorAll(".switch");
-
-    var enableDarkMode = () => {
-      document.documentElement.classList.add("darkmode");
-      localStorage.setItem("darkMode", "enabled");
-    };
-
-    var disableDarkMode = () => {
-      document.documentElement.classList.remove("darkmode");
-      localStorage.setItem("darkMode", null);
-    };
-
+    var enableDarkMode = () => { document.documentElement.classList.add("darkmode"); localStorage.setItem("darkMode", "enabled"); };
+    var disableDarkMode = () => { document.documentElement.classList.remove("darkmode"); localStorage.setItem("darkMode", null);};
     if (darkMode === "enabled") { enableDarkMode();}
 
     darkSwitch.forEach(element => {
       element.addEventListener('click', event => {
         darkMode = localStorage.getItem("darkMode");
         if (darkMode !== "enabled") {
-          enableDarkMode();
-          element.setAttribute("aria-label", "Desactivar modo oscuro");
+          enableDarkMode(); element.setAttribute("aria-label", "Desactivar modo oscuro");
         } else {
           element.setAttribute("aria-label", "Cambiar a modo oscuro")
           disableDarkMode();
@@ -141,28 +101,19 @@ document.querySelector("html").classList.remove("overhidden");
 
   searchmobile.classList.remove('show');
 
-  buscarmobile.addEventListener('click', function () {
-    searchmobile.classList.toggle('show');
-  });
-  cerrarsearchmobile.addEventListener('click', function () {
-    searchmobile.classList.remove('show');
-  });
+  buscarmobile.addEventListener('click', function () { searchmobile.classList.toggle('show'); });
+  cerrarsearchmobile.addEventListener('click', function () { searchmobile.classList.remove('show'); });
   //--FIN PANEL BUSQUEDA MOBILE-->
 
 // SEARCH INPUT == OK
-  document.querySelector('#search-btn').addEventListener('click', function () {
-     document.querySelector('#search').classList.add('open');
-  })
-
-  document.querySelector('.search-close').addEventListener('click', function () {
-     document.querySelector('#search').classList.remove('open');
-  })
-
+  document.querySelector('#search-btn').addEventListener('click', function () { document.querySelector('#search').classList.add('open'); })
+  document.querySelector('.search-close').addEventListener('click', function () { document.querySelector('#search').classList.remove('open'); })
 
 
   //ANALYTICS
   function sendPageView(){
     dataLayer.push({ 'event': 'pageview','pagePath': window.location.pathname,'pageTitle': document.title });
+    console.log("pageview:" + document.title);
     self.COMSCORE && COMSCORE.beacon({c1:"2",c2:"24322362"});
     jQuery.ajax({
       url : "https://750.am/wp-content/themes/am750/COMSCORE.txt?rand="+Math.random(4),
@@ -173,6 +124,7 @@ document.querySelector("html").classList.remove("overhidden");
 
   sendPageView();
   //ANALYTICS
+
 
 
 
@@ -204,42 +156,25 @@ document.querySelector("html").classList.remove("overhidden");
 
   //PROGRAMAS TAB - PAGE PROGRAMAS
   jQuery(".programas_tabs li ").on('click touch', function () {
+    var selectedElement = jQuery(this).children("a").attr("id");
+    console.log(selectedElement);
+    jQuery('.programas_tabs li ').removeClass('is-active');
+    jQuery(this).addClass('is-active');
 
-        var selectedElement = jQuery(this).children("a").attr("id");
-        console.log(selectedElement);
-        jQuery('.programas_tabs li ').removeClass('is-active');
-        jQuery(this).addClass('is-active');
-
-        jQuery(".programas_tabs_content div").removeClass('is-active');
-        jQuery(".programas_tabs_content").children("#"+selectedElement).addClass('is-active');
+    jQuery(".programas_tabs_content div").removeClass('is-active');
+    jQuery(".programas_tabs_content").children("#"+selectedElement).addClass('is-active');
   });
 
   
   // ##JQUERY
   jQuery(".swipe_tabs li ").on('click touch', function () {
-
-        var selectedElement = jQuery(this).children("a").attr("id");
-        console.log(selectedElement);
-        jQuery('.swipe_tabs li ').removeClass('is-active');
-        jQuery(this).addClass('is-active');
-        jQuery(".swiper-programacion.filtromodo div div").removeClass('swiper-slide').addClass('non-swiper-slide');
-        jQuery(".swiper-programacion.filtromodo div div."+selectedElement).removeClass('non-swiper-slide').addClass('swiper-slide');
-        if(selectedElement=="todos"){
-          jQuery(".swiper-programacion.filtromodo div div").removeClass('non-swiper-slide').addClass('swiper-slide');
-        }
+      var selectedElement = jQuery(this).children("a").attr("id");
+      console.log(selectedElement);
+      jQuery('.swipe_tabs li ').removeClass('is-active');
+      jQuery(this).addClass('is-active');
+      jQuery(".swiper-programacion.filtromodo div div").removeClass('swiper-slide').addClass('non-swiper-slide');
+      jQuery(".swiper-programacion.filtromodo div div."+selectedElement).removeClass('non-swiper-slide').addClass('swiper-slide');
+      if(selectedElement=="todos"){
+        jQuery(".swiper-programacion.filtromodo div div").removeClass('non-swiper-slide').addClass('swiper-slide');
+      }
   });
-
-    //que es esto?
-
-    // var top_of_element = $(elem).offset().top;
-    // var bottom_of_element = $(elem).offset().top + $(elem).outerHeight();
-    // var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-    // var top_of_screen = $(window).scrollTop();
-
-    // if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-    //     // the element is visible, do something
-    //     return true;
-    // } else {
-    //     // the element is not visible, do something else
-    //     return false;
-    // }

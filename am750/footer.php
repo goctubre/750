@@ -169,11 +169,15 @@
 	<?php include get_theme_file_path( '/player/mediaplayer-asyn.php' );?>
 	<!--// Player-->
 
-	<!-- <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script"> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" defer></script>
+	<link rel="preload" href="https://unpkg.com/swiper@7/swiper-bundle.min.js" as="script">
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+
 
 	<?php wp_footer(); ?>
 
+	<!--jquery - pronto te vamos a abandonar -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!--//jquery-->
 
 
 	<script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js" defer></script>

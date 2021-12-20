@@ -176,7 +176,7 @@ get_header();
 					</ul>
 				</div>
 
-					<div class="swiper-container swiper-programacion filtromodo">
+					<div class="swiper swiper-programacion filtromodo">
 					  <div class="swiper-wrapper">
 						<?php  $the_query = new WP_Query( array( 'post_type' => 'programas', 'posts_per_page' => 8)); ?>
 
@@ -206,7 +206,7 @@ get_header();
 				</div>
 
 				<!-- CAROUEL -->
-					<div class="swiper-container swiper-programacion">
+					<div class="swiper swiper-programacion">
 					  <div class="swiper-wrapper">
 						<?php $the_query = new WP_Query( array( 'category_name' => 'relax', 'posts_per_page' => 8)); ?>
 

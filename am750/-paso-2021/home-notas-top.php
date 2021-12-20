@@ -1,58 +1,83 @@
+<style>	
+#notas-top .column { display: flex; flex-direction: column; justify-content: center; align-items: center;} 
+a .ver:hover {color: #FFF!important; opacity: 0.8; transition: all 1s;} 
+hr.crisis { background: #009FD4; height: 1px; margin: 20px 0; width: 100%; }
+</style>
+
+
+
+
 <div id="notas-top">
-	<div class="scrolleable">
-		<div class="columns scrolleame">
-			<div class="column fija">
-				<a href="https://750.am/category/democracia-2021/">
-					<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png" width="97" height="41">
-					<h3 class="is-size-5 has-text-weight-semibold"> Elecciones legislativas </h3>
-					<h3 class="is-size-7">Todo lo que tenés que saber para votar </h3>
+ 
+
+	<div style="position: absolute; top: -14px; background: #FFF; font-weight: 600; padding-right: 10px"> Especial 2001 </div>
+	<hr class="crisis">
+
+
+
+	<!--DESKTOP-->
+	<div class="scrolleable is-hidden-mobile">
+
+
+		<div class="columns scrolleame" style="margin-right: .1rem; margin-left: .1rem;">
+
+			<div class="column fija" style="background: #FBB47B;">
+				<a href="https://750.am/especiales/2021-12_crisis2001/" target="_blank">
+					<h3 class="is-size-5mt-1 has-text-weight-semibold"> A 20 años de la crisis </h3>
+					<h3 class="is-size-7">Cronología de un diciembre en llamas </h3>
 				</a>
 			</div>
 
-	    	<div class="column fl">
-	    		<a href="https://750.am/2021/11/03/de-cuanto-es-la-multa-por-no-votar-en-las-elecciones-2021/">
-	    			<div class="columns">
-	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-01.jpg" width="147" height="84">
-						</div>	
-
-						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿De cuánto es la multa por no votar?</h3> 
-						</div>
-					</div>
-	    		</a>
-	    	</div>
-
-	    	<div class="column fl">
-	    		<a href="https://750.am/2021/11/03/elecciones-2021-que-pasa-si-no-voto/">
-	    			<div class="columns">
-	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-02.jpg" width="147" height="84">
-						</div>	
-
-						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿Qué pasa <br> si no voto?</h3> 
-						</div>
-					</div>
+	    	<div class="column fl is-2 has-text-centered mr-1" style="background: #111021">
+	    		<a href="https://750.am/especiales/2021-12_crisis2001/" style="color:#FFF" target="_blank">
+					<h3 class="is-size-6 is-fira has-text-weight-semibold ver">Ver especial</h3> 
 	    		</a>
 	    	</div>
 
 
-	    	<div class="column fl">
-	    		<a href="https://750.am/2021/11/12/especial-interactivo-que-esta-en-juego-en-las-elecciones-legislativas/">
-	    			<div class="columns">
-	    				<div class="column">
-							<img class="is-block" src="<?php bloginfo('template_url'); ?>/-paso-2021/elecciones-03.jpg" width="147" height="84">
-						</div>	
 
-						<div class="column">	
-							<h3 class="is-size-6 mt-2 is-fira has-text-weight-semibold">¿Qué está <br> en juego en estas elecciones?</h3> 
-						</div>
-					</div>
+	    	<div class="column fl mr-1" style="background: #2AE1D3"> 
+	    		<a href="https://750.am/2021/12/15/crisis-del-2001-que-paso-el-19-y-20-de-diciembre-de-2001/">
+					<h3 class="is-size-6 is-fira has-text-left has-text-weight-semibold">¿Qué pasó el 19 y 20 <br> de diciembre de 2001?</h3> 
+	    		</a>
+	    	</div>
+
+
+	    	<div class="column fl" style="background: #08CBBC"> 
+	    		<a href="https://750.am/2021/12/09/especial-2001-grito-no-disparen-y-un-comerciante-lo-mato-en-frente-de-su-familia/">
+					<h3 class="is-size-6 is-fira has-text-left has-text-weight-semibold">Las historias de la brutal <br> represión que dejó 39 muertes </h3> 
 	    		</a>
 	    	</div>
 
 
 		</div>
 	</div>
+	<!--//DESKTOP-->
+
+
+	<!--CELULAR-->
+
+	<div class="is-hidden-tablet">
+
+		<div class="columns is-mobile" style="margin-right: .1rem; margin-left: .1rem;">
+
+			<div class="column" style="background: #FBB47B;">
+				<a href="https://750.am/especiales/2021-12_crisis2001/">
+					<h3 class="is-size-6 mt-1 mb-1 has-text-weight-semibold"> A 20 años de la crisis </h3>
+					<h3 class="is-size-7" style="line-height: 100%!important;">Cronología de un diciembre <br>en llamas </h3>
+				</a>
+			</div>
+
+	    	<div class="column has-text-centered is-4" style="background: #111021">
+	    		<a href="https://750.am/especiales/2021-12_crisis2001/" style="color:#FFF">
+					<h3 class="is-size-6 is-fira has-text-weight-semibold ver">Ver especial</h3> 
+	    		</a>
+	    	</div>
+
+		</div>
+	</div>
+
+	<!--//CELULAR-->
+	<hr class="crisis">
+
 </div>

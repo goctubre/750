@@ -14,17 +14,8 @@
         spaceBetween: 10,
         slidesPerGroup:1,
         loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-          slidesPerGroup:4
-          },
-        },      
+        pagination: { el: '.swiper-pagination', clickable: true, },
+        breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, },      
         navigation: {
           nextEl :'.bt-next-' + i,
           prevEl: '.bt-prev-' + i,
@@ -56,15 +47,8 @@
         a11y: true,
         keyboardControl: true,
         grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-            dynamicMainBullets: 5
-          },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+        pagination: { el: '.swiper-pagination', dynamicBullets: true, dynamicMainBullets: 5 },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
     });
 
     };
@@ -80,51 +64,18 @@
   programacionPrevButton = document.querySelectorAll('.programacion-bt-prev'); //const
 
   for( i=0; i< programacionSlider.length; i++ ) {
-
     programacionNextButton[i].classList.add('programacion-bt-next-' + i);
     programacionPrevButton[i].classList.add('programacion-bt-prev-' + i);
-
     programacionSlider[i].classList.add('swiper-programacion-' + i);
     var slider = new Swiper('.swiper-programacion-' + i, {
         slidesPerView: 1,
         spaceBetween: 10,
         slidesPerGroup:1,
         loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-          slidesPerGroup:4
-          },
-        },      
-        navigation: {
-          nextEl :'.programacion-bt-next-' + i,
-          prevEl: '.programacion-bt-prev-' + i,
-        },
+        pagination: { el: '.swiper-pagination', clickable: true, },
+        breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, },      
+        navigation: { nextEl :'.programacion-bt-next-' + i, prevEl: '.programacion-bt-prev-' + i, },
     });
 
   }
-
-
-
-
   // FIN PROGRAMACION SWIPER  [HOME]
-
-// FILTRO [HOME] -- SEGUIR
-//   document.querySelectorAll('.tabs').forEach((tab)=>{
-//     tab.querySelectorAll('li').forEach((li)=>{
-//       li.onclick = () => {
-//           tab.querySelector('li.is-active').classList.remove('is-active')
-//           li.classList.add('is-active')
-// tab.nextElementSibling.querySelector('.tab-pane.is-active').classList.remove('is-active')
-// tab.nextElementSibling.querySelector('.tab-pane#'+li.firstElementChild.getAttribute('id'))
-//             .classList.add("is-active")
-//       }
-//     })
-//   })
-
-

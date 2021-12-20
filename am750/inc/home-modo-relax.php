@@ -57,9 +57,7 @@
 
 				<div class="seccion-header">
 					<div class="seccion-nombre">
-						<h2 class="is-size-2"> 
-							Descubrí otros programas
-						</h2>
+						<h2 class="is-size-2"> Descubrí otros programas </h2>
 					</div>
 
 					<div class="has-text-right vermas">
@@ -73,33 +71,28 @@
 				<!-- CAROUSEL -->
 				<div class="tabs rounded swipe_tabs">
 					  <ul>
-						<li class="is-active"><a id="todos">Todos</a></li>
-						<li><a id="actualidad">Actualidad</a></li>
-						<li><a id="relax">Modo Relax</a></li>
+						<li class="is-active"> <a class="no-ajaxy" id="todos">Todos</a> </li>
+						<li> <a class="no-ajaxy" id="actualidad">Actualidad</a> </li>
+						<li> <a class="no-ajaxy" id="relax">Modo Relax</a> </li>
 					</ul>
 				</div>
 
-					<div class="swiper-container swiper-programacion filtromodo">
+					<div class="swiper swiper-programacion filtromodo">
 					  <div class="swiper-wrapper">
 						<?php  $the_query = new WP_Query( array( 
-							'post_status' => 'publish',  
-							'post_type' => 'programas', 
-							'orderby' => 'menu_order', 
-							'order' => 'ASC',
-							'posts_per_page' => 38)); 
+							'post_status' => 'publish', 'post_type' => 'programas', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 38)); 
 						?>
 
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-					    	<div class="swiper-slide <?php $terms = get_the_terms( $post->ID , 'modo' );  foreach ( $terms as $term ) { echo strtolower($term->name).' '; } ?>">
+					    	<div class="swiper-slide <?php $terms = get_the_terms($post->ID , 'modo');  foreach ($terms as $term) { echo strtolower($term->name).' '; } ?>">
 					    		<a href="<?php the_permalink(); ?>">
 
 									<?php if ( has_post_thumbnail() ) : ?>
 										<?php echo picture_image('medium', 'medium', 'medium', 'medium', 'is-square-small', 'is-rounded');?>
 									<?php endif; ?>
 
-									<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold"> 
-										<?php the_title(); ?> </h3> 
+									<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold">  <?php the_title(); ?> </h3> 
 					    		</a>
 					    	</div>
 
@@ -140,7 +133,7 @@
 
 				<!--CAROUSEL ENTREVISTAS-->
 				<div class="swiperbox swiperbox-seccion">
-					<div class="swiper-container swiper-secciones">
+					<div class="swiper swiper-secciones">
 					  <div class="swiper-wrapper">
 						<!-- loop entrevistas -->
 						<?php 
@@ -206,7 +199,7 @@
 
 				<!--CAROUSEL AUDIOCUENTOS-->
 				<div class="swiperbox swiperbox-seccion">
-					<div class="swiper-container swiper-secciones">
+					<div class="swiper swiper-secciones">
 					  <div class="swiper-wrapper">
 						<!-- loop audiocuentos -->
 						<?php 
@@ -340,7 +333,7 @@
 				</div>
 
 				<div class="swiperbox swiperbox-seccion">
-					<div class="swiper-container swiper-secciones">
+					<div class="swiper swiper-secciones">
 					  <div class="swiper-wrapper">
 						<!-- loop ENTREVISTAS -->
 						<?php 
