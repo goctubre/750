@@ -153,12 +153,10 @@
 		
 	</div><!-- #page -->
 
-
 		<!-- Back to top button -->
 		<a id="gototop" class="is-bg-celeste">
 			<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/chevron-up.svg" width="" height="" alt="Ir hacia arriba" />
 		</a>
-
 
 		</div><!--INSIDE DONDE ajaxify-->
 	</div> <!--DONDE ajaxify-->
@@ -169,10 +167,6 @@
 	<?php include get_theme_file_path( '/player/mediaplayer-asyn.php' );?>
 	<!--// Player-->
 
-	<link rel="preload" href="https://unpkg.com/swiper@7/swiper-bundle.min.js" as="script">
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
-
-
 	<?php wp_footer(); ?>
 
 	<!--jquery - pronto te vamos a abandonar -->
@@ -182,13 +176,10 @@
 
 	<script src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js" defer></script>
 
-	<script type="module">
-		let ajaxify = new Ajaxify({elements: "#insidedonde", selector: "a:not(.no-ajaxy)", inline: false });
-	</script>
+	<script type="module"> let ajaxify = new Ajaxify({elements: "#insidedonde", selector: "a:not(.no-ajaxy)", inline: false });	</script>
 
 	<!--<script src="<?php echo get_template_directory_uri(); ?>/js/750-ajaxify.js?=v<?php echo rand()?>>" defer></script> -->    
 	<script src="<?php echo get_template_directory_uri(); ?>/js/750-general.js?=v<?php echo rand()?>>" data-class="always" defer></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/750-home.js?=v<?php echo rand()?>>" data-class="always" defer></script>
 
 
 	<!--COMSCORE-->

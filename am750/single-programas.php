@@ -158,9 +158,7 @@ get_header();
 
  				<!--DESCUBRI OTROS PROGRAMAS-->
 				<div class="seccion-header mt-6">
-					<div class="seccion-nombre">
-						<h2 class="is-size-3"> Descubrí otros programas </h2>
-					</div>
+					<div class="seccion-nombre"> <h2 class="is-size-3"> Descubrí otros programas </h2> </div>
 
 					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/programacion/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
 				</div>
@@ -170,31 +168,34 @@ get_header();
 				<!-- CAROUSEL -->
 				<div class="tabs rounded swipe_tabs">
 					  <ul>
-						<li class="is-active"><a id="todos">Todos</a></li>
-						<li><a id="actualidad">Actualidad</a></li>
-						<li><a id="relax">Modo Relax</a></li>
+						<li class="is-active" data-value="todos"> <a class="no-ajaxy"> Todos </a> </li>
+						<li data-value="actualidad"> <a class="no-ajaxy"> Actualidad</a> </li>
+						<li data-value="relax"> <a class="no-ajaxy"> Modo Relax</a> </li>					  	
 					</ul>
 				</div>
+				
+				<div class="swiper swiper-programacion filtromodo">
+				  <div class="swiper-wrapper">
+					<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'post_type' => 'programas', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 38)); ?>
 
-					<div class="swiper swiper-programacion filtromodo">
-					  <div class="swiper-wrapper">
-						<?php  $the_query = new WP_Query( array( 'post_type' => 'programas', 'posts_per_page' => 8)); ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					    	<div class="swiper-slide <?php $terms = get_the_terms( $post->ID , 'modo' );  foreach ( $terms as $term ) { echo strtolower($term->name).' '; } ?>">
-					    		<a href="<?php the_permalink(); ?>">
-					    			<figure class="image is-square-small ">
-					    				<?php the_post_thumbnail('medium', array('class' => 'is-rounded')); ?>
-					    			</figure>
-					    			<?php echo categorias_programas();?>
-									<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold"> <?php the_title(); ?> </h3> 
-					    		</a>
-					    	</div>
-						<?php endwhile; ?>
-					  </div>
-					  <div class="swiper-button-prev programacion-bt-prev"></div>
-					  <div class="swiper-button-next programacion-bt-next"></div>
-					</div> 
+				    	<div class="swiper-slide <?php $terms = get_the_terms($post->ID, 'modo'); foreach ($terms as $term) {echo strtolower($term->name).' ';}?>"  data-filter="<?php $terms = get_the_terms($post->ID, 'modo'); foreach ($terms as $term) {echo strtolower($term->name);}?>">
+				    		<a href="<?php the_permalink(); ?>">
+
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php echo picture_image('medium', 'medium', 'medium', 'medium', 'is-square-small', 'is-rounded');?>
+								<?php endif; ?>
+
+								<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold">  <?php the_title(); ?> </h3> 
+				    		</a>
+				    	</div>
+
+					<?php endwhile; ?>
+				  </div>
+				  <div class="swiper-button-prev programacion-bt-prev"></div> <!--parche-->
+				  <div class="swiper-button-next programacion-bt-next"></div> <!--parche-->
+				</div>
 				<!--// carrousel-->
 				<!--//DESCUBRI OTROS-->
 
@@ -205,7 +206,7 @@ get_header();
 					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/category/relax/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
 				</div>
 
-				<!-- CAROUEL -->
+				<!-- CARRUOUSEL -->
 					<div class="swiper swiper-programacion">
 					  <div class="swiper-wrapper">
 						<?php $the_query = new WP_Query( array( 'category_name' => 'relax', 'posts_per_page' => 8)); ?>
@@ -252,6 +253,15 @@ get_header();
 		</div>
 
 	</div>
+
+
+
+<!--SWIPER // FRONTPAGE // PAGE-PROGRAMACION // SINGLE-PROGRAMAS -->
+<?php include get_theme_file_path( '/js/swiper.php' );?>
+<!--SWIPER-->
+
+
+
 <?php
 //get_sidebar();
 get_footer();

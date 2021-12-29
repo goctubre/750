@@ -1,0 +1,81 @@
+<h4>== Changelog ==</h4>
+
+Version x.x.x [2021 Diciembre 23] - sacar swiper de todos lados menos de
+frontpage.php // page-programacion.php // single-programa.php
+[x] header.php - se quitó css del swiper - call css/am750.css -call css/swiper.css -
+[x] footer.php - se quitó js del swiper
+[x] js/swiper.php - llamado solo x frontpage.php // page-programacion.php // single-programa.php
+[x] js/swiper.js - se eliminó 750-home.js
+[x] css/swiper.css - (se quitó lo de swiper del css principal)
+[x] ccs/am750.css - (detach style.css para que deje de ser un css bloqueante)
+[x] filtro programas swiper >> pasado a js (home-modo-relax.php // single-programa.php)
+
+
+Version x.x.x [2021 Diciembre 03]
+[x] header.php - migrate v@7swiper
+[x] footer.php - migrate v@7swiper
+[x] style.css - migrate v@7swiper
+[x] home-modo-relax.php // s-informativo-750.php // page-programacion.php // single-programa.php >>  ((swiper-container x swiper))
+
+
+Version x.x.x [2021 Noviembre 30]
+[x] single-programas.php - Imagen programa abajo de título y horario
+[x] single-programas.php - Volaron los integrantes
+[x] single-programas.php - Mejora en tamaño de imagen programa
+[x] inc/en-vivo.php - Mejora en tamaño de imagen programa
+[x] inc/en-vivo.php - En vivo deja de ser botón rojo 
+[x] inc/en-vivo.php - Botón escuchar y enviar mensaje alineados 
+[x] inc/al-aire.php - Mejora en tamaño de imagen programa
+[x] css/mini-player-filtrado.css - se filtro el css de mediaplayer
+
+Version x.x.x [2021 Octubre 28]
+[x] Player Async
+[x] Fix redeclaration ajaxify
+
+Version x.x.x [2021 Octubre 26]
+[x] Imágenes 19:6 > background: #f2f2f2 + logo (figure.image.is-16by9)
+[x] Imágenes Alt=""
+[x] Function picture_image ++ $loading = "lazy",  $importance = "auto"
+[x] llamado imagen principal single-programas.php
+[x] loading="eager" > logo, whatapp, darkmode, lupa
+
+Version x.x.x [2021 Septiembre 20]
+[x] Post-elecciones
+[x] Categoria-uno (para poder tener mayor control en el orden de las notas)
+
+
+Version x.x.x [2021 Septiembre 09]
+[x] Publicidad top mobile
+
+Version x.x.x [2021 Septiembre 07]
+[x] Portadas Elecciones
+[x] Switch de widget/mapa
+
+Version x.x.x [2021 Agosto 19]
+[x] Ajaxify (cambia por Zajax)
+
+Version x.x.x [2021 Julio 20]
+[x] Catástrofe
+[x] Especial Vacunas v02
+
+Version x.x.x [2021 Julio 15]
+[x] Especial Vacunas v01
+
+Version x.x.x [2021 Julio 7]
+[x] Notas - te puede interesar ()
+
+Version x.x.x [2021 Julio 6]
+[x] Se quitó load more infinite
+
+Version x.x.x [2021 Junio 14]
+[x] Experimeno AMP
+
+
+Version x.x.x [2021 Mayo 5]
+[x] Vinculamos contenido a Google News
+
+Version x.x.x [2021 Abril 26]
+[x]Cambiamos sitemap de jetpack por el de yoastSEO
+
+Version x.x.x [2021 Marzo 4]
+[x] Lanzamiento sitio nuevo

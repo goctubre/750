@@ -20,9 +20,7 @@
 
 						<div class="seccion-header">
 							<div class="seccion-nombre">
-								<a href="<?php echo get_site_url(); ?>/category/cultura/"> <h2 class="is-size-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"> 
-									Cultura y<br>espectáculos  
-								</h2> </a>
+								<a href="<?php echo get_site_url(); ?>/category/cultura/"> <h2 class="is-size-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"> Cultura y<br>espectáculos </h2> </a>
 							</div>
 							<div class="has-text-right vermas">
 								<a href="<?php echo get_site_url(); ?>/category/cultura/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
@@ -61,46 +59,46 @@
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/programacion/"> <span class="is-celeste is-size-5 has-text-weight-bold"> 
-						Ver más </span> </a>
+						<a href="<?php echo get_site_url(); ?>/programacion/"> 
+							<span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
 					</div>
 				</div>
 	
 				<p> Escuchá todos los episodios y columnas completos de tus programas favoritos</p>
 
 				<!-- CAROUSEL -->
+				<!-- <p class="categories"><span>Todos</span> <span>Actualidad</span> <span>Modo Relax</span></p>  -->  
+
 				<div class="tabs rounded swipe_tabs">
 					  <ul>
-						<li class="is-active"> <a class="no-ajaxy" id="todos">Todos</a> </li>
-						<li> <a class="no-ajaxy" id="actualidad">Actualidad</a> </li>
-						<li> <a class="no-ajaxy" id="relax">Modo Relax</a> </li>
+						<li class="is-active" data-value="todos"> <a class="no-ajaxy"> Todos </a> </li>
+						<li data-value="actualidad"> <a class="no-ajaxy"> Actualidad</a> </li>
+						<li data-value="relax"> <a class="no-ajaxy"> Modo Relax</a> </li>					  	
 					</ul>
 				</div>
 
-					<div class="swiper swiper-programacion filtromodo">
-					  <div class="swiper-wrapper">
-						<?php  $the_query = new WP_Query( array( 
-							'post_status' => 'publish', 'post_type' => 'programas', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 38)); 
-						?>
+				<div class="swiper swiper-programacion filtromodo">
+				  <div class="swiper-wrapper">
+					<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'post_type' => 'programas', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 38)); ?>
 
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-					    	<div class="swiper-slide <?php $terms = get_the_terms($post->ID , 'modo');  foreach ($terms as $term) { echo strtolower($term->name).' '; } ?>">
-					    		<a href="<?php the_permalink(); ?>">
+				    	<div class="swiper-slide <?php $terms = get_the_terms($post->ID, 'modo'); foreach ($terms as $term) {echo strtolower($term->name).' ';}?>"  data-filter="<?php $terms = get_the_terms($post->ID, 'modo'); foreach ($terms as $term) {echo strtolower($term->name);}?>">
+				    		<a href="<?php the_permalink(); ?>">
 
-									<?php if ( has_post_thumbnail() ) : ?>
-										<?php echo picture_image('medium', 'medium', 'medium', 'medium', 'is-square-small', 'is-rounded');?>
-									<?php endif; ?>
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php echo picture_image('medium', 'medium', 'medium', 'medium', 'is-square-small', 'is-rounded');?>
+								<?php endif; ?>
 
-									<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold">  <?php the_title(); ?> </h3> 
-					    		</a>
-					    	</div>
+								<h3 class="is-size-6 mt-2 is-fira has-text-centered has-text-weight-semibold">  <?php the_title(); ?> </h3> 
+				    		</a>
+				    	</div>
 
-						<?php endwhile; ?>
-					  </div>
-					  <div class="swiper-button-prev programacion-bt-prev"></div> <!--parche-->
-					  <div class="swiper-button-next programacion-bt-next"></div> <!--parche-->
-					</div> 
+					<?php endwhile; ?>
+				  </div>
+				  <div class="swiper-button-prev programacion-bt-prev"></div> <!--parche-->
+				  <div class="swiper-button-next programacion-bt-next"></div> <!--parche-->
+				</div> 
 				<!--// carrousel-->
 
 			</section>
@@ -137,13 +135,8 @@
 					  <div class="swiper-wrapper">
 						<!-- loop entrevistas -->
 						<?php 
-							$the_query = new WP_Query( array( 
-								'post_status' => 'publish', 
-								'category_name' => 'entrevistas', 
-								'orderby' => 'menu_order', 
-								'order' => 'ASC',
-								'posts_per_page' => 8));
-						 ?>
+							$the_query = new WP_Query(array('post_status' => 'publish','category_name' => 'entrevistas','orderby' => 'menu_order','order' => 'ASC','posts_per_page' => 8));
+						?>
 
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					    	<div class="swiper-slide">
@@ -202,13 +195,7 @@
 					<div class="swiper swiper-secciones">
 					  <div class="swiper-wrapper">
 						<!-- loop audiocuentos -->
-						<?php 
-						$the_query = new WP_Query( array( 
-							'post_status' => 'publish', 
-							'category_name' => 'audiocuentos', 
-							'orderby' => 'menu_order', 'order' => 'ASC',
-							'posts_per_page' => 8));
-						 ?>
+						<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'audiocuentos', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 8)); ?>
 
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					    	<div class="swiper-slide">
@@ -273,13 +260,7 @@
 						<!--//BANNER-->
 					</div>
 
-					<?php 
-						$the_query = new WP_Query( array( 
-							'post_status' => 'publish', 
-							'category_name' => 'deportes', 
-							'orderby' => 'menu_order', 'order' => 'ASC',
-							'posts_per_page' => 2 ) );
-					?>
+					<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'deportes', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 2 ) ); ?>
 
 					<?php if ( $the_query->have_posts() ) : ?>
 					 					 
@@ -307,9 +288,7 @@
 					    <?php wp_reset_postdata(); ?>
 					 
 					<?php else : ?>
-						<div class="column">
-					    	<p><?php _e( 'Upsss.' ); ?></p>
-						</div>
+						<div class="column"> <p><?php _e( 'Upsss.' ); ?></p> </div>
 					<?php endif; ?>
 				</div>
 				<div class="is-hidden-desktop has-text-centered mt-4  mb-5-mobile">
@@ -336,13 +315,7 @@
 					<div class="swiper swiper-secciones">
 					  <div class="swiper-wrapper">
 						<!-- loop ENTREVISTAS -->
-						<?php 
-							$the_query = new WP_Query( array( 
-								'post_status' => 'publish', 
-								'category_name' => 'la-venganza-sera-terrible', 
-								'orderby' => 'menu_order', 'order' => 'ASC',
-								'posts_per_page' => 8));
-						 ?>
+						<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'la-venganza-sera-terrible', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 8)); ?>
 
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					    	<div class="swiper-slide">

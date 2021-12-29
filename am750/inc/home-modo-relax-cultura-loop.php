@@ -1,10 +1,4 @@
-<?php  $the_query = new WP_Query( array( 
-	'post_status' => 'publish', 
-	'category_name' => 'cultura', 
-	'orderby' => 'menu_order', 
-	'order' => 'ASC',
-	'posts_per_page' => 2 ));
-?>
+<?php  $the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 'cultura', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 2 ));?>
 
 <?php if ( $the_query->have_posts() ) : ?>			 
     <!-- the loop -->
@@ -21,7 +15,7 @@
 	    		<a href="<?php the_permalink(); ?>">
 	        		<h3 class="is-size-5 has-text-weight-semibold is-fira mt-2"> <?php the_title(); ?></h3> 
 	        	</a>
-    	</article>
+    		</article>
     	</div>
     <?php endwhile; ?>
     <!-- end of the loop -->
@@ -29,7 +23,5 @@
     <?php wp_reset_postdata(); ?>
  
 	<?php else : ?>
-		<div class="column">
-	    	<p><?php _e( 'Upsss.' ); ?></p>
-		</div>
+		<div class="column"> <p><?php _e( 'Upsss.' ); ?></p> </div>
 <?php endif; ?>

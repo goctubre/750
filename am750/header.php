@@ -15,28 +15,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css"> -->
-
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css"></noscript>
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">  -->
-	
 
 	<!--PASO 2021-->
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/-paso-2021/elecciones-paso.css?v=<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!--//PASO 2021-->
 	
-	<!--swiper-->
-		<!-- <link rel="preload" as="style" href="//unpkg.com/swiper/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css" /> -->
-		<link rel="preload" as="style" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> 
-	<!--//swiper-->
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css"></noscript> -->
 
-	<?php /*<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-swiper.css">*/?>
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css"></noscript> 
+	<!-- testING >> ?=v<?php //echo rand()?>-->
 
 	<meta name="theme-color" content="#ffffff">
 	<link rel="manifest" href="/manifest.json">
+
 
 
 	<!--PRELOAD GOOGLE FONT-->
@@ -57,9 +53,6 @@
 
 
 	<?php wp_head(); ?>
-
-	<!-- AJAXIFY-->
-	<!-- <script defer src="https://cdn.jsdelivr.net/gh/arvgta/ajaxify@8.1.5/ajaxify.min.js"></script> -->
 
 	<!--ADZONE-->
 	<!-- <script src="https://s-adzone.com/c/14_750amsupertag.js" defer></script> -->
@@ -192,15 +185,7 @@
 
 
 		    <div id="menuprincipal">
-
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
-				?>
+				<?php wp_nav_menu(array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )); ?>
 
 				<ul id="menu-mob" class="is-hidden-tablet"> 
 					<li> <div class="switch" aria-label="Activar modo oscuro"> Activar modo oscuro </div>  </li>
@@ -239,7 +224,6 @@
 				</section>
 			<?php }
 		?>
-
 		<!--//BANNERS-->
 
 		<!--BREAKING NEWS  -->

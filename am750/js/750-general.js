@@ -164,17 +164,3 @@ document.querySelector("html").classList.remove("overhidden");
     jQuery(".programas_tabs_content div").removeClass('is-active');
     jQuery(".programas_tabs_content").children("#"+selectedElement).addClass('is-active');
   });
-
-  
-  // ##JQUERY
-  jQuery(".swipe_tabs li ").on('click touch', function () {
-      var selectedElement = jQuery(this).children("a").attr("id");
-      console.log(selectedElement);
-      jQuery('.swipe_tabs li ').removeClass('is-active');
-      jQuery(this).addClass('is-active');
-      jQuery(".swiper-programacion.filtromodo div div").removeClass('swiper-slide').addClass('non-swiper-slide');
-      jQuery(".swiper-programacion.filtromodo div div."+selectedElement).removeClass('non-swiper-slide').addClass('swiper-slide');
-      if(selectedElement=="todos"){
-        jQuery(".swiper-programacion.filtromodo div div").removeClass('non-swiper-slide').addClass('swiper-slide');
-      }
-  });

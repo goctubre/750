@@ -201,5 +201,14 @@ get_header();
 
 	</section>
 
+
+
+
+<!--SWIPER // FRONTPAGE // PAGE-PROGRAMACION // SINGLE-PROGRAMAS -->
+<?php include get_theme_file_path( '/js/swiper.php' );?>
+<!--SWIPER-->
+
+
+
 <?php
 get_footer();

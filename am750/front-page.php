@@ -15,6 +15,12 @@
 get_header();
 ?>
 
+<style>
+/* INFORMATIVO 750 - CLS - VITALS*/
+@media (min-width:769px) { #informativo750 .swiper-container-mob { height: calc(100vh - 10px);  overflow-y: auto;overflow-x: hidden;}  .swiper-container-mob .swiper-slide {height: unset; width: unset !important; margin-right: 10px;} .swiper-container-mob .swiper-wrapper {position: unset; width: unset;height: unset;display: unset;transition: unset;box-sizing: unset;} .swiper-container-mob .swiper-pagination {display: none;}}
+</style>
+
+
 <!--AUTOREFRESH - paso2021-->
 		<div data-autorefresh="front-page-loop.php">
 			<?php include get_theme_file_path( 'front-page-loop.php' );	?>
@@ -166,6 +172,12 @@ get_header();
   });
   
 </script>
+
+
+
+<!--SWIPER // FRONTPAGE // PAGE-PROGRAMACION // SINGLE-PROGRAMAS -->
+<?php include get_theme_file_path( '/js/swiper.php' );?>
+<!--SWIPER-->
 
 
 <?php

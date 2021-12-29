@@ -1,0 +1,80 @@
+.swiper-initialized {display:block!important} .swiper {display:none}
+
+
+/* Carousel
+--------------------------------------------- */
+.swiper {line-height: 140% !important; }
+.swiperbox { position: relative; padding: 0 1.5rem; margin-left: -1.5rem;}
+.swiper-button-next, .swiper-button-prev {background:#FFF!important; box-shadow: 0px 1px 4px rgba(0,0,0,0.15)!important;
+  top:50%!important; border-radius:50%!important;color:#3D3F52!important; padding:0!important; height: 40px!important;width: 40px !important;font-weight: bold!important}
+.swiperbox-seccion .swiper-button-next, .swiperbox-seccion .swiper-button-prev {top:36% !important}
+.swiper-button-next:hover {margin-left: -10px;transition: all 0.3s;}
+.swiper-button-prev:focus {margin-right: -10px;transition: all 0.3s;}
+
+
+.swiper-button-prev::after, .swiper-container-rtl .swiper-button-next::after,
+.swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {
+content: " " !important; position: relative!important; height: 100%!important; width: 100%!important;; background-repeat: no-repeat!important;
+background-position: center center!important; background-size: 10px!important; background-image: url("https://750.am/wp-content/themes/am750/img/i-prev.svg")!important;}
+
+.swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {transform: rotate(180deg);}
+
+.darkmode .swiper-button-next, .darkmode .swiper-button-prev {background:#E0E0E0; color: #121212;}
+.darkmode .swiper-button-prev::after, .darkmode .swiper-button-next::after {filter: brightness(26%);
+  -webkit-filter:  brightness(26%);-moz-filter: brightness(26%);}
+.darkmode .swiper-pagination-bullet {background: #FFF;}
+
+
+
+@media screen and (max-width:1023px){
+.swiperbox {  position: relative !important; padding: 0 0 0 1.5rem !important; }
+.swiper {padding-bottom: 40px !important; margin-right: -.75rem!important;}
+.swiper-secciones { padding-bottom: 80px !important }
+.swiper-container-mob {margin-bottom: 30px}
+.swiper-container-mob .swiper-button-next, .swiper-container-mob .swiper-button-prev,
+.swiperbox-seccion .swiper-button-next, .swiperbox-seccion .swiper-button-prev { top: unset !important;height:30px!important;width:30px!important;bottom: 0!important;}
+.swiperbox-seccion .swiper-button-next, .swiperbox-seccion .swiper-button-prev {bottom:6px;}
+.swiper-secciones .swiper-pagination-bullets.swiper-pagination-horizontal { bottom: 3px!important}
+}
+
+
+
+
+/* Carousel Mobile
+--------------------------------------------- */
+
+@media (min-width:769px) {
+  #informativo750 .swiper-container-mob { height: calc(100vh - 10px);  overflow-y: auto;overflow-x: hidden;}
+  .swiper-container-mob .swiper-slide {height: unset; width: unset !important; margin-right: 10px;}
+  .swiper-container-mob .swiper-wrapper {position: unset; width: unset;height: unset;display: unset;transition: unset;box-sizing: unset;}
+  .swiper-container-mob .swiper-pagination {display: none;}
+  /*.swiper-container-mob .swiper-button-next, .swiper-container-mob .swiper-button-prev {display: none} */}
+
+.swiper-container-mob .swiper-button-next::after, .swiper-container-mob .swiper-button-prev::after { font-size: 8px !important;}
+.swiper-container-mob .swiper-button-next, .swiper-container-mob .swiper-button-prev {display: none}
+
+@media (max-width:768px) { 
+  .swiper-container-mob hr { display: none;} 
+  .swiper-container-mob .swiper-button-next, .swiper-container-mob .swiper-button-prev {display: flex !important;}  /*seguir chequear*/
+}
+
+.swiper-container-mob {  width: 100%;  overflow: hidden}
+.swiper-container-mob .swiper-pagination-bullets {  position: relative;}
+.swiper-container-mob .swiper-pagination-bullet { width: 10px; height: 10px;}
+.swiper-button-prev.seccion-bt-prev { margin-left: 20px;}
+
+.swiper-container-mob h3 {  margin-bottom: 20px;}
+.swiperbox-seccion h1 { margin-bottom: 20px;}
+
+
+/* SLIDER */
+.image.is-square-small { padding-top: 80%; text-align: center;}
+.image.is-square-small img { height: 100%;width: 80%; bottom: 0 !important; left: 10%; position: absolute; right: 0; top: 0;}
+
+
+@media screen and (max-width:1023px) {
+.image.is-square-small { padding-top: 50%; text-align: center;}
+.image.is-square-small img { height: 100%;width:50%; bottom: 0 !important; left:25%; position: absolute; right: 0; top: 0; color: transparent; background: #F0F0F0;}
+.swiper-programacion {padding-bottom: 0;}
+.swiper-programacion .swiper-button-next, .swiper-programacion .swiper-button-prev  {margin-top: -40px !important}
+}

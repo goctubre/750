@@ -421,11 +421,10 @@ function pagination_bar() {
     $total_pages = $wp_query->max_num_pages;
     if ($total_pages > 1){
         $current_page = max(1, get_query_var('paged'));
-        echo paginate_links(array(
-            'type' => 'list',
-            'current' => $current_page,
-            'total' => $total_pages,
-        ));
+        //echo paginate_links(array( 'type' => 'list', current' => $current_page, 'total' => $total_pages));
+        $nropages =  paginate_links(array( 'type' => 'list', 'current' => $current_page, 'total' => $total_pages));
+        $nropages = str_replace('<a ', '<a rel="nofollow" ', $nropages);
+        echo $nropages;
     }
 }
 
