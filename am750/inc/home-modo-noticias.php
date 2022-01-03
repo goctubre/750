@@ -123,7 +123,7 @@
 
 		<!-- loop MÁS ACTUALIDAD -->
 		<?php 
-			$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'actualidad', 'posts_per_page' => 3, 'orderby' => 'menu_order', 'order' => 'ASC', 'offset' => 4 ));
+			$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'actualidad', 'posts_per_page' => 3, 'orderby' => $orderby, 'order' => $order, 'offset' => 4 ));
 			$count = 0;
 		 ?>
 
@@ -196,13 +196,8 @@
 	<div class="columns">
 		<div class="column is-5">
 			<?php 
-				$the_query = new WP_Query( array( 
-					'post_status' => 'publish', 
-					'category_name' => 'opinion', 
-					'orderby' => 'menu_order', 
-					'order' => 'ASC',
-					'posts_per_page' => 1) );
-				?>
+				$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'opinion', 'orderby' => $orderby, 'order' => $order, 'posts_per_page' => 1) );
+			?>
 
 				<?php if ( $the_query->have_posts() ) : ?>
 			 					 
@@ -254,13 +249,7 @@
 
 		<div class="column is-offset-1">
 			<?php 
-				$the_query = new WP_Query( array( 
-					'post_status' => 'publish', 
-					'category_name' => 'opinion', 
-					'orderby' => 'menu_order', 
-					'order' => 'ASC',
-					'posts_per_page' => 3, 
-					'offset' => 1 ) );
+$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'opinion', 'orderby' => $orderby, 'order' => $order, 'posts_per_page' => 3, 'offset' => 1));
 			?>
 
 			<?php if ( $the_query->have_posts() ) : ?>				 

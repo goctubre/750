@@ -8,12 +8,7 @@
 		<a href="<?php echo get_site_url(); ?>/category/relax/"> <h2 class="is-size-0 has-text-weight-bold is-fira ls-2" data-scroll-direction="horizontal" data-scroll data-scroll-speed="-1">Modo Relax</h2> </a>
 
 		<!--humor first- HUMOR-->
-		<?php $the_query = new WP_Query( array(
-			'post_status' => 'publish', 
-			'category_name'=>'relax',
-			'orderby' => 'menu_order', 
-			'order' => 'ASC',
-			'posts_per_page'=>1));?>
+		<?php $the_query = new WP_Query( array('post_status' => 'publish', 'category_name'=>'relax', 'orderby' => $orderby, 'order' => $order, 'posts_per_page'=>1));?>
 
 		<?php if ( $the_query->have_posts() ) : ?>
 		 					 
@@ -65,8 +60,7 @@
 		<!--//HUMOR-->
 
 		<div class="columns">
-			<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'humor', 
-			'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 2 ) ); ?>
+			<?php $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'humor', 'orderby' => $orderby, 'order' => $order, 'posts_per_page' => 2 ) ); ?>
 
 			<?php if ( $the_query->have_posts() ) : ?>		 
 			    <!-- the loop -->

@@ -1,5 +1,5 @@
 <?php 
-$the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 'destacados', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 4 ) );
+$the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 'destacados', 'orderby' => $orderby, 'order' => $order, 'posts_per_page' => 4 ) );
 ?>
 
 <!-- loop destacado -->

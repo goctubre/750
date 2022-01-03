@@ -15,6 +15,12 @@
 get_header();
 ?>
 
+<?php 
+$orden_criterio =  get_option('orden_criterio');  
+if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$orderby = 'menu_order';$order = 'ASC';}
+?>
+
+
 <style>
 /* INFORMATIVO 750 - CLS - VITALS*/
 @media (min-width:769px) { #informativo750 .swiper-container-mob { height: calc(100vh - 10px);  overflow-y: auto;overflow-x: hidden;}  .swiper-container-mob .swiper-slide {height: unset; width: unset !important; margin-right: 10px;} .swiper-container-mob .swiper-wrapper {position: unset; width: unset;height: unset;display: unset;transition: unset;box-sizing: unset;} .swiper-container-mob .swiper-pagination {display: none;}}

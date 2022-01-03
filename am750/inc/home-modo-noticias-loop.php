@@ -1,11 +1,6 @@
 <!--actualidad first- LA ÚLTIMA NOTICIA-->
 <?php 
-	$the_query = new WP_Query( array( 
-		'post_status' => 'publish', 
-		'category_name' => 'actualidad', 
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
-		'posts_per_page' => 1));
+	$the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' => 'actualidad', 'orderby' => $orderby, 'order' => $order, 'posts_per_page' => 1));
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
@@ -58,13 +53,7 @@
 <hr class="dashed">
 <!--actualidad - ULTIMAS +3 NOTICIAS-->
 <?php 
-	$the_query = new WP_Query( array( 
-		'post_status' => 'publish', 
-		'category_name' => 'actualidad', 
-		'orderby' => 'menu_order', 
-		'order' => 'ASC',
-		'posts_per_page' => 3, 
-		'offset' => 1 ) );
+$the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 'actualidad', 'orderby' => $orderby,'order' => $order,'posts_per_page' => 3, 'offset' => 1 ));
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>

@@ -72,6 +72,8 @@ add_settings_field('candidates_url', 'URL Resultados por Candidates', 'portada_c
 add_settings_field('candidates_p12_url', 'URL Resultados por Candidates P12', 'portada_candidates_p12_url', 'portada-page', 'portada_page_setting_section');
 add_settings_field('mapa_url', 'URL Mapa', 'portada_mapa_url', 'portada-page', 'portada_page_setting_section');
 add_settings_field('orden_portada', 'Orden de la portada', 'portada_orden_portada', 'portada-page', 'portada_page_setting_section');
+add_settings_field('orden_criterio', 'Orden Criteria', 'portada_orden_criterio', 'portada-page', 'portada_page_setting_section');
+
 
 register_setting( 'portada-page', 'catastrofe' );
 register_setting( 'portada-page', 'catastrofe_mapa' );
@@ -81,6 +83,7 @@ register_setting( 'portada-page', 'candidates_url' );
 register_setting( 'portada-page', 'candidates_p12_url' );
 register_setting( 'portada-page', 'mapa_url' );
 register_setting( 'portada-page', 'orden_portada' );
+register_setting( 'portada-page', 'orden_criterio' );
 
 }
 
@@ -142,7 +145,11 @@ function portada_orden_portada() { ?>
     <?php
 }
 
-
+function portada_orden_criterio() { ?>
+    <input type="radio" name="orden_criterio" value="menu_order" <?php checked(menu_order, get_option('orden_criterio'), true); ?>> Ordenar por orden menu <br>
+    <input type="radio" name="orden_criterio" value="fecha" <?php checked(fecha, get_option('orden_criterio'), true); ?>> Ordenar por fecha <br>
+    <?php
+}
 
 
 
