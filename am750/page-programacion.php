@@ -106,10 +106,10 @@ get_header();
 
 				<div class="tabs rounded programas_tabs visibility">
 				  <ul>
-					<?php
-					foreach ($dias as $key => $value) {
+				  <ul>
+					<?php foreach ($dias as $key => $value) {
 						if($now_day==$key){$active="is-active ";}else{$active="";}
-						echo'<li class="'.$active.'"><a id="'.$key.'">'.$value.'</a></li>';
+						echo'<li class="'.$active.'" data-dia="'.$key.'"> <a>'.$value.'</a></li>';
 					}?>
 				  </ul>
 				</div>

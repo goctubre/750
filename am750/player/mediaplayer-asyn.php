@@ -1,4 +1,20 @@
-    <script src="https://player.cdn.mdstrm.com/lightning_player/api.js" importance="low"></script>
+ <script src="https://player.cdn.mdstrm.com/lightning_player/api.js" importance="low"></script>
+
+	<style>
+		#playerloading { background: #000; height: 70px; width: 100%; position: fixed;  bottom: 0; text-align: center; z-index: 999}
+		.lds-ellipsis {display: inline-block;position: relative; width: 80px;height: 80px;}
+		.lds-ellipsis div { position: absolute;  top: 33px; width: 13px; height: 13px; border-radius: 50%; background: #fff; animation-timing-function: cubic-bezier(0, 1, 1, 0);}
+		.lds-ellipsis div:nth-child(1) { left: 8px; animation: lds-ellipsis1 0.6s infinite;}
+		.lds-ellipsis div:nth-child(2) { left: 8px; animation: lds-ellipsis2 0.6s infinite;}
+		.lds-ellipsis div:nth-child(3) { left: 32px; animation: lds-ellipsis2 0.6s infinite;}
+		.lds-ellipsis div:nth-child(4) { left: 56px; animation: lds-ellipsis3 0.6s infinite;}
+		@keyframes lds-ellipsis1 { 0% {transform: scale(0); }  100% { transform: scale(1); }}
+		@keyframes lds-ellipsis3 { 0% { transform: scale(1);} 100% { transform: scale(0);}}
+		@keyframes lds-ellipsis2 { 0% { transform: translate(0, 0); } 100% { transform: translate(24px, 0);}}
+	</style>
+
+
+
 
 	<div id="player-div"> </div>
 
@@ -63,11 +79,7 @@
 				</svg>
 			</button>
 
-
-
 			<button class="np__btn_controls np__btn_controls_play"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play fa-w-14 np__btn_controls_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg></button>
-
-
 
 			<button class="np__btn_controls disabled" style="opacity: 0.2;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="step-forward" class="svg-inline--fa fa-step-forward fa-w-14 np__btn_controls_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 475.4 64 448V64c0-27.4 31.9-41.7 52.5-24.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"></path></svg></button>
 
@@ -90,20 +102,6 @@
 
 	</div>
 	
-	<style>
-		#playerloading { background: #000; height: 70px; width: 100%; position: fixed;  bottom: 0; text-align: center; z-index: 999}
-		.lds-ellipsis {display: inline-block;position: relative; width: 80px;height: 80px;}
-		.lds-ellipsis div { position: absolute;  top: 33px; width: 13px; height: 13px; border-radius: 50%; background: #fff; animation-timing-function: cubic-bezier(0, 1, 1, 0);}
-		.lds-ellipsis div:nth-child(1) { left: 8px; animation: lds-ellipsis1 0.6s infinite;}
-		.lds-ellipsis div:nth-child(2) { left: 8px; animation: lds-ellipsis2 0.6s infinite;}
-		.lds-ellipsis div:nth-child(3) { left: 32px; animation: lds-ellipsis2 0.6s infinite;}
-		.lds-ellipsis div:nth-child(4) { left: 56px; animation: lds-ellipsis3 0.6s infinite;}
-		@keyframes lds-ellipsis1 { 0% {transform: scale(0); }  100% { transform: scale(1); }}
-		@keyframes lds-ellipsis3 { 0% { transform: scale(1);} 100% { transform: scale(0);}}
-		@keyframes lds-ellipsis2 { 0% { transform: translate(0, 0); } 100% { transform: translate(24px, 0);}}
-	</style>
-
-
 
 <!--   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css" as="style" onload="this.onload=null;this.rel='stylesheet'" importance="low">
   <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mini-player-v02.css"></noscript> -->
@@ -115,58 +113,91 @@
   <div id="playerLoaded"> </div>
 
 
-	<script type="module">
+	<script type="text/javascript">
 
-	var playmedia = document.getElementById('playmedia');
-	var falsoplayer = document.getElementById('falsoplayer');
-	var playerloading = document.getElementById('playerloading');
+	// SEGUIR
+		  var reproduciendo = false; 
+		  var falsoplayeron = true; 
 
+		  var falsoplayer = document.getElementById('falsoplayer');      
+		  var playerloading = document.getElementById('playerloading');  
+		  var btfalsotop = document.querySelector(".play_btn");  //#playnav
+		  var btfalsobottom = document.querySelector('#falsoplayer .np__btn_controls_play'); 
 
-	// TOCAR PLAY DE ARRIBA
-	var btplayarriba = document.getElementById("playnav");
-  	btplayarriba.classList.add("llamarfalsoplayer");
-  	var llamarfalsoplayer = document.querySelector(".llamarfalsoplayer");
+		  function llamarposta () {
+		  	//console.log("llamar-falsoplayer");
+		    reproduciendo = true;
+		    window.reproduciendo=true;
+		    //console.log("reproduciendo:"+reproduciendo);
+		    //console.log("falsoplayeron:"+falsoplayeron);
+		    dataLayer.push({'event': 'play'});
+		    document.querySelector('.play_btn').classList.add('reproduciendo');
+		    document.querySelector(".play_btn").classList.remove('llamarfalsoplayer');
+		    
+		    // calling script
+		    var script = document.createElement("script");
+		    script.type = "text/javascript";
+		    script.src = "https://player.cdn.mdstrm.com/lightning_player/api.js";
+		    script.dataset.container = "player-div";
+		    script.dataset.type = "live";
+		    script.dataset.id = "601bf3e463786007e6d3b9b0";
+		    script.dataset.appName = "am750";
+		    script.id = "playerScript";
+		    //script.dataset.loaded = "playerLoaded";
+		    script.dataset.autoplay = "autoplay";
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		    falsoplayer.remove();
+		    setTimeout(function(){ playerloading.remove(); },2000);
 
+		    //setTimeout(function(){document.querySelector("#player-div .np__btn_controls_play").style.background = "blue"; }, 3000);
 
-	var playfalso = function () {
-		//alert("ey");
-
-		if(btplayarriba.classList.contains("llamarfalsoplayer")){
-		// check si ya hubo play abajo
-			//alert("HO");
-
-			falsoplayer.remove();
-			btplayarriba.classList.remove("llamarfalsoplayer");
-
-			console.log("reproduciendo");
-			window.reproduciendo=true;
-			dataLayer.push({'event': 'play'});
-			//setTimeout(function(){ check_if_playing(true) }, 3000);
-
-			document.querySelector('.play_btn').classList.add('reproduciendo');
-
-			var script = document.createElement("script");
-			script.type = "text/javascript";
-			script.src = "https://player.cdn.mdstrm.com/lightning_player/api.js";
-			script.dataset.container = "player-div";
-			script.dataset.type = "live";
-			script.dataset.id = "601bf3e463786007e6d3b9b0";
-			script.dataset.appName = "am750";
-			script.id = "playerScript";
-			//script.dataset.loaded = "playerLoaded";
-			script.dataset.autoplay = "autoplay";
-			document.getElementsByTagName("head")[0].appendChild(script); return false;	
-
-			alert("listo");
-			playerloading.remove();
-		//fin check si ya hubo play abajo	
-		}
-
-
-	};
+	      setTimeout(function(){
+		    	var btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
+	        btbottom.addEventListener("click", haztugraciadown);
+		    }, 4000);
+	      
+		    falsoplayeron = false; 
+				return false;
+		  }
 
 
-	llamarfalsoplayer.addEventListener("click", playfalso, {once: true});
-	playmedia.addEventListener("click", playfalso);
+			 function haztugraciatop() {
+			    //YA ANDANDO
+			    if(falsoplayeron === false){	
+				    if (reproduciendo === true) {
+				      document.querySelector('#player-div .np__btn_controls_play').click();
+				    } else {
+				       document.querySelector('#player-div .np__btn_controls_play').click();
+				    }  
+
+			    //LLAMAR PLAYER
+			    } else if (falsoplayeron === true) { llamarposta(); };
+			  }
+
+			 function haztugraciadown () {
+			    //YA ANDANDO
+			    if(falsoplayeron === false){	
+				    if (reproduciendo === true) {
+				      document.querySelector('.play_btn').classList.remove('reproduciendo');
+				      console.log("*pausado*");
+				      reproduciendo = false;
+				      console.log("reproduciendo:"+reproduciendo);
+				      dataLayer.push({'event': 'stop'});
+				    } else {
+				      document.querySelector('.play_btn').classList.add('reproduciendo');
+				      console.log("*play*");
+				      reproduciendo = true;
+				       console.log("reproduciendo:"+reproduciendo);
+				      dataLayer.push({'event': 'play'});
+				    }  
+			    //LLAMAR PLAYER
+			    } else if (falsoplayeron === true) { llamarposta(); };
+			  }
+
+	btfalsotop.addEventListener("click", haztugraciatop);
+	btfalsobottom.addEventListener("click", haztugraciadown);
+	btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
+	btbottom.addEventListener("click", haztugraciadown);
+  
 
 	</script>

@@ -30,7 +30,7 @@
 			</h2>
 
 			<?php if ( has_post_thumbnail() ) : ?>
-				<?php echo picture_image('mediumlarge', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado');?>
+				<?php echo picture_image('mediumlarge', 'mediumlarge', 'mediumlarge', 'small', 'is-16by9', 'is-bordeado', 'eager');?>
 			<?php endif; ?>
 
 			<ul class="redes is-flex mt-3">

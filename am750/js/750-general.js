@@ -109,58 +109,40 @@ document.querySelector("html").classList.remove("overhidden");
   document.querySelector('#search-btn').addEventListener('click', function () { document.querySelector('#search').classList.add('open'); })
   document.querySelector('.search-close').addEventListener('click', function () { document.querySelector('#search').classList.remove('open'); })
 
-
   //ANALYTICS
   function sendPageView(){
     dataLayer.push({ 'event': 'pageview','pagePath': window.location.pathname,'pageTitle': document.title });
     console.log("pageview:" + document.title);
-    self.COMSCORE && COMSCORE.beacon({c1:"2",c2:"24322362"});
-    jQuery.ajax({
-      url : "https://750.am/wp-content/themes/am750/COMSCORE.txt?rand="+Math.random(4),
-            type: 'get',
-            success: function(response) { console.log(response); }
-        });
   }
-
   sendPageView();
   //ANALYTICS
 
 
+  //PLAYING / PAUSE MEDIAPLAYER == siguen en mediaplyaer-asyn.php
+  if (reproduciendo === true ) { 
+    document.querySelector('.play_btn').classList.add('reproduciendo');
+    document.querySelector(".play_btn").classList.remove('llamarfalsoplayer');
+  } 
 
-
-  //PLAYING / PAUSE MEDIAPLAYER == jquery
-  function check_if_playing(elem=false){
-      if(jQuery(".np__btn_controls_play").children().hasClass("fa-pause")){
-        jQuery(".play_btn").addClass("reproduciendo");
-        jQuery(".np__btn_controls_play").addClass("reproduciendo");
-        console.log("reproduciendo");
-        window.reproduciendo=true;
-        if(elem!=false){ dataLayer.push({'event': 'play'}); }
-      } else {
-        jQuery(".play_btn").removeClass("reproduciendo");
-        jQuery(".np__btn_controls_play").removeClass("reproduciendo");
-        console.log("pausa");
-        window.reproduciendo=false;
-        if(elem!=false){ dataLayer.push({'event': 'stop'}); }
-      }
-      console.log(window.reproduciendo);
-  }
-
-  var playPauseStreaming = function(elem) { jQuery(".np__btn_controls_play").click();};
-
-  jQuery("body").on("click touch", ".np__btn_controls_play", function() { setTimeout(function(){ check_if_playing("player"); }, 700); });  
-  jQuery("body").on("click touch", ".play_btn", function() { playPauseStreaming(jQuery(this)) });  
-
-  check_if_playing();
-
+  var btfalsotop = document.querySelector(".play_btn");  //#playnav
+  btfalsotop.addEventListener("click", haztugraciatop);
+  btfalsobottom.addEventListener("click", haztugraciadown);
+  btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
+  btbottom.addEventListener("click", haztugraciadown);
+  
 
   //PROGRAMAS TAB - PAGE PROGRAMAS
-  jQuery(".programas_tabs li ").on('click touch', function () {
-    var selectedElement = jQuery(this).children("a").attr("id");
-    console.log(selectedElement);
-    jQuery('.programas_tabs li ').removeClass('is-active');
-    jQuery(this).addClass('is-active');
+  var tabLinks = document.querySelectorAll(".programas_tabs li");
+  var tabContent = document.querySelectorAll(".tab-pane");
 
-    jQuery(".programas_tabs_content div").removeClass('is-active');
-    jQuery(".programas_tabs_content").children("#"+selectedElement).addClass('is-active');
-  });
+  tabLinks.forEach(function(el) {  el.addEventListener("click", openTabs); });
+
+  function openTabs(el) {
+     var btnTarget = el.currentTarget;
+     var dia = btnTarget.dataset.dia;
+    
+     tabContent.forEach(function(el) { el.classList.remove("is-active"); });
+     tabLinks.forEach(function(el) { el.classList.remove("is-active"); });
+     document.querySelector("#" + dia).classList.add("is-active");
+     btnTarget.classList.add("is-active");
+}

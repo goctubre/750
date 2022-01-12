@@ -180,17 +180,18 @@
 
 	<!--<script src="<?php echo get_template_directory_uri(); ?>/js/750-ajaxify.js?=v<?php echo rand()?>>" defer></script> -->    
 	<script src="<?php echo get_template_directory_uri(); ?>/js/750-general.js?=v<?php echo rand()?>>" data-class="always" defer></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/comscore.js?=v<?php echo rand()?>>" data-class="always" defer></script>
 
-
-	<!--COMSCORE-->
+	<!--COMSCORE volar-->
 	<script type="text/javascript">
-	var _comscore = _comscore || [];
-	_comscore.push({ c1: "2", c2: "24322362" });
-	  (function() {
-		var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-		el.parentNode.insertBefore(s, el);
-	})();
+		// console.log("comscore");
+		// var _comscore = _comscore || [];
+		// _comscore.push({ c1: "2", c2: "24322362" });
+		//   (function() {
+		// 	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		// 	s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		// 	el.parentNode.insertBefore(s, el);
+		// })();
 	</script>
 
 

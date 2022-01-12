@@ -13,6 +13,14 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--web-vitals library-->
+<!-- 	<script type="module">
+	  import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
+	  getCLS(console.log); getFID(console.log); getLCP(console.log);
+	</script> -->
+	<!-- //web-vitals library-->
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/mini-bulma-v05.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -26,8 +34,8 @@
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css"></noscript> -->
 
-	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css"></noscript> 
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v3"></noscript> 
 	<!-- testING >> ?=v<?php //echo rand()?>-->
 
 	<meta name="theme-color" content="#ffffff">
@@ -170,7 +178,7 @@
 
 					<!--ESCUCHAR-->
 					<a class="navbar-item play_btn is-hidden-touch" href="javascript:void(0); ">
-							<button id="playnav" class=" button is-bg-violet">
+						<button id="playnav" class="button is-bg-violet llamarfalsoplayer">
 							<span class="icon">
 								<!-- <img src="<?php echo http2();?>/img/nav-play.svg" class="is-invert" width="" height="" alt="Escuchar radio" / -->
 							</span>

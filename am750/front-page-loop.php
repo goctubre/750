@@ -48,16 +48,16 @@
 			<!--//ESPECIALES-->
 
 			<!--SERVICIOS -->
-			<!-- <section id="serviciostop" class="is-bg-grisclarito mt-5 mb-5">
+			<section id="serviciostop" class="mt-5 mb-5">
 				<div class="columns level is-mobile">
 					<div class="column">
 						<?php include get_theme_file_path( '/inc/dolar.php' );?>
 					</div>
 					<div class="column has-text-right is-2-mobile">
-						<?php //include get_theme_file_path( '/inc/clima.php' );?>
+						<?php include get_theme_file_path( '/inc/clima.php' );?>
 					</div>
 				</div>
-			</section> -->
+			</section>
 			<!--//SERVICIOS -->
 
 

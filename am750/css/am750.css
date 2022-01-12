@@ -343,7 +343,7 @@ filter: grayscale(100%) brightness(194%);
 #envivo .column { padding-top: 0; padding-bottom: 0;}
 #envivo img {margin-bottom: -6px;}
 
-#serviciostop { padding: 0 20px; border-radius: 5px;}
+#serviciostop { padding: 0 20px; border-radius: 5px; background:#F7F7FA;}
 #serviciostop img {filter: invert(70%); margin-top: -2px; margin-right: 4px; }
 
 @media screen and (max-width:1023px) { #serviciostop {font-size: 0.8rem} }
@@ -714,7 +714,7 @@ border-radius: 10px; padding: 30px 6px;}
     border-radius: 0 !important;}
   #serviciostop .columns { margin: 0 !important;}
   #serviciostop .column { padding: 0 !important;}
-  #serviciostop img { height: 22px; width: auto; margin-right: 2px}
+  #serviciostop img { height: 22px; width: auto; margin-right: 2px; margin-top:0;}
   .bwhatapp {background: none !important; padding-left: 0!important; padding-right: 0!important}
   .bwhatapp .icon { margin: 0 !important;}
   .bwhatapp img { margin-left: 0  !important; filter: invert(69%) sepia(91%) saturate(4728%) hue-rotate(162deg) brightness(91%)  !important} 
