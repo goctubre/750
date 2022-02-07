@@ -3,7 +3,10 @@
 //https://gist.github.com/badcrocodile/91e002f96c0d038792dd
 //https://wordpress.stackexchange.com/questions/311558/meta-query-for-an-acf-checkbox-field-dont-works-correctly
 
-	$date_now = date('H:i:s'); 
+	//$date_now = date('H:i:s'); 
+	$date_now = date('H:i');
+	$date_now = strtotime ( '-3 hour' , strtotime ( $date_now ) ) ;
+	$date_now = date ( 'H:i' , $date_now );
 	$diadehoy = date('D');
 	$the_query  = new WP_Query(
 		array(

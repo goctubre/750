@@ -51,7 +51,7 @@ filtrame.forEach(filter => {
     if (val =="todos") {
       var todos = document.querySelectorAll('[data-filter]');
       todos.forEach((element) => { element.classList.remove('non-swiper-slide');  element.classList.add('swiper-slide'); });
-      console.log($(".swiper-programacion .swiper-slide").length);
+      //console.log($(".swiper-programacion .swiper-slide").length);
       var swiperprogramas = document.querySelector('.swiper-programacion').swiper;
       //swiperprogramas.destroy();
       swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', }, });
@@ -62,7 +62,7 @@ filtrame.forEach(filter => {
       vuelan.forEach((vuela) => { vuela.classList.add('non-swiper-slide');  vuela.classList.remove('swiper-slide'); });
       var estan = document.querySelectorAll('[data-filter="'+val+'"]');
       estan.forEach((esta) => { esta.classList.remove('non-swiper-slide'); esta.classList.add('swiper-slide'); });
-      console.log($(".swiper-programacion .swiper-slide").length);
+      //console.log($(".swiper-programacion .swiper-slide").length);
       //swiperprogramas.destroy();
       swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', }, });
     }

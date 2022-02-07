@@ -2,7 +2,10 @@
 		<h2 class="pt-3 pb-3 is-bg-violet is-size-4 is-fira">Al aire ahora</h2>
 
 		<?php
-			$date_now = date('H:i:s'); 
+			//$date_now = date('H:i:s'); 
+			$date_now = date('H:i');
+			$date_now = strtotime ( '-3 hour' , strtotime ( $date_now ) ) ;
+			$date_now = date ( 'H:i' , $date_now );
 			$diadehoy = strtolower(date('D'));
 			$the_query  = new WP_Query(
 				array(

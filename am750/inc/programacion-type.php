@@ -41,7 +41,7 @@ function custom_post_type_calendario() {
         'supports' => array('title')
  
     );
-    date_default_timezone_set('America/Argentina/Buenos_Aires');
+    //date_default_timezone_set('America/Argentina/Buenos_Aires');
      
     register_post_type( 'calendarios', $args );
  

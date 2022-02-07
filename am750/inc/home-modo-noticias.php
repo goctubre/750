@@ -8,29 +8,32 @@
 			<!--BANNER MOBILE-->
 			<div class="ad-slot mb-6" id="mobile_home_atf" data-adtype="box_mobile"> </div>
 			<!-- //BANNER MOBILE-->
-			<!-- <div data-autorefresh="/inc/s-informativo-750.php" class="sticky"> -->
-			<div class="sticky">
+			<div data-autorefresh="/inc/s-informativo-750.php" class="sticky">
 				<?php include get_theme_file_path( '/inc/s-informativo-750.php' );?>
 			</div>
 		</div>
 		<!--//INFORMATIVO COLUMN3-->
 
-		<!-- <div class="column" id="nota-principal" data-scroll data-scroll-speed="1" data-autorefresh="/inc/home-modo-noticias-loop.php"> -->
-		<div class="column" id="nota-principal">
+		<div class="column" id="nota-principal" data-autorefresh="/inc/home-modo-noticias-loop.php">
     		<!--//ULTIMAS NOTICIAS -  CATASTROFE -->
     			<?php 
     				$catastrofe =  get_option('catastrofe'); 
-    				if( $catastrofe !== 'catastrofe' ) { 
-    					include get_theme_file_path( '/inc/home-modo-noticias-loop.php' );	
-    				}
+    				if( $catastrofe !== 'catastrofe' ) { include get_theme_file_path( '/inc/home-modo-noticias-loop.php' ); }
     			?>
     		<!--//ULTIMAS NOTICIAS-->
 		</div>
 
 
 		<!--DESTACADOS-->
-		<!-- <div class="column is-3" id="destacados"  data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
-		<div class="column is-3" id="destacados">	
+		<div class="column is-3" id="destacados">
+
+			<!--LIVE -->
+			<?php 
+				$live_blog_posting =  get_option('live_blog_posting');  
+				if( $live_blog_posting == 'on') { include get_theme_file_path( '/inc/home-live.php' );}
+			?>
+			<!-- // LIVE--> 
+
 			<!--PREDESTACADO -->
 			<div id="predestacado" class="mb-5">
 				<?php 
@@ -59,8 +62,7 @@
 			<!--//PREDESTACADO-->
 
     		<!--//DESTACADOS-->
-    		<!-- <div data-scroll data-scroll-speed="-0.5" data-autorefresh="/inc/home-modo-noticias-destacados-loop.php"> -->
-    		<div>	
+    		<div data-autorefresh="/inc/home-modo-noticias-destacados-loop.php">
 				<?php include get_theme_file_path( '/inc/home-modo-noticias-destacados-loop.php' );?>
 			</div> 
     		<!--//DESTACADOS-->
@@ -79,8 +81,7 @@
 	<?php
 		$catastrofe_mapa =  get_option('catastrofe_mapa');  
 		if( $catastrofe_mapa == 'on' &&  $catastrofe !== 'mapa') { ?>
-		<!-- <div data-autorefresh="-paso-2021/mapa-elecciones.php"> -->
-		<div>
+		<div data-autorefresh="-paso-2021/mapa-elecciones.php">
 			<?php include get_theme_file_path( '-paso-2021/mapa-elecciones.php' );?>
 		</div>	
 		<?}

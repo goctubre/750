@@ -118,19 +118,6 @@ document.querySelector("html").classList.remove("overhidden");
   //ANALYTICS
 
 
-  //PLAYING / PAUSE MEDIAPLAYER == siguen en mediaplyaer-asyn.php
-  if (reproduciendo === true ) { 
-    document.querySelector('.play_btn').classList.add('reproduciendo');
-    document.querySelector(".play_btn").classList.remove('llamarfalsoplayer');
-  } 
-
-  var btfalsotop = document.querySelector(".play_btn");  //#playnav
-  btfalsotop.addEventListener("click", haztugraciatop);
-  btfalsobottom.addEventListener("click", haztugraciadown);
-  btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
-  btbottom.addEventListener("click", haztugraciadown);
-  
-
   //PROGRAMAS TAB - PAGE PROGRAMAS
   var tabLinks = document.querySelectorAll(".programas_tabs li");
   var tabContent = document.querySelectorAll(".tab-pane");
@@ -146,3 +133,22 @@ document.querySelector("html").classList.remove("overhidden");
      document.querySelector("#" + dia).classList.add("is-active");
      btnTarget.classList.add("is-active");
 }
+
+
+  //PLAYING / PAUSE MEDIAPLAYER == siguen en mediaplyaer-asyn.php
+
+  var btbottom = "";
+  if (reproduciendo === true ) { 
+    //document.querySelector('.play_btn').classList.add('reproduciendo');
+    //document.querySelector(".play_btn").classList.remove('llamarfalsoplayer');
+    document.querySelectorAll('.play_btn').forEach(function(el) {  el.classList.add('reproduciendo'); });
+    document.querySelectorAll('.play_btn').forEach(function(el) {  el.classList.remove('llamarfalsoplayer'); });
+  } 
+
+  var btfalsotop = document.querySelectorAll(".play_btn");  //#playnav
+
+  //btfalsotop.addEventListener("click", haztugraciatop);
+  btfalsotop.forEach(function(el) {  el.addEventListener("click", haztugraciatop); });
+  btfalsobottom.addEventListener("click", haztugraciadown);
+  btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
+  if (btbottom !== null) {   btbottom.addEventListener("click", haztugraciadown); }

@@ -10,7 +10,7 @@
 		    <input class="input" type="text" name="s" value="<?php the_search_query(); ?>"  placeholder="Buscar" />
 		  </p>
 		  <p class="control">
-		    <a class="button">  Buscar </a>
+		    <a class="button"> Buscar </a>
 		  </p>
 		</div>
 	</form>
@@ -28,9 +28,7 @@
               <a href="<?php the_permalink(); ?>">
 
 		        <div class="columns is-mobile">
-		          <figure class="image column is-4">
-		          	<?php the_post_thumbnail(); ?>
-		          </figure>
+		          <figure class="image column is-4"> <?php the_post_thumbnail('thumbnail'); ?> </figure>
 
 			        <div class="column">
 			           <h3 class= "is-size-5 has-text-weight-semibold is-fira"> <?php the_title(); ?> </h3>

@@ -1,8 +1,60 @@
 <h4>== Changelog ==</h4>
 
+Version x.x.x [2022 Febrero 04] - darkmode.css
+[x] header.php
+[x] darkmode.css
+[x] 750.css
+
+Version x.x.x [2022 Febrero 03] - live post bloging
+[x] home-live.php
+
+Version x.x.x [2022 Enero 20] - chau jquery
+[x] jquery eliminado del pie
+
+Version x.x.x [2022 Enero 20] - autorefresh
+[x] front-page.php (vuela  front-page-loop.php)
+[x] inc/home-modo-noticias.php
+[x] plugins/autorefresh/functions.php  --> vuela el onfocus
+
+Version x.x.x [2022 Enero 19] - Bt escuchar en barra “al aire ahora”
+[x] player/mediaplayer-asyn.php
+[x] js/750-general.js
+
+
+Version x.x.x [2022 Enero 19] - problema de la fecha (afectaba al status de wordpress) // dejar de emparchar ACF
+[x] inc/programacion-type.php / inc/al-aire.php / inc/en-vivo.php / page-programacion.php
+[x] se eliminó date_default_timezone_set('America/Argentina/Buenos_Aires');
+[x] Se agregó 3hs más al calculo de $now_date
+
+Version x.x.x [2022 Enero 12]
+[x]se agregó 750-single.js
+
+Version x.x.x [2022 Enero 12]
+[x] player JS (750-general.js / -mediaplayer-async.php / header.php
+[x] header.php > librería CWV
+[x] reactivación dólar/clima (-front-page-loop.php / am750.css > #serviciostop {#F7F7FA;} / elecciones.css > #notas-top {margin-bottom: 0px;}
+[x] comscore to JS ( 750-general.js / footer.php > js/comscore.js)
+[x] tabs programas to JS ( 750-general.js // page-progrramas.php )
+[x] eager noticia principal > home-modo-noticias-loop.php
+
+
+Version x.x.x [2021 Diciembre 30]
+switch para cambiar orden portada date/menu_order
+[x] front-page.php
+[x] inc/home-modo-noticias.php
+[x] inc/home-modo-noticias-loop.php
+[x] inc/home-modo-noticias-destacado-loop.php
+[x] inc/home-modo-relax-loop.php
+[x] inc/home-modo-relax-cultura-loop.php
+[x] inc/template-functions-admin.php
+
+
+Version x.x.x [2021 Diciembre 28]
+[x] inc/template-functions.php -> rel="nofollow" en la paginación
+
 Version x.x.x [2021 Diciembre 23] - sacar swiper de todos lados menos de
 frontpage.php // page-programacion.php // single-programa.php
-[x] header.php - se quitó css del swiper - call css/am750.css -call css/swiper.css -
+[x] header.php - se quitó css del swiper -call css/am750.css -call css/swiper.css -
 [x] footer.php - se quitó js del swiper
 [x] js/swiper.php - llamado solo x frontpage.php // page-programacion.php // single-programa.php
 [x] js/swiper.js - se eliminó 750-home.js
@@ -26,7 +78,7 @@ Version x.x.x [2021 Noviembre 30]
 [x] inc/en-vivo.php - En vivo deja de ser botón rojo 
 [x] inc/en-vivo.php - Botón escuchar y enviar mensaje alineados 
 [x] inc/al-aire.php - Mejora en tamaño de imagen programa
-[x] css/mini-player-filtrado.css - se filtro el css de mediaplayer
+[x] css/mini-player-filtrado.css - se filtró el css de mediaplayer
 
 Version x.x.x [2021 Octubre 28]
 [x] Player Async
@@ -70,7 +122,6 @@ Version x.x.x [2021 Julio 6]
 Version x.x.x [2021 Junio 14]
 [x] Experimeno AMP
 
-
 Version x.x.x [2021 Mayo 5]
 [x] Vinculamos contenido a Google News
 
@@ -79,3 +130,4 @@ Version x.x.x [2021 Abril 26]
 
 Version x.x.x [2021 Marzo 4]
 [x] Lanzamiento sitio nuevo
+

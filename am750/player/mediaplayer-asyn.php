@@ -121,7 +121,7 @@
 
 		  var falsoplayer = document.getElementById('falsoplayer');      
 		  var playerloading = document.getElementById('playerloading');  
-		  var btfalsotop = document.querySelector(".play_btn");  //#playnav
+		  var btfalsotop = document.querySelectorAll(".play_btn");  //#playnav
 		  var btfalsobottom = document.querySelector('#falsoplayer .np__btn_controls_play'); 
 
 		  function llamarposta () {
@@ -131,8 +131,8 @@
 		    //console.log("reproduciendo:"+reproduciendo);
 		    //console.log("falsoplayeron:"+falsoplayeron);
 		    dataLayer.push({'event': 'play'});
-		    document.querySelector('.play_btn').classList.add('reproduciendo');
-		    document.querySelector(".play_btn").classList.remove('llamarfalsoplayer');
+		    btfalsotop.forEach(function(el) {  el.classList.add('reproduciendo'); });
+		    btfalsotop.forEach(function(el) {  el.classList.remove('llamarfalsoplayer'); });
 		    
 		    // calling script
 		    var script = document.createElement("script");
@@ -178,26 +178,28 @@
 			    //YA ANDANDO
 			    if(falsoplayeron === false){	
 				    if (reproduciendo === true) {
-				      document.querySelector('.play_btn').classList.remove('reproduciendo');
+				      document.querySelectorAll('.play_btn').forEach(function(el) {  el.classList.remove('reproduciendo'); });
+
 				      console.log("*pausado*");
 				      reproduciendo = false;
 				      console.log("reproduciendo:"+reproduciendo);
 				      dataLayer.push({'event': 'stop'});
 				    } else {
-				      document.querySelector('.play_btn').classList.add('reproduciendo');
+				      document.querySelectorAll('.play_btn').forEach(function(el) {  el.classList.add('reproduciendo'); });
 				      console.log("*play*");
 				      reproduciendo = true;
-				       console.log("reproduciendo:"+reproduciendo);
+				      console.log("reproduciendo:"+reproduciendo);
 				      dataLayer.push({'event': 'play'});
 				    }  
 			    //LLAMAR PLAYER
 			    } else if (falsoplayeron === true) { llamarposta(); };
 			  }
 
-	btfalsotop.addEventListener("click", haztugraciatop);
+	//btfalsotop.addEventListener("click", haztugraciatop);
+	btfalsotop.forEach(function(el) {  el.addEventListener("click", haztugraciatop); });
 	btfalsobottom.addEventListener("click", haztugraciadown);
 	btbottom = document.querySelector('#player-div .np__btn_controls_play'); 
-	btbottom.addEventListener("click", haztugraciadown);
+  if (btbottom !== null) {  btbottom.addEventListener("click", haztugraciadown); }
   
 
 	</script>

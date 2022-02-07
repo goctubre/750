@@ -27,11 +27,93 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 </style>
 
 
-<!--AUTOREFRESH - paso2021-->
-		<div data-autorefresh="front-page-loop.php">
-			<?php include get_theme_file_path( 'front-page-loop.php' );	?>
-		</div>
-<!--//AUTOREFRESH-->
+<!--****** EX FRONT-PAGE-LOOP.PHP *******-->
+
+	<!--TOP POSITION - paso2021-->
+	<div class="container portadatop"> <!-- mb-6-->
+
+		<?php $elecciones_up =  get_option('elecciones_up'); $notas_up =  get_option('elecciones_up'); $catastrofe =  get_option('catastrofe');?>
+		<!-- WIDGET ELECCIONES - paso2021-->
+		<?php if( $elecciones_up == 'widget') { include get_theme_file_path( '/-paso-2021/home-especial-elecciones.php' ); }?>
+		<!-- // WIDGET ELECCIONES -->
+
+		<!-- WIDGET ELECCIONES - paso2021-->
+		<?php if( $elecciones_up == 'widgetp12') { include get_theme_file_path( '/-paso-2021/home-especial-elecciones-p12.php' );} ?>
+		<!-- // WIDGET ELECCIONES -->
+
+		<!-- NOTAS DESCATADAS TOP - paso2021-->
+		<?php if( $elecciones_up == 'servicio') { include get_theme_file_path( '/-paso-2021/home-notas-top.php' );} ?>
+		<!-- // NOTAS DESCATADAS TOP -->
+
+		<!-- CATASTROFE -->
+		<?php if( $catastrofe == 'una' || $catastrofe == 'cuatro' ) { include get_theme_file_path( '/inc/home-modo-catastrofe-loop.php' ); } ?>	
+		<!--//CATASTROFE-->
+
+		<!-- CATASTROFE MAPA -->
+		<?php if( $catastrofe == 'mapa' ) { include get_theme_file_path( '/inc/home-modo-catastrofe-mapa.php' ); } ?>	
+		<!--//CATASTROFE MAPA-->
+
+		<!-- DESTACADO SUPERIOR - paso2021-->
+		<?php if( $catastrofe == 'destacadosuperior' ||$catastrofe == 'destacadosuperiormasnotas' ) {include get_theme_file_path( '/inc/home-nota-top-destacada.php' ); }?>
+		<!-- // NOTAZA  -->
+
+	</div>
+	<!--//TOP POSITION-->
+
+	<div id="bloque01" class="container  <?php $catastrofe =  get_option('catastrofe'); if( $catastrofe == 'una' || $catastrofe == 'cuatro'  || $catastrofe == 'mapa' ) { echo "catastrofe";} ?>">
+
+		<div class="columns">
+			
+			<div class="column is-9">
+				<!--BANNERS - UBICACION ORIGINAL-->
+				<section id="bannertop" class="is-bg-grisclarito is-hidden-mobile">
+					<div class="ad-slot" id="home_billboard_atf" data-adtype="billboard"></div>
+					<!--<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> 300x50-320x50-360x56-->
+				</section>
+				<!--//BANNERS-->
+
+				<!--ESPECIALES -->
+				<section id="especiales" class="my-4">
+					<?php //include get_theme_file_path( '/inc/home-especial-vacunas.php' );?>
+				</section>
+				<!--//ESPECIALES-->
+
+				<!--SERVICIOS -->
+				<section id="serviciostop" class="mt-5 mb-5">
+					<div class="columns level is-mobile">
+						<div class="column">
+							<?php include get_theme_file_path( '/inc/dolar.php' );?>
+						</div>
+						<div class="column has-text-right is-2-mobile">
+							<?php include get_theme_file_path( '/inc/clima.php' );?>
+						</div>
+					</div>
+				</section>
+				<!--//SERVICIOS -->
+
+
+				<!--MODO NOTICIAS-->
+				<?php 
+					include get_theme_file_path( '/inc/home-modo-noticias.php' );
+					//$hour = date("G");
+				   	//if($hour >= 8 && $hour < 22) { include get_theme_file_path( '/inc/home-modo-noticias.php' );} 
+				    //else { include get_theme_file_path( '/inc/home-modo-relax.php' );}
+				 ?>
+				<!--//MODO NOTICIAS-->
+
+			</div> <!-- #column9 -->
+
+			<!--BANNER -->
+			<div class="column is-3 is-hidden-mobile" id="banner01">
+				<div class='ad-slot sticky is-bg-grisclarito' id='home_sidebar' data-adtype='sidebar'></div>
+			</div>	
+			<!--//BANNER -->
+
+		</div> <!--/columns -->
+
+	</div> <!--/#BLOQUE01 -->
+	
+<!--//************EX FRONT-PAGE-LOOP-->
 
 
 <!--ACCESOS RÁPIDOS-->
@@ -42,15 +124,22 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 				<div class="columns is-mobile">
 				  <div class="column is-2-desktop is-3-mobile has-text-centered-mobile">
 				  	<br>
-				  	<a href="#suscribite-newsletter">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/accesos-rapidos-mail.svg" width="52" height="48" alt="750 AM" />
+				  	<a href="https://open.spotify.com/show/4BEo1rhhXeZY5UbmD84dDP?si=404e03a96cb34d76" target="_blank">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/accesos-rapidos-mail.svg" width="52" height="48" alt="750 AM" /> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/img/accesos-rapidos-spotify.svg" width="51" height="51" alt="750 AM" />
 					</a>
 				  </div>
 				  <div class="column">
-				  	<a href="#suscribite-newsletter">
-					<p class="has-text-weight-bold mb-3">Lo mejor de AM750 en tu mail</p>
-					Suscribite para recibir gratis el newsletter de AM750. <b>Todos los sábados, lo mejor de la semana, en un mail</b>.
+						<!--<a href="#suscribite-newsletter">
+						<p class="has-text-weight-bold mb-3">Lo mejor de AM750 en tu mail</p>
+						Suscribite para recibir gratis el newsletter de AM750. <b>Todos los sábados, lo mejor de la semana, en un mail</b>.
+				    </a> -->
+
+ 						<a href="https://open.spotify.com/show/4BEo1rhhXeZY5UbmD84dDP?si=404e03a96cb34d76" target="_blank">
+							<p class="has-text-weight-bold mb-3">Lo mejor de AM750 en Spotify</p>
+							Ahora podés escuchar tus programas preferidos cuando quieras y en dónde quieras.</b>
 				    </a>
+				    
 				  </div>
 				</div>		
 			</div>

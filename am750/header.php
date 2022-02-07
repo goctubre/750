@@ -15,10 +15,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--web-vitals library-->
-<!-- 	<script type="module">
+	<script type="module">
 	  import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
 	  getCLS(console.log); getFID(console.log); getLCP(console.log);
-	</script> -->
+	</script>
 	<!-- //web-vitals library-->
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -34,9 +34,12 @@
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css"></noscript> -->
 
-	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v3"></noscript> 
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v1"></noscript> 
 	<!-- testING >> ?=v<?php //echo rand()?>-->
+
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750-darkmode.min.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750-darkmode.min.css?=v<?php echo rand()?>"></noscript> 
 
 	<meta name="theme-color" content="#ffffff">
 	<link rel="manifest" href="/manifest.json">
@@ -138,7 +141,7 @@
 					<!-- SEARCH -->
 					<div id="search" class="is-hidden-touch">
 						<div class="nav-search-button">
-							<img id="search-btn" loading="eager" src="<?php echo http2();?>/img/i-lupa.svg" width="22px" height="22px" alt="buscar" />
+							<img id="search-btn" loading="eager" src="<?php echo http2();?>/img/i-lupa.svg" width="22" height="22" alt="buscar" />
 
 							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" aria-label="Buscar">
 
@@ -166,13 +169,13 @@
 
 					<!--DARKMODE-->
 					<div class="navbar-item switch is-hidden-touch rayita" aria-label="Cambiar a modo oscuro">
-						<img loading="eager" src="<?php echo http2();?>/img/i-contrast.svg" width="22px" height="22px" />
+						<img loading="eager" src="<?php echo http2();?>/img/i-contrast.svg" width="22" height="22" />
 					</div>
 					<!--//DARKMODE-->
 
 					<!--WHATSAPP-->
 					<a class="navbar-item rayita" id="bt-wa" href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank" aria-label="Enviá un mensaje a la radio" rel="noopener noreferrer">
-						<img loading="eager" src="<?php echo http2();?>/img/i-wa-verde.svg" width="24px" height="24px" alt="AM 750 - Mensajes" class="wz"/>
+						<img loading="eager" src="<?php echo http2();?>/img/i-wa-verde.svg" width="24" height="24" alt="AM 750 - Mensajes" class="wz"/>
 					</a>
 					<!--//WHATSAPP-->
 

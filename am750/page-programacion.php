@@ -98,9 +98,12 @@ get_header();
 					$the_query = array( 'post_type' => 'calendarios', 'post_status' => 'publish', 'posts_per_page' => 90, 'meta_key' => 'hora_inicio',
 						'orderby' => 'meta_value', 'order' => 'ASC' );
 					$dias=array( "mon"=>"Lunes", "tue"=>"Martes", "wed"=>"Miércoles", "thu"=>"Jueves", "fri"=>"Viernes", "sat"=>"Sábado", "sun"=>"Domingo" );
-					date_default_timezone_set('America/Argentina/Buenos_Aires');
+					//date_default_timezone_set('America/Argentina/Buenos_Aires');
 					$now_day=strtolower(date("D"));
-					$now_hour=strtolower(date("H:i"));
+					//$now_hour=strtolower(date("H:i"));
+					$now_hour = date('H:i');
+					$now_hour = strtotime ( '-3 hour' , strtotime ( $now_hour ) ) ;
+					$now_hour = date ( 'H:i' , $now_hour );
 				?>
 
 

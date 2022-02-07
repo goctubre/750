@@ -63,7 +63,12 @@ function my_admin_page_contents() { ?>
 add_action( 'admin_init', 'my_settings_init' );
 
 function my_settings_init() {
+
 add_settings_section('portada_page_setting_section', __( 'Catástrofe - Switch Modo', 'my-textdomain' ),'my_setting_section_callback_function','portada-page');
+
+add_settings_field('live_blog_posting', 'En vivo', 'portada_live_blog_posting', 'portada-page', 'portada_page_setting_section'); /*LBP*/
+add_settings_field('live_blog_posting_tema', 'En vivo - Tema', 'portada_live_blog_posting_tema', 'portada-page', 'portada_page_setting_section'); /*LBP*/
+
 add_settings_field('catastrofe', 'Portadas catástrofe - Elecciones-', 'portada_catastrofe', 'portada-page', 'portada_page_setting_section');
 add_settings_field('catastrofemapa_', 'Mapa', 'portada_catastrofe_mapa', 'portada-page', 'portada_page_setting_section');
 add_settings_field('elecciones_up', 'Destacado Superior', 'portada_elecciones_up', 'portada-page', 'portada_page_setting_section');
@@ -74,6 +79,8 @@ add_settings_field('mapa_url', 'URL Mapa', 'portada_mapa_url', 'portada-page', '
 add_settings_field('orden_portada', 'Orden de la portada', 'portada_orden_portada', 'portada-page', 'portada_page_setting_section');
 add_settings_field('orden_criterio', 'Orden Criteria', 'portada_orden_criterio', 'portada-page', 'portada_page_setting_section');
 
+register_setting( 'portada-page', 'live_blog_posting' );
+register_setting( 'portada-page', 'live_blog_posting_tema' );
 
 register_setting( 'portada-page', 'catastrofe' );
 register_setting( 'portada-page', 'catastrofe_mapa' );
@@ -88,6 +95,19 @@ register_setting( 'portada-page', 'orden_criterio' );
 }
 
 function my_setting_section_callback_function() { echo '<p>Desde acá se puede modificar la portada</p>'; }
+
+function portada_live_blog_posting() { ?> 
+    <input type="radio" name="live_blog_posting" value="off" <?php checked(off, get_option('live_blog_posting'), true); ?>> Apagado <br>
+    <input type="radio" name="live_blog_posting" value="on" <?php checked(on, get_option('live_blog_posting'), true); ?>> Prendido <br>
+    <label style="font-size: 12px; display: block;"> Las notas tienen que tener categoría #en-vivo</label>
+
+    <?php
+}
+
+function portada_live_blog_posting_tema() { ?> 
+    <input style="width:400px;display: block;margin: 10px 0" type="text" id="live_blog_posting_tema" name="live_blog_posting_tema" value="<?php echo get_option('live_blog_posting_tema'); ?>">
+    <?php
+}
 
 function portada_catastrofe() { ?>
     <input type="radio" name="catastrofe" value="off" <?php checked(off, get_option('catastrofe'), true); ?>>  Apagado <br>
