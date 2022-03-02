@@ -12,7 +12,7 @@
 	</main> <!-- #main -->
 
 
-	<footer class="footer is-bg-violet">
+	<footer class="footer">
 	  <div class="container">
 	  	<div class="columns mt-5 has-text-centered">
 	  		<div class="column">
@@ -26,12 +26,12 @@
 	  	</div>
 
 	  	<br>
-	  	<h2 class="is-size-5 has-text-weight-bold mt-4 mb-2 has-text-centered-mobile">Lo mejor de AM750 en tu mail </h2>
 
 	  	<!--NEWSLETTER-->
 	  	<div class="columns has-text-centered-mobile" id="suscribite-newsletter">
-	  		<div class="column">
-	  			Suscribite para recibir gratis el newsletter de AM750. Todos los sábados, lo mejor de la semana, en un mail.
+	  		<div class="column is-4">
+	  			<h2 class="is-size-5 has-text-weight-bold mt-4 mb-2 has-text-centered-mobile">Lo mejor de AM750 en tu mail </h2>
+	  			Suscribite para recibir novedades de la AM750.
 	  		</div>
 	  		<div class="column">
 
@@ -39,19 +39,17 @@
 				<!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"> -->
 				<style type="text/css">
 
-				#mc_embed_signup form{text-align:center;padding:10px 0 10px 0}.mc-field-group{display:inline-block}#mc_embed_signup input.email{font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;font-size:15px;border:1px solid #abb0b2;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#343434;background-color:#fff;box-sizing:border-box;height:32px;padding:0 .4em;display:inline-block;margin:0;width:350px;vertical-align:top}#mc_embed_signup label{display:block;font-size:16px;padding-bottom:10px;font-weight:700}#mc_embed_signup .clear{display:inline-block}#mc_embed_signup .button{font-size:13px;border:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;letter-spacing:.03em;color:#fff;background-color:#aaa;box-sizing:border-box;height:32px;line-height:32px;padding:0 18px;display:inline-block;margin:0;transition:all .23s ease-in-out 0s}#mc_embed_signup .button:hover{background-color:#777;cursor:pointer}#mc_embed_signup div#mce-responses{float:left;top:-1.4em;padding:0 .5em 0 .5em;overflow:hidden;width:90%;margin:0 5%;clear:both}#mc_embed_signup div.response{margin:1em 0;padding:1em .5em .5em 0;font-weight:700;float:left;top:-1.5em;z-index:1;width:80%}#mc_embed_signup #mce-error-response{display:none}#mc_embed_signup #mce-success-response{color:#529214;display:none}#mc_embed_signup label.error{display:block;float:none;width:auto;margin-left:1.05em;text-align:left;padding:.5em 0}@media (max-width:768px){#mc_embed_signup input.email{width:100%;margin-bottom:5px}#mc_embed_signup .clear{display:block;width:100%}#mc_embed_signup .button{width:100%;margin:0}}
+				#mc_embed_signup form{text-align:left;padding:10px 0 10px 0}.mc-field-group{display:inline-block}#mc_embed_signup input.email{font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;font-size:15px;border:1px solid #abb0b2;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#343434;background-color:#231F20;box-sizing:border-box;height:32px;padding:0 .4em;display:inline-block;margin:0;width:350px;vertical-align:top}#mc_embed_signup label{display:block;font-size:16px;padding-bottom:0;font-weight:700;text-align: left;}#mc_embed_signup .clear{display:inline-block}#mc_embed_signup .button{font-size:15px; font-weight: bold; border:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;letter-spacing:.03em;color:#231F20;background-color:#aaa;box-sizing:border-box;height:32px;line-height:32px;padding:0 18px;display:inline-block;margin:0;transition:all .23s ease-in-out 0s}#mc_embed_signup .button:hover{background-color:#777;cursor:pointer}#mc_embed_signup div#mce-responses{float:left;top:-1.4em;padding:0 .5em 0 .5em;overflow:hidden;width:90%;margin:0 5%;clear:both}#mc_embed_signup div.response{margin:1em 0;padding:1em .5em .5em 0;font-weight:700;float:left;top:-1.5em;z-index:1;width:80%}#mc_embed_signup #mce-error-response{display:none}#mc_embed_signup #mce-success-response{color:#529214;display:none}#mc_embed_signup label.error{display:block;float:none;width:auto;margin-left:1.05em;text-align:left;padding:.5em 0}@media (max-width:768px){#mc_embed_signup input.email{width:100%;margin-bottom:5px}#mc_embed_signup .clear{display:block;width:100%}#mc_embed_signup .button{width:100%;margin:0}}
 
 					@media screen and (max-width:768px){ #mc_embed_signup { width: 80%; margin-left: 10%;} #mc_embed_signup input.email {margin-bottom:10px;} }
 
 					@media screen and (min-width:769px){ 
 						#mc_embed_signup_scroll {max-width: 78%; margin: 0 auto;} #mc_embed_signup{text-align:right;} #mc-embedded-subscribe {margin-top: 0!important} #mc_embed_signup input.email {margin-bottom: 10px}} 
-					#mc_embed_signup input.email { background: none; color: #FFF; font-family: unset; font-size: 1rem; padding-bottom: calc(.5em - 1px);padding-left: calc(.75em - 1px); padding-right: calc(.75em - 1px);
+					#mc_embed_signup input.email { background: #FFF; color: #231F20; font-family: unset; font-size: 1rem; padding-bottom: calc(.5em - 1px);padding-left: calc(.75em - 1px); padding-right: calc(.75em - 1px);
 					padding-top: calc(.5em - 1px); border: 1px solid #FFF; border-radius:5px; margin-right: 10px;}
-					#mc-embedded-subscribe { background: #009FD4 !important; color: #FFF; border: none !important;
+					#mc-embedded-subscribe { background: #FFEC00 !important; color: #000; border: none !important;
 					font-family: 'Inter', sans-serif !important; font-weight: 500;border-radius: 20px !important; 
 					padding-left: 1.6rem !important; padding-right: 1.6rem !important; margin-top: 20px}
-
-
 					/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 					   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 				</style>
@@ -59,7 +57,8 @@
 
 				<form action="https://750.us16.list-manage.com/subscribe/post?u=533d2b93d7b2998584d7dff67&amp;id=eef050d62a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				    <div id="mc_embed_signup_scroll">
-					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+				    <label for="mce-EMAIL">Email</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" required>
 				    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 				    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_533d2b93d7b2998584d7dff67_7336ef8e66" tabindex="-1" value=""></div>
 				    <input type="submit" value="Suscribirme" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
@@ -114,36 +113,44 @@
 
 	  		<div class="column">
 	  			<h2 class="is-size-5 has-text-weight-bold">Diarios </h2> <br>
-	  			<a href="https://www.pagina12.com.ar/" target="_blank" rel="noopener noreferrer" >Página/12</a><br>
-	  			<a href="https://diarioz.com.ar" target="_blank" rel="noopener noreferrer" >Diario Z </a>
+	  			<ul>
+	  				<li> <a href="https://www.pagina12.com.ar/" target="_blank" rel="noopener noreferrer" >Página/12</a> </li>
+	  				<li> <a href="https://diarioz.com.ar" target="_blank" rel="noopener noreferrer" >Diario Z </a> </li>
+	  			</ul>
 	  		</div>
 
 	  		<div class="column">
 	  			<h2 class="is-size-5 has-text-weight-bold">Publicaciones </h2> <br>
-	  			<a href="https://carasycaretas.org.ar/" target="_blank" rel="noopener noreferrer">Caras y Caretas </a> <br>
-	  			<a href="https://elplanetaurbano.com/" target="_blank" rel="noopener noreferrer">El Planeta Urbano </a> <br>
-	  			<a href="https://www.editorialoctubre.com.ar/" target="_blank" rel="noopener noreferrer">Editorial Octubre </a> <br>
+	  			<ul>
+	  				<li> <a href="https://carasycaretas.org.ar/" target="_blank" rel="noopener noreferrer">Caras y Caretas </a> </li>
+	  				<li> <a href="https://elplanetaurbano.com/" target="_blank" rel="noopener noreferrer">El Planeta Urbano </a> </li>
+	  				<li> <a href="https://www.editorialoctubre.com.ar/" target="_blank" rel="noopener noreferrer">Editorial Octubre </a> </li>
+	  			</ul>	
 	  		</div>
 
 
 	  		<div class="column">
 	  			<h2 class="is-size-5 has-text-weight-bold">Radios </h2> <br>
-	  			<a href="https://750.am/" target="_blank" rel="noopener noreferrer"> AM750 </a> <br>
-	  			<a href="https://fmaspen.com/" target="_blank" rel="noopener noreferrer" >Aspen</a> <br>
-	  			<a href="https://mucharadio.com.ar/" target="_blank" rel="noopener noreferrer" >Mucha Radio 94.7</a> <br> 
-	  			<a href="https://fmlike.com.ar/" target="_blank" rel="noopener noreferrer" >Like</a> <br>
-	  			<a href="https://oktubre.fm/" target="_blank" rel="noopener noreferrer" >Oktubre</a> <br>
-	  			<a href="https://malena.fm/" target="_blank" rel="noopener noreferrer" >Malena</a> <br>
-	  			<a href="https://fmblackie.com.ar/" target="_blank" rel="noopener noreferrer" > FM Blackie </a> <br>
+	  			<ul>
+	  				<li> <a href="https://750.am/" target="_blank" rel="noopener noreferrer"> AM750 </a> </li>
+	  				<li> <a href="https://fmaspen.com/" target="_blank" rel="noopener noreferrer" >Aspen</a> </li>
+	  				<li> <a href="https://mucharadio.com.ar/" target="_blank" rel="noopener noreferrer" >Mucha Radio 94.7</a> </li>
+	  				<li> <a href="https://fmlike.com.ar/" target="_blank" rel="noopener noreferrer" >Like</a> </li>
+	  				<li> <a href="https://oktubre.fm/" target="_blank" rel="noopener noreferrer" >Oktubre</a> </li>
+	  				<li> <a href="https://malena.fm/" target="_blank" rel="noopener noreferrer" >Malena</a></li>
+	  				<li> <a href="https://fmblackie.com.ar/" target="_blank" rel="noopener noreferrer" > FM Blackie </a> </li>
+	  			</ul>
 	  		</div>
 
 	  		<div class="column">
 	  			<h2 class="is-size-5 has-text-weight-bold">Contenidos </h2> <br>
-	  			<a href="https://ip.digital/" target="_blank" rel="noopener noreferrer" > IP digital </a> <br>
-	  			<a href="https://www.elnueve.com.ar/" target="_blank" rel="noopener noreferrer" > Canal 9 </a> <br>
-	  			<a href="https://salas.carasycaretas.org.ar/" target="_blank" rel="noopener noreferrer" > Salas Caras y Caretas </a> <br>
-	  			<a href="https://octubretv.com/" target="_blank" rel="noopener noreferrer" > Octubre TV </a> <br>
-	  			<a href="https://latinoamericapiensa.com/" target="_blank" rel="noopener noreferrer" > Latinoamérica Piensa </a> <br>
+	  			<ul>
+	  				<li> <a href="https://ip.digital/" target="_blank" rel="noopener noreferrer" > IP digital </a> </li>
+	  				<li> <a href="https://www.elnueve.com.ar/" target="_blank" rel="noopener noreferrer" > Canal 9 </a> </li>
+	  				<li> <a href="https://salas.carasycaretas.org.ar/" target="_blank" rel="noopener noreferrer" > Salas Caras y Caretas </a> </li>
+	  				<li> <a href="https://octubretv.com/" target="_blank" rel="noopener noreferrer" > Octubre TV </a> </li>
+	  				<li> <a href="https://latinoamericapiensa.com/" target="_blank" rel="noopener noreferrer" > Latinoamérica Piensa </a></li>
+	  			</ul>
 	  		</div>
 
 	  	</div>

@@ -7,7 +7,7 @@ for( i=0; i< seccionSlider_DT.length; i++ ) {
   nextButton_DT[i].classList.add('bt-next-' + i);
   prevButton_DT[i].classList.add('bt-prev-' + i);
   seccionSlider_DT[i].classList.add('swiper-secciones-' + i);
-  var slider = new Swiper('.swiper-secciones-' + i, { slidesPerView: 1.5, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.bt-next-' + i, prevEl: '.bt-prev-' + i, }, });
+  var slider = new Swiper('.swiper-secciones-' + i, { slidesPerView: 1.5, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.bt-next-' + i, prevEl: '.bt-prev-' + i, },  a11y: { prevSlideMessage: 'Anterior', nextSlideMessage: 'Siguiente',}, });
 }
 
 // SLIDER MOBILE - POPULAR [HOME] == OK
@@ -21,7 +21,7 @@ breakpointChecker = function() {    //const
 
 enableSwiper = function() { //const
 
-var swipermobile = new Swiper ('.swiper-container-mob', { loop: true, slidesPerView: 1, a11y: true, keyboardControl: true, grabCursor: true, pagination: { el: '.swiper-pagination', dynamicBullets: true, dynamicMainBullets: 5 }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }, });
+var swipermobile = new Swiper ('.swiper-container-mob', { loop: true, slidesPerView: 1, a11y: true, keyboardControl: true, grabCursor: true, pagination: { el: '.swiper-pagination', dynamicBullets: true, dynamicMainBullets: 5 }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },  a11y: { prevSlideMessage: 'Anterior', nextSlideMessage: 'Siguiente',},  });
 
 };
 
@@ -31,7 +31,7 @@ breakpointChecker();// kickstart
 
 //PROGRAMACION SWIPER  [HOME] == OK
 //if (typeof swiperprogramas !== 'undefined') { swiperprogramas.destroy(true, true);  }
-var swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', }, });  
+var swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', },   a11y: { prevSlideMessage: 'Anterior', nextSlideMessage: 'Siguiente',}, });  
 // FIN PROGRAMACION SWIPER  [HOME]
 
 
@@ -54,7 +54,7 @@ filtrame.forEach(filter => {
       //console.log($(".swiper-programacion .swiper-slide").length);
       var swiperprogramas = document.querySelector('.swiper-programacion').swiper;
       //swiperprogramas.destroy();
-      swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', }, });
+      swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', },  a11y: { prevSlideMessage: 'Anterior', nextSlideMessage: 'Siguiente',},  });
     
     } else {
     
@@ -64,7 +64,7 @@ filtrame.forEach(filter => {
       estan.forEach((esta) => { esta.classList.remove('non-swiper-slide'); esta.classList.add('swiper-slide'); });
       //console.log($(".swiper-programacion .swiper-slide").length);
       //swiperprogramas.destroy();
-      swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', }, });
+      swiperprogramas = new Swiper('.swiper-programacion', { slidesPerView: 1, spaceBetween: 10, slidesPerGroup:1, loop: true, pagination: { el: '.swiper-pagination', clickable: true, }, breakpoints: { 768: { slidesPerView: 4, spaceBetween: 20, slidesPerGroup:4 }, }, navigation: { nextEl :'.programacion-bt-next', prevEl: '.programacion-bt-prev', },  a11y: { prevSlideMessage: 'Anterior', nextSlideMessage: 'Siguiente',}, });
     }
 
   })

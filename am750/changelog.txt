@@ -1,5 +1,23 @@
 <h4>== Changelog ==</h4>
 
+
+Version x.x.x [2022 Febrero 21] - versión amarilla // POPUP gravitec
+[x] header.php
+[x] footer.php
+[x] single-programas.php
+[x] rss-instantarticles.php
+[x] single.php
+[x] 404.php
+[x] page-programacion.php
+[x] frontpage.php
+[x] inc/home-modo-relax.php
+[x] inc/home-modo-relax-loop.php
+[x] inc/home-modo-noticias.php
+[x] inc/home-modo-noticias-destacados-loop.php
+[x] inc/como-escucharnos.php
+[x] inc/al-aire.php
+[x] css/gravitec.css
+
 Version x.x.x [2022 Febrero 04] - darkmode.css
 [x] header.php
 [x] darkmode.css
@@ -121,6 +139,7 @@ Version x.x.x [2021 Julio 6]
 
 Version x.x.x [2021 Junio 14]
 [x] Experimeno AMP
+
 
 Version x.x.x [2021 Mayo 5]
 [x] Vinculamos contenido a Google News

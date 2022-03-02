@@ -1,0 +1,21 @@
+.swal-overlay--show-modal{opacity:1 !important;pointer-events:auto}
+.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;
+/*opacity:0;*/transition:opacity .3s}
+.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}
+.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}
+.swal-title{background-image:url(//750.am/wp-content/uploads/2019/10/750_logo_crop_push.png);background-size:47px 25px;background-repeat:no-repeat}
+.swal-footer{padding:0;margin:0;padding-bottom:10px;padding-right:10px}
+.swal-button{padding:0;width:100px;height:30px;border-radius:0;margin-top:5px;font-family:'Open Sans',sans-serif;font-weight:900;font-size:12px;border:0}
+.swal-button--suscribe{background-color:#1cacf4}
+.swal-button--cancel{color:#1cacf4;background-color:transparent}
+.swal-title:first-child{margin-top:15px;margin-bottom:0;margin-left:15px}
+.swal-button-container{margin-left:10px}
+.swal-text{color:#373737;float:left;font-family:'Open Sans',sans-serif;font-weight:600;font-size:14px;margin-top:5px;padding-left:15px}
+@media (max-width: 768px) {
+.swal-modal{border:0;width:340px;margin-top:100vh;text-align:center;border-radius:0;margin-bottom:10px;box-shadow:0 0 10px 2px gray}
+.swal-overlay{background-color:transparent;top:auto;pointer-events:none}
+}
+@media (min-width: 769px) {
+.swal-modal{border:0;width:370px;text-align:center;margin:0 auto;box-shadow:0 0 40px 10px #000;margin-bottom:100vh;margin-right:7px;border-radius:0}
+.swal-overlay{background-color:transparent;bottom:auto;pointer-events:none}
+}

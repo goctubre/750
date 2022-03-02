@@ -1,3 +1,4 @@
+
 <!--PRINCIPAL-->
 <section id="principal" class="is-seccion">
 	<div class="columns">
@@ -44,9 +45,9 @@
 					<?php  if ( in_category('democracia-2021') ) { ?>
 						<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='64' height='27'>
 					<? } else {?>
-						<button class="button is-750 etiquet has-text-weight-bold mb-2 noclick">
+						<div class="etiquet has-text-weight-bold mb-2 noclick">
 							<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
-						</button>
+						</div>
 					<?}?>
 					<!--//democracia 2021-->
 
@@ -105,13 +106,12 @@
 <section id="actualidad" class="is-seccion">
 
 	<div class="seccion-header ml-32">
-		<div class="seccion-nombre">
-			<a href="<?php echo get_site_url(); ?>/category/actualidad/"> <h2 class="is-size-2">Más de actualidad</h2> </a>
-		</div>
+		<div class="seccion-nombre" id="masactualidad"> <h2 class="is-size-2">Más de actualidad</h2> </div>
 
 		<div class="has-text-right vermas">
-			<a href="<?php echo get_site_url(); ?>/category/actualidad/"> <span class="is-celeste is-size-5 has-text-weight-bold"> 
-			Ver más </span> </a>
+			<a href="<?php echo get_site_url(); ?>/category/actualidad/" aria-describedby="masactualidad"> 
+				<span class="is-size-5 has-text-weight-bold"> Ver más </span> 
+			</a>
 		</div>
 	</div>
 
@@ -185,11 +185,11 @@
 
 	<div class="seccion-header ml-7">
 		<div class="seccion-nombre">
-			<a href="<?php echo get_site_url(); ?>/category/opinion/"> <h2 class="is-size-2"> Opinión</h2> </a>
+			<h2 class="is-size-2" id="masopinion"> Opinión</h2>
 		</div>
 
 		<div class="has-text-right vermas">
-			<a href="<?php echo get_site_url(); ?>/category/opinion/"> <span class="is-celeste is-size-5 has-text-weight-bold"> 
+			<a href="<?php echo get_site_url(); ?>/category/opinion/" aria-describedby="masopinion"> <span class="is-size-5 has-text-weight-bold"> 
 			Ver más </span> </a>
 		</div>
 	</div>
@@ -288,7 +288,7 @@ $the_query = new WP_Query( array( 'post_status' => 'publish', 'category_name' =>
 		</div>
 
 		<div class="column is-hidden-desktop has-text-centered mt-6 mt-0-mobile">
-			<a href="<?php echo get_site_url(); ?>/category/opinion/"> <button class="button is-750 etiquet has-text-weight-bold">Ver más</button> </a>
+			<a href="<?php echo get_site_url(); ?>/category/opinion/"> <button class="button is-grisoscuro has-text-weight-bold" aria-describedby="masopinion">Ver más</button> </a>
 		</div>
 
 	</div>

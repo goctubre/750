@@ -78,3 +78,6 @@ background-position: center center!important; background-size: 10px!important; b
 .swiper-programacion {padding-bottom: 0;}
 .swiper-programacion .swiper-button-next, .swiper-programacion .swiper-button-prev  {margin-top: -40px !important}
 }
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main,
+.swiper-pagination-bullet.swiper-pagination-bullet-active { background: #EC1C24;}

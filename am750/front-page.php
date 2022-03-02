@@ -30,7 +30,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 <!--****** EX FRONT-PAGE-LOOP.PHP *******-->
 
 	<!--TOP POSITION - paso2021-->
-	<div class="container portadatop"> <!-- mb-6-->
+	<div class="container portadatop mt-4"> <!-- mb-6-->
 
 		<?php $elecciones_up =  get_option('elecciones_up'); $notas_up =  get_option('elecciones_up'); $catastrofe =  get_option('catastrofe');?>
 		<!-- WIDGET ELECCIONES - paso2021-->
@@ -119,7 +119,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 <!--ACCESOS RÁPIDOS-->
 <section id="accesos-rapidos" class="is-seccion mt-4 lh-140 mb-6-mobile">
 	<div class="container">
-		<div class="columns">
+		<div class="columns caja p-4">
 			<div class="column">
 				<div class="columns is-mobile">
 				  <div class="column is-2-desktop is-3-mobile has-text-centered-mobile">
@@ -136,7 +136,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 				    </a> -->
 
  						<a href="https://open.spotify.com/show/4BEo1rhhXeZY5UbmD84dDP?si=404e03a96cb34d76" target="_blank">
-							<p class="has-text-weight-bold mb-3">Lo mejor de AM750 en Spotify</p>
+							<p class="has-text-weight-bold mb-3"> <span> Lo mejor de AM750 en Spotify </span> </p>
 							Ahora podés escuchar tus programas preferidos cuando quieras y en dónde quieras.</b>
 				    </a>
 				    
@@ -154,7 +154,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 				  </div>
 				  <div class="column">
 				  	<a href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank" rel="noopener noreferrer">
-						<p class="has-text-weight-bold mb-3">Escribinos</p>
+						<p class="has-text-weight-bold mb-3"> <span>  Escribinos </span>  </p>
 						Comunicate con los programas por Whatsapp.
 					</a>
 				  </div>
@@ -168,7 +168,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 					<a href="https://750.am/bajate-nuestra-app/"> <img src="<?php echo get_template_directory_uri(); ?>/img/accesos-rapidos-app.svg" width="52" height="48" alt="750 AM" /> </a>
 				  </div>
 				  <div class="column">
-					<a href="https://750.am/bajate-nuestra-app/"> <p class="has-text-weight-bold mb-3">Bajate nuestra app</p>
+					<a href="https://750.am/bajate-nuestra-app/"> <p class="has-text-weight-bold mb-3"> <span>  Bajate nuestra app </span>  </p>
 					Llevá la radio AM750 en tu celular y <b> disfrutá de la mejor experiencia de audio.</b> </a>
 				  </div>
 				</div>
@@ -227,7 +227,7 @@ if( $orden_criterio == 'fecha') { 	$orderby = 'date';$order = 'DESC';}  else {	$
 	<div class="container">
 		<div class="columns">
 			<div class="column is-6 is-offset-1 pb-0">
-				<h2 class="is-size-3ypico mb-0 is-celeste is-fira">Ayudanos a mejorar</h2>
+				<h2 class="is-size-3ypico mb-0 is-fira">Ayudanos a mejorar</h2>
 			</div>
 		</div>
 

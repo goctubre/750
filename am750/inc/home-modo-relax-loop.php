@@ -45,13 +45,11 @@
 		<br> <br class="is-hidden-mobile">  <br class="is-hidden-mobile"> 
 		<!--HUMOR-->
 		<div class="seccion-header">
-			<div class="seccion-nombre">
-				<a href="<?php echo get_site_url(); ?>/category/humor/"> <h2 class="is-size-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.4"> Humor </h2> </a>
-			</div>
+			<div class="seccion-nombre"> <h2 class="is-size-2" id="mashumor"> Humor </h2> </div>
 
 			<div class="has-text-right vermas">
-				<a href="<?php echo get_site_url(); ?>/category/humor/"> 
-					<span class="is-celeste is-size-5 has-text-weight-bold"> 
+				<a href="<?php echo get_site_url(); ?>/category/humor/" aria-describedby="mashumor"> 
+					<span class="is-size-5 has-text-weight-bold">
 						Ver más 
 					</span> 
 				</a>
@@ -97,7 +95,7 @@
 
 	<div class="column is-hidden-desktop has-text-centered mt-6 mt-1-mobile pt-0-mobile">
 		<a href="<?php echo get_site_url(); ?>/category/humor/"> 
-			<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile">Ver más</button> </a>
+			<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile">Ver más</button> </a>
 	</div>
 
 </div>

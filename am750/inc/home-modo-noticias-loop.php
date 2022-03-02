@@ -11,18 +11,18 @@
 
     		<div class="etiquetas">
 
+    			<?php echo categorias_programas();?>
+
     			<!--democracia 2021-->
 				<?php  if ( in_category('democracia-2021') ) { ?>
 					<img class='mr-5' src='<?php bloginfo('template_url'); ?>/-paso-2021/democracia-2021.png' width='86' height='36'>
 				<? } else {?>
-					<button class="button is-750 etiquet has-text-weight-bold noclick">
+					<div class="is-750 etiquet has-text-weight-bold noclick">
 						<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
-					</button>
+					</div>
 				<? } ?>
 				<!--//democracia 2021-->
 
-
-				<?php echo categorias_programas();?>
 			</div>
 			
 			<h2 class="is-size-3 is-size-4-mobile mt-3 mb-4 is-fira lh-110"> 

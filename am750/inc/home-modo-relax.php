@@ -19,11 +19,10 @@
 					<div class="column">
 
 						<div class="seccion-header">
-							<div class="seccion-nombre">
-								<a href="<?php echo get_site_url(); ?>/category/cultura/"> <h2 class="is-size-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"> Cultura y<br>espectáculos </h2> </a>
-							</div>
+							<div class="seccion-nombre"> <h2 class="is-size-2" id="mascultura"> Cultura y<br>espectáculos </h2> </div>
 							<div class="has-text-right vermas">
-								<a href="<?php echo get_site_url(); ?>/category/cultura/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
+								<a href="<?php echo get_site_url(); ?>/category/cultura/" aria-describedby="mascultura"> 
+									<span class="is-size-5 has-text-weight-bold"> Ver más </span> </a>
 							</div>
 						</div>
 
@@ -34,8 +33,8 @@
 					</div>
 
 					<div class="column is-hidden-desktop has-text-centered mt-6 mt-0-mobile mb-5-mobile">
-						<a href="<?php echo get_site_url(); ?>/category/cultura/"> 
-							<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile ml-0-mobile mb-4-mobile">Ver más</button> 
+						<a href="<?php echo get_site_url(); ?>/category/cultura/" aria-describedby="mascultura"> 
+							<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile ml-0-mobile mb-4-mobile">Ver más</button> 
 						</a>
 					</div>
 				</div>
@@ -55,12 +54,12 @@
 
 				<div class="seccion-header">
 					<div class="seccion-nombre">
-						<h2 class="is-size-2"> Descubrí otros programas </h2>
+						<h2 class="is-size-2" id="masprogramas"> Descubrí otros programas </h2>
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/programacion/"> 
-							<span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
+						<a href="<?php echo get_site_url(); ?>/programacion/" aria-describedby="masprogramas"> 
+							<span class="is-size-5 has-text-weight-bold"> Ver más </span> </a>
 					</div>
 				</div>
 	
@@ -117,14 +116,12 @@
 
 				<div class="seccion-header">
 					<div class="seccion-nombre">
-						<a href="<?php echo get_site_url(); ?>/category/entrevistas/"> <h2 class="is-size-2">Grandes entrevistas</h2> </a>
+						<h2 class="is-size-2" id="masentrevistas">Grandes entrevistas</h2>
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/category/entrevistas/">  
-							<span class="is-celeste is-size-5 has-text-weight-bold"> 
-								Ver más 
-							</span> 
+						<a href="<?php echo get_site_url(); ?>/category/entrevistas/" aria-describedby="masentrevistas">  
+							<span class="is-size-5 has-text-weight-bold"> Ver más </span> 
 						</a>
 					</div>
 				</div>
@@ -167,8 +164,8 @@
 
 
 				<div class="is-hidden-desktop has-text-centered mt-4 mb-5-mobile">
-					<a href="<?php echo get_site_url(); ?>/category/entrevistas/"> 
-						<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile">Ver más</button> </a>
+					<a href="<?php echo get_site_url(); ?>/category/entrevistas/" aria-describedby="masentrevistas"> 
+						<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile">Ver más</button> </a>
 				</div>
 			</section>
 			<!--//GRANDES ENTREVISTAS-->
@@ -181,12 +178,11 @@
 			<section id="audicuentos" class="is-seccion mb-6-mobile">
 				<div class="seccion-header">
 					<div class="seccion-nombre">
-						<a href="<?php echo get_site_url(); ?>/category/audiocuentos/"> <h2 class="is-size-2"> Audiocuentos </h2> </a>
+						<h2 class="is-size-2" id="masaudiocuentos"> Audiocuentos </h2>
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/category/audiocuentos/"> <span class="is-celeste is-size-5 has-text-weight-bold"> 
-						Ver más </span> </a>
+						<a href="<?php echo get_site_url(); ?>/category/audiocuentos/" aria-describedby="masaudiocuentos"> <span class="is-size-5 has-text-weight-bold"> Ver más </span> </a>
 					</div>
 				</div>
 
@@ -226,7 +222,7 @@
 				<!--fin carrousel AUDIOCUENTOS-->
 				<div class="is-hidden-desktop has-text-centered mt-4  mb-5-mobile">
 					<a href="<?php echo get_site_url(); ?>/category/audiocuentos/"> 
-						<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile">Ver más</button> 
+						<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile" aria-describedby="masaudiocuentos">Ver más</button> 
 					</a>
 				</div>
 			</section>
@@ -242,11 +238,11 @@
 
 				<div class="seccion-header ml-34">
 					<div class="seccion-nombre">
-						<a href="<?php echo get_site_url(); ?>/category/deportes/"> <h2 class="is-size-2"> Deportes </h2> </a>
+						<h2 class="is-size-2" id="masdeportes"> Deportes </h2>
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/category/deportes/"> <span class="is-celeste is-size-5 has-text-weight-bold"> 
+						<a aria-describedby="masdeportes" href="<?php echo get_site_url(); ?>/category/deportes/"> <span class="is-size-5 has-text-weight-bold"> 
 						Ver más </span> </a>
 					</div>
 				</div>
@@ -293,7 +289,7 @@
 				</div>
 				<div class="is-hidden-desktop has-text-centered mt-4  mb-5-mobile">
 					<a href="<?php echo get_site_url(); ?>/category/deportes/"> 
-						<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile">Ver más</button> 
+						<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile" aria-describedby="masdeportes">Ver más</button> 
 					</a>
 				</div>
 			</section>
@@ -303,11 +299,11 @@
 			<section id="lavenganzasera" class="is-seccion">
 				<div class="seccion-header">
 					<div class="seccion-nombre">
-						<a href="<?php echo get_site_url(); ?>/category/la-venganza-sera-terrible/"> <h2 class="is-size-2"> La venganza será terrible</h2> </a>
+						<h2 class="is-size-2" id="masvenganza"> La venganza será terrible</h2>
 					</div>
 
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/category/la-venganza-sera-terrible/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
+						<a href="<?php echo get_site_url(); ?>/category/la-venganza-sera-terrible/"> <span class="is-size-5 has-text-weight-bold" aria-describedby="masvenganza"> Ver más </span> </a>
 					</div>
 				</div>
 
@@ -347,7 +343,7 @@
 
 				<div class="is-hidden-desktop has-text-centered mt-4">
 					<a href="<?php echo get_site_url(); ?>/category/la-venganza-sera-terrible/"> 
-						<button class="button is-750 etiquet has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile">Ver más</button> 
+						<button class="button is-grisoscuro has-text-weight-bold mr-0-mobile ml-0-mobile mt-4-mobile" aria-describedby="masvenganza">Ver más</button> 
 					</a>
 				</div>
 			</section>

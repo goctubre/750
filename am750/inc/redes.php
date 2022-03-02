@@ -9,8 +9,12 @@
 	<li> <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/s-mail.svg" width="24" height="24" alt="Haz clic para enviar por correo electrónico a un amigo" /></li>
 </a>
 
-<li class="facebook-share"> <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/s-facebook.svg" width="24" height="24" alt="Compartir Noticias de AM 750 por Facebook" /> </li>
+<a href="#">
+	<li class="facebook-share"> <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/s-facebook.svg" width="24" height="24" alt="Compartir Noticias de AM 750 por Facebook" /> </li>
+</a>
 
-<li class="twitter-share"> 
-	<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/s-twitter.svg" width="24" height="24" alt="Compartir Noticias de AM 750 por twitter" /> 
-</li>
+<a href="#">
+	<li class="twitter-share"> 
+		<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/s-twitter.svg" width="24" height="24" alt="Compartir Noticias de AM 750 por twitter" /> 
+	</li>
+</a>

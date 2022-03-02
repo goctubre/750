@@ -13,6 +13,6 @@ window.addEventListener('message', function(e) {
     }
 });
 </script>
-<iframe src="<?php echo get_option( 'candidates_url');?>" id="GOlistas_paso" scrolling="No" height="250px" width="100%" style="border: none;" ></iframe>
+<iframe src="<?php echo get_option( 'candidates_url');?>" id="GOlistas_paso" scrolling="No" height="120px" width="100%" style="border: none;" ></iframe>
 
 <!--https://especiales.gonoticias.com/2021/elecciones/listas_paso/resultados/widget/index.html?json=get_flowics_json&refresh=true-->

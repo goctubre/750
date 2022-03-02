@@ -39,7 +39,7 @@
 					</a>
 				</div>
 				
-				<p class="is-celeste mb-3"><?php echo $horario_inicio;?> a <?php echo $horario_fin;?> hs </p>
+				<p class="is-rojo mb-3"><?php echo $horario_inicio;?> a <?php echo $horario_fin;?> hs </p>
 				
 				<h3 class="is-size-4 is-fira pr-2 pl-2"> 
 					<a href="<?php the_permalink($programa_id);?>"> <?php echo get_the_title($programa_id)?> </a> 

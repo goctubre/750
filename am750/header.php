@@ -14,6 +14,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta property="fb:pages" content="133788303319361" />
+	
 	<!--web-vitals library-->
 	<script type="module">
 	  import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
@@ -34,12 +36,16 @@
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css"></noscript> -->
 
-	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v1"></noscript> 
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750.min.css?=v<?php echo rand()?>"></noscript> 
 	<!-- testING >> ?=v<?php //echo rand()?>-->
 
 	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/am750-darkmode.min.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/am750-darkmode.min.css?=v<?php echo rand()?>"></noscript> 
+
+
+	<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/css/gravitec.css?=v<?php echo rand()?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/gravitec.css?=v<?php echo rand()?>"></noscript> 
 
 	<meta name="theme-color" content="#ffffff">
 	<link rel="manifest" href="/manifest.json">
@@ -103,14 +109,14 @@
 
 	<?php wp_body_open(); ?>
 
-	<h1 id="page-title" style="display:none">AM 750 Una señal</h1>
+	<h1 id="page-title" style="text-indent:-999em;opacity:0;transform: scale(0); height: 1px;">AM 750 Una señal</h1>
 	<div id="manto" class="hide"> </div>
 
 	<?php include get_theme_file_path( '/inc/menu-search-mobile.php' );?>
 
 	 <div id="page" class="site" data-scroll-container>
 
-		<header id="masthead" class="site-header mt-2 mb-2">
+		<header id="masthead" class="site-header"> <!-- mt-2 mb-2-->
 
 			<nav class="navbar is-fixed-top" role="navigation">
 
@@ -132,7 +138,7 @@
 
 			    <div class="navbar-brand">
 			      <a class="site-branding navbar-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			    	  <img loading="eager" src="<?php echo http2();?>/img/750am-logo.svg" width="125" height="28" alt="AM 750 - Una señal" />
+			    	  <img loading="eager" src="<?php echo http2();?>/img/750am-logo-red.svg" width="125" height="28" alt="AM 750 - Una señal" />
 		     	 </a> <!-- .site-branding -->
 			    </div>
 
@@ -140,10 +146,10 @@
 
 					<!-- SEARCH -->
 					<div id="search" class="is-hidden-touch">
-						<div class="nav-search-button">
-							<img id="search-btn" loading="eager" src="<?php echo http2();?>/img/i-lupa.svg" width="22" height="22" alt="buscar" />
+						<div class="nav-search-button" role="button">
+							<img id="search-btn" loading="eager" src="<?php echo http2();?>/img/i-lupa.svg" width="22" height="22" alt="buscar"/>
 
-							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" aria-label="Buscar">
+							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" alt="Buscar">
 
 								<div class="field is-grouped">
 								  <p class="control is-expanded">
@@ -168,20 +174,20 @@
 					<!--//SEARCH-->
 
 					<!--DARKMODE-->
-					<div class="navbar-item switch is-hidden-touch rayita" aria-label="Cambiar a modo oscuro">
+					<div class="navbar-item switch is-hidden-touch rayita" alt="Cambiar a modo oscuro" role="button">
 						<img loading="eager" src="<?php echo http2();?>/img/i-contrast.svg" width="22" height="22" />
 					</div>
 					<!--//DARKMODE-->
 
 					<!--WHATSAPP-->
-					<a class="navbar-item rayita" id="bt-wa" href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank" aria-label="Enviá un mensaje a la radio" rel="noopener noreferrer">
+					<a class="navbar-item rayita" id="bt-wa" href="https://api.whatsapp.com/send?phone=5491139224098" target="_blank" alt="Enviá un mensaje a la radio" role="button" rel="noopener noreferrer">
 						<img loading="eager" src="<?php echo http2();?>/img/i-wa-verde.svg" width="24" height="24" alt="AM 750 - Mensajes" class="wz"/>
 					</a>
 					<!--//WHATSAPP-->
 
 					<!--ESCUCHAR-->
 					<a class="navbar-item play_btn is-hidden-touch" href="javascript:void(0); ">
-						<button id="playnav" class="button is-bg-violet llamarfalsoplayer">
+						<button id="playnav" class="button is-bg-black llamarfalsoplayer" aria-label="Escuchar am750 en vivo">
 							<span class="icon">
 								<!-- <img src="<?php echo http2();?>/img/nav-play.svg" class="is-invert" width="" height="" alt="Escuchar radio" / -->
 							</span>
@@ -227,23 +233,13 @@
 
 		</header><!-- #masthead -->
 
-		<!--BANNERS ELECCIONES 2021 -->
-		<?php
-			if ( is_front_page()) { ?>
-				<section id="bannertop" class="is-bg-grisclarito is-hidden-desktop" style="margin-top:8px">
-					<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
-				</section>
-			<?php }
-		?>
-		<!--//BANNERS-->
-
 		<!--BREAKING NEWS  -->
 		<?php
 			if ( is_front_page()) {
 
 				$breaking = get_option( 'breaking_mode' );
 				if($breaking != "off") { ?>
-					<div class="breaking py-2 <?php echo get_option( 'breaking_mode' ); ?>"> 
+					<div class="breaking py-2 mb-5 mb-0-mobile <?php echo get_option( 'breaking_mode' ); ?>"> 
 						<a href="<?php echo get_option( 'breaking_news_url');?>" target="_blank">
 							<h3 class="is-inline"> <?php echo get_option( 'breaking_news_field' ); ?>  </h3>
 						</a>
@@ -253,6 +249,17 @@
 			}
 		?>
 		<!--// BREAKING NEWS-->
+
+		<!--BANNERS ELECCIONES 2021 -->
+		<?php
+			if ( is_front_page()) { ?>
+				<section id="bannertop0" class="is-bg-grisclarito is-hidden-desktop">
+					<div class="ad-slot" id="mobile_home_top" data-adtype="mobile_top"></div> <!--300x50-320x50-360x56-->
+				</section>
+			<?php }
+		?>
+		<!--//BANNERS-->
+
 
 		<!--MAIN -cierra en footer -->
 		<main id="primary" class="site-main">

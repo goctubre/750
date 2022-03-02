@@ -22,7 +22,7 @@
 				$output = '';
 				if ( ! empty( $categories ) ) {
 				    foreach( $categories as $category ) {
-				        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light etiquet mb-2">' . esc_html( $category->name ) . '</button> </a>';
+				        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '"> <button class="button is-light elprograma mb-2">' . esc_html( $category->name ) . '</button> </a>';
 				    }
 				    echo trim( $output );
 				}

@@ -1,5 +1,5 @@
 
-<h2 class="is-size-5 has-text-weight-bold mb-5"> Informativo 750 </h3>
+<h2 class="is-size-5 has-text-weight-bold mb-5 etiquet"> Informativo 750 </h3>
 
 	<!--CAROUSEL INFORMATIVO-->
 	<div class="swiper-container-mob">

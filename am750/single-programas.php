@@ -110,7 +110,7 @@ get_header();
 				<div class="seccion-header mt-6">
 					<div class="seccion-nombre"> <h2 class="is-size-3"> Volvé a escuchar </h2> </div>
 					<div class="has-text-right vermas">
-						<a href="<?php echo get_site_url(); ?>/category/programacion/<?php echo $elprograma?>"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a>
+						<a href="<?php echo get_site_url(); ?>/category/programacion/<?php echo $elprograma?>"> <span class="is-size-5 has-text-weight-bold"> Ver más </span> </a>
 					</div>
 				</div>
 
@@ -160,7 +160,7 @@ get_header();
 				<div class="seccion-header mt-6">
 					<div class="seccion-nombre"> <h2 class="is-size-3"> Descubrí otros programas </h2> </div>
 
-					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/programacion/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
+					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/programacion/"> <span class="is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
 				</div>
 
 				<p class="mb-5"> Escuchá todos los episodios y columnas completos de tus programas favoritos </p>
@@ -203,7 +203,7 @@ get_header();
  				<!--LO MEJOR DE LA 750-->
 				<div class="seccion-header mt-6">
 					<div class="seccion-nombre"> <h2 class="is-size-3"> Lo mejor de la 750</h2> </div>
-					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/category/relax/"> <span class="is-celeste is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
+					<div class="has-text-right vermas"> <a href="<?php echo get_site_url(); ?>/category/relax/"> <span class="is-size-5 has-text-weight-bold"> Ver más </span> </a> </div>
 				</div>
 
 				<!-- CARRUOUSEL -->

@@ -1,6 +1,6 @@
 <div class="columns mt-6 visibility">
 	<div class="column is-12">
-		<h2 class="is-size-4 is-celeste has-text-weight-bold">¿Cómo escucharnos?</h2>
+		<h2 class="is-size-4 has-text-weight-bold">¿Cómo escucharnos?</h2>
 	</div>
 </div>
 	

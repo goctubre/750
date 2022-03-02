@@ -8,9 +8,9 @@ $the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 
 	<?php $count++; ?>
 	<?php if ($count == 1) : ?>
     	<article>
-			<button class="button is-750 etiquet has-text-weight-bold mb-2 noclick">
+			<div class="etiquet has-text-weight-bold mb-2 noclick">
 				<?php echo get_post_meta( get_the_ID(),  'tema', true ); ?>
-			</button>
+			</div>
 
     		<a href="<?php the_permalink(); ?>">
         		<h2 class="is-size-5 has-text-weight-semibold mb-3 is-fira"><?php the_title(); ?></h2>
@@ -22,7 +22,7 @@ $the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 
 
     	</article>
 
-    	<p class="is-size-5 is-celeste has-text-weight-bold rayita pt-3 pb-5 is-hidden-mobile">Leé también</p>
+    	<p class="is-size-5 is-celeste has-text-weight-bold rayita pt-3 pb-5 is-hidden-mobile"><!-- Leé también --></p>
 
 
 
@@ -38,6 +38,6 @@ $the_query = new WP_Query( array('post_status' => 'publish', 'category_name' => 
     </div>
 
         <div class="has-text-centered is-hidden-desktop"> 
-             <button id="sabermas" class="button is-750 etiquet has-text-weight-bold ml-2 mt-5 is-hidden-desktop" onclick="masDestacados()"> <img src="<?php echo get_template_directory_uri(); ?>/img/i-prev.svg" width="11" height="7"/> Quiero saber más</button> 
+             <button id="sabermas" role="button" aria-label=" Quiero saber más" class="button is-grisoscuro has-text-weight-bold ml-2 mt-5 is-hidden-desktop" onclick="masDestacados()"> <img src="<?php echo get_template_directory_uri(); ?>/img/i-prev.svg" width="11" height="7"/> Quiero saber más</button> 
         </div>
 <!-- end loop destacado -->

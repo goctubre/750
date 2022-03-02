@@ -182,7 +182,7 @@ function categorias_programas() {
     if ( ! empty( $programas ) ) {
         foreach( $programas as $programa ) {
             if ($programa->parent != 0) {
-                $output .= '<a href="' . esc_url( get_category_link( $programa->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'Ver todas las noticias en %s', 'textdomain' ), $programa->name ) ) . '"> <button class="button is-light etiquet">' . esc_html( $programa->name ) . '</button> </a>';
+                $output .= '<a href="' . esc_url( get_category_link( $programa->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'Ver todas las noticias en %s', 'textdomain' ), $programa->name ) ) . '"> <button class="button is-grisoscuro elprograma">' . esc_html( $programa->name ) . '</button> </a>';
             }
 
         }
@@ -385,7 +385,7 @@ add_action( 'wp_enqueue_scripts', 'webapptiv_remove_block_library_css' );
 //21.875em 350px
 //21.874em = 349.984px
 
-
+// alt="'.$titulo.'"
 function picture_image($screenbig, $screenmedium, $screensmall, $screenmini, $relation, $imgradius, $loading = "lazy",  $importance = "auto") {
     $full = get_the_post_thumbnail_url('', 'full');
     $large = get_the_post_thumbnail_url('', 'large');
@@ -401,7 +401,7 @@ function picture_image($screenbig, $screenmedium, $screensmall, $screenmini, $re
             <source media="(min-width: 48.000em)" srcset="'.$$screenmedium.'">
             <source media="(min-width: 21.875em)" srcset="'.$$screensmall.'">
             <source media="(max-width: 21.874em)" srcset="'.$$screenmini.'">
-            <img importance="'.$importance.'" loading="'.$loading.'" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt="'.$titulo.'">
+            <img importance="'.$importance.'" loading="'.$loading.'" class="'.$imgradius.'" srcset="'.$$screenmini.'" alt="" tabindex=-1>
         </picture> 
     </figure>';
     return $html;
@@ -447,3 +447,10 @@ add_filter('body_class','add_category_to_single');
 
 /*** Functions AMP */
 //require get_template_directory() . '/inc/template-functions-amp.php';
+
+
+///CUSTOM RSS - SEGUIR 
+
+// add_action('init', 'customRSS');
+// function customRSS(){ add_feed('instantarticles', 'customRSSFunc');}
+// function customRSSFunc(){ get_template_part('rss', 'instantarticles');}

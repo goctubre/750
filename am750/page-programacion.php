@@ -151,7 +151,7 @@ get_header();
 													echo get_the_post_thumbnail( $programa_id, 'medium' );
 												echo '</a> </figure>';
 
-												echo '<span class="is-celeste has-text-weight-bold"><a href="'.$link.'">'.$horario_inicio.'</a></span>';
+												echo '<span class="is-rojo has-text-weight-bold"><a href="'.$link.'">'.$horario_inicio.'</a></span>';
 												echo '<h3 class="ml-2 is-inline"><a href="'.$link.'">'.get_the_title($programa_id).'</a></h3>';
 										echo '</div>';
 									}

@@ -16,7 +16,7 @@ get_header();
 
 			<div class="page-content mt-6 has-text-centered">
 				<p class="is-size-5 mb-2"> Error 404 </p>
-				<h1 class="is-size-3 mb-4"> Esta página <span class="is-celeste"> no está disponible </span> </h1>
+				<h1 class="is-size-3 mb-4"> Esta página <span class="is-rojo"> no está disponible </span> </h1>
 				<a href="/"> <button class="button is-bg-violet mb-6"> Volver a la home </button> </a>
 
 				<figure class="mb-3"> <img src="<?php echo get_template_directory_uri(); ?>/img/404.png" width="" height="" alt="750 AM - Contenido no encontrado" /> </figure>
